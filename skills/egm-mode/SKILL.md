@@ -39,7 +39,6 @@ The router owns the only todo list and the gate shape. A gate is one question, t
 - Reflection on a finished task -> **reflect**.
 - State machine or lifecycle design -> **statechart**. It is experimental.
 - Status, stage, or "what next" -> **egm-ask**. It is read-only and never acts on a pending gate.
-- Stale install or "update egm-stack" -> **egm-update**. Check the route and version, then update only with approval.
 
 ## Autonomy
 

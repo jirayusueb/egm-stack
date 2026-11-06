@@ -1,9 +1,5 @@
 # Routing cases. One prompt per skill and per playbook.
 # kind: skill | playbook. packs: comma list for the rules case.
-- id: update-stack
-  prompt: "Update egm-stack to the latest release."
-  expect: egm-update
-  kind: skill
 - id: ask-next-step
   prompt: "Where am I in the workflow and what should I run next?"
   expect: egm-ask

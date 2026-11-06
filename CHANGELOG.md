@@ -3,6 +3,12 @@
 All notable changes to this project are documented here. The format follows
 Keep a Changelog, and this project adheres to Semantic Versioning.
 
+## [0.3.1] - 2026-11-06
+
+### Removed
+
+- `egm-update` and guide chapter 13. Host update commands stay documented in the harness adapters.
+
 ## [0.3.0] - 2026-11-06
 
 ### Added

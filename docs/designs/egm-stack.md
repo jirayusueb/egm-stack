@@ -107,14 +107,13 @@ Line budgets are ceilings checked by `validate.mjs`. Depth that does not fit
 belongs in `references/`, and the skill says when to read it. A budget is not a
 quality target.
 
-### Core (9)
+### Core (8)
 
 | Skill | Budget | Responsibility |
 | --- | --- | --- |
 | `egm-mode` | 320 | Router, non-negotiables, autonomy, delegation pointer, harness mapping, generated indexes |
 | `egm-ask` | 100 | Read-only contextual answers and next steps |
 | `egm-setup` | 140 | 17-role model configuration, provider/model values, host effort levels |
-| `egm-update` | 130 | Detect the install route, compare versions, and update with approval |
 | `egm-brainstorm` | 120 | Concept stress-test, brief artifact |
 | `egm-draft` | 140 | Section-by-section spec drafting |
 | `egm-review` | 220 | Review engine, stages, loop, profiles, gates |
