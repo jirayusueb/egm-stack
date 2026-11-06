@@ -32,7 +32,7 @@ npx skills add jirayusueb/egm-stack
 ```
 
 Select the core skills and the twenty-four principles. The router routes to
-what is installed. Run `/egm-update` later to move to a newer release.
+what is installed.
 
 ### Claude Code
 
