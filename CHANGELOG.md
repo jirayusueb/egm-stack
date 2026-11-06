@@ -3,6 +3,25 @@
 All notable changes to this project are documented here. The format follows
 Keep a Changelog, and this project adheres to Semantic Versioning.
 
+## [0.2.0] - 2026-11-06
+
+### Added
+
+- omp (Oh My Pi) harness adapter, install route, capability row, and research coverage.
+- `egm-setup` detects `provider/model` values and host effort levels, maps a budget to the nearest available level, and writes host rule files only for hosts in use.
+
+### Changed
+
+- The design specification adds success criteria, problem evidence, ownership and approval gates, cost estimates, security notes, and a risk table with revisit triggers.
+- Command forms are documented per install route. A plugin namespaces skills, for example `/egm-stack:egm-setup`.
+- `delegate` splits a `provider/model` value at spawn time.
+- The validator checks model-role documentation, command forms, adapter presence, and version parity between `package.json` and the manifests.
+
+### Fixed
+
+- Regenerated `docs/skills.md` after skill edits.
+- Layer, gate ownership, churn, and artifact definitions in the design spec.
+
 ## [0.1.0] - 2026-11-06
 
 ### Added

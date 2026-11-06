@@ -451,7 +451,7 @@ pins commits and inventories the files.
 | Wrapper that requires EGM installed | Couples releases to an upstream we do not control and breaks skills-only installs. |
 | No rule packs at all | The principles already cover some ground, but the packs carry concrete decision rules that principles do not. The cost is one skill and fourteen references. |
 | Formal verification in core | Java and TLC are heavy prerequisites. Statechart stays experimental and optional. |
-| Web documentation site | Out of scope for 0.1.0. Markdown docs are the contract. |
+| Web documentation site | Out of scope for the 0.x line. Markdown docs are the contract. |
 
 ## Risks
 

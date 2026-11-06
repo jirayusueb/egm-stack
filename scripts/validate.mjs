@@ -256,6 +256,13 @@ function checkManifests() {
   if (versions.size > 1) fail('manifests', 'version mismatch');
   if (descriptions.size > 1) fail('manifests', 'description mismatch');
   if (licenses.size > 1) fail('manifests', 'license mismatch');
+  if (existsSync(join(ROOT, 'package.json'))) {
+    try {
+      const pkg = JSON.parse(read('package.json'));
+      if (pkg.version !== [...versions][0]) fail('package.json', `version ${pkg.version} does not match manifests ${[...versions][0]}`);
+      if (pkg.name !== [...names][0]) fail('package.json', `name ${pkg.name} does not match manifests ${[...names][0]}`);
+    } catch (error) { fail('package.json', `invalid JSON: ${error.message}`); }
+  }
 
   const marketplaceRel = '.claude-plugin/marketplace.json';
   if (existsSync(join(ROOT, marketplaceRel))) {
