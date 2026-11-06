@@ -1,6 +1,6 @@
 # The EGM Stack guide
 
-Twelve chapters. Read them in order the first time. After that, each chapter
+Thirteen chapters. Read them in order the first time. After that, each chapter
 stands alone.
 
 The habit the guide teaches is simple. Say what you want and how you will know
@@ -23,6 +23,7 @@ trade-offs yourself.
 | [10-ddd.md](10-ddd.md) | Model a domain and review it |
 | [11-subagents.md](11-subagents.md) | Delegate with a brief and run a durable team |
 | [12-ask.md](12-ask.md) | Ask where you are and what to run next |
+| [13-update.md](13-update.md) | Move an installed stack to a newer release |
 
 ## The one thing to remember
 

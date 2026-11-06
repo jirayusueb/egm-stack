@@ -3,6 +3,16 @@
 All notable changes to this project are documented here. The format follows
 Keep a Changelog, and this project adheres to Semantic Versioning.
 
+## [0.3.0] - 2026-11-06
+
+### Added
+
+- `egm-update`: detects the plugin or skills route, compares the latest release, updates with approval, and verifies the result. Update commands for omp and Claude Code are documented.
+
+### Changed
+
+- Core tier grows to nine skills, for a total of forty-eight.
+
 ## [0.2.1] - 2026-11-06
 
 ### Fixed

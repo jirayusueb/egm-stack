@@ -32,7 +32,7 @@ npx skills add jirayusueb/egm-stack
 ```
 
 Select the core skills and the twenty-four principles. The router routes to
-what is installed.
+what is installed. Run `/egm-update` later to move to a newer release.
 
 ### Claude Code
 
@@ -132,6 +132,7 @@ and an applied fix does not settle. Read [the guide](docs/guide/README.md).
 | `egm-resolve` | Core | Triage reviewer findings against the target, write an annotated report, and apply only the fixes the author approves. |
 | `egm-review` | Core | Audit a design, spec, plan, document, code change, or domain model with fresh-context reviewers, resolve the findings, and report what remains. |
 | `egm-setup` | Core | Configure which model each EGM role uses, set one reasoning budget, and write the result to the rule files that harnesses load. |
+| `egm-update` | Core | Check for a newer egm-stack release and update the installed copy on this host. |
 | `arena` | Extended | Run a controlled arena for /arena or when one attempt at a non-trivial artifact would lock in the wrong shape. |
 | `delegate` | Extended | Delegate a bounded task with /delegate and a self-contained brief. |
 | `how` | Extended | Explain how a subsystem works with /how. |
@@ -268,7 +269,7 @@ Nine skills start with `egm-`: `egm-mode`, `egm-ask`, `egm-setup`,
 `why`, `ddd`, `rules`, `tdd`, and the 24 `principle-*` leaves.
 
 `/egm-` filters by name prefix. It is not a package filter. Use
-[docs/skills.md](docs/skills.md) to see all 47.
+[docs/skills.md](docs/skills.md) to see all 48.
 
 A slash menu can also rename skills. A Claude Code plugin prefixes its name, so
 the form is `/egm-stack:egm-mode`. omp uses `/skill:egm-mode`. Codex, Cursor, and
@@ -324,6 +325,6 @@ Apache-2.0. See [LICENSE](LICENSE). Vendored MIT material keeps its own notice.
 - Confirm no generated region was hand-edited, and `LICENSE`, `NOTICE`, and the
   `UPSTREAM.md` pins are current.
 - Add a row to `docs/designs/README.md` for each new design document.
-- Tag `v0.2.1`.
+- Tag `v0.3.0`.
 - Test each documented install route on a clean machine, and confirm the tree
   has no secrets and no absolute local paths.

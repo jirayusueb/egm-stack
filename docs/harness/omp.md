@@ -73,14 +73,19 @@ catalog is built when a session starts.
 
 ## Update
 
-The marketplace clone is a git checkout. Pull it, reinstall with force, and
-restart.
+```sh
+omp plugin upgrade egm-stack@egm-stack
+```
+
+If the version does not move, refresh the marketplace checkout and reinstall.
 
 ```sh
 git -C ~/.omp/plugins/cache/marketplaces/egm-stack pull --ff-only
 omp plugin install egm-stack@egm-stack --force
 omp plugin list
 ```
+
+Restart omp after the update.
 
 ## Paths
 

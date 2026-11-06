@@ -50,6 +50,14 @@ when a session starts. `npx skills list` shows what landed.
 
 With Agent Teams, install once per workspace. The team board is per session.
 
+## Update
+
+```sh
+npx skills update
+```
+
+Start a new session afterward. The skill catalog is built at session start.
+
 ## Paths
 
 - Project skills: `<workspace>/.agents/skills/<name>/SKILL.md`
