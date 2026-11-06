@@ -254,6 +254,7 @@ approved spec to `docs/designs/<slug>.md`. See [docs/artifacts.md](docs/artifact
 | Cursor | skills or plugin manifest | Documented, unverified |
 | OpenCode | skills | Documented, unverified |
 | omp (Oh My Pi) | plugin or skills | Documented, unverified |
+| DeepSeek Harness | skills | Verified in this build |
 | Agent Teams | skills | Verified in this build; host docs unverified |
 
 ### Why `/egm-` does not list every skill

@@ -21,6 +21,7 @@ date when you verify a row.
 | Cursor | `Task` tool | Yes, `.cursor/agents/` | Unverified | No | None built in | Fields verified. Live run unverified. |
 | OpenCode | `task` in V1, `subagent` in V2 | Yes, agents with `mode: subagent` | Unverified | No | None built in | Unverified here. |
 | omp (Oh My Pi) | `task` | Yes, personas from `agents/` | Reported, unverified | No | None built in | Unverified here. |
+| DeepSeek Harness | `subagent` and `spawn_teammate` | Yes, Agent Teams | One level for teams | Yes | None built in, we write to `.egm/<slug>/` | Verified in this build. |
 | Agent Teams | `spawn_teammate` | Yes, named teammates | One level | Yes, shared task board | Workspace plus task board | Verified in this runtime. |
 
 ## What the matrix decides

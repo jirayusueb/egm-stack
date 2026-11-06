@@ -377,11 +377,11 @@ function checkDelegation() {
     for (const tool of ['Agent', 'spawn_agent', 'Task', 'task', 'spawn_teammate']) {
       if (!text.includes(tool)) fail(harness, `capability matrix does not mention ${tool}`);
     }
-    for (const host of ['omp', 'OpenCode', 'Agent Teams']) {
+    for (const host of ['omp', 'OpenCode', 'Agent Teams', 'DeepSeek Harness']) {
       if (!text.includes(host)) fail(harness, `capability matrix does not mention ${host}`);
     }
   }
-  for (const adapter of ['claude-code', 'codex', 'cursor', 'opencode', 'agent-teams', 'omp']) {
+  for (const adapter of ['claude-code', 'codex', 'cursor', 'opencode', 'agent-teams', 'omp', 'deepseek-harness']) {
     const rel = `docs/harness/${adapter}.md`;
     if (!existsSync(join(ROOT, rel))) fail(rel, 'missing adapter');
   }
