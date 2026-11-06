@@ -46,7 +46,7 @@ Read `references/brief.md` before the first spawn. The brief is the whole contra
 
 ## Model and effort
 
-Pick a role from `egm-setup`. Read its model and effort line and pass them to the spawn. When the role is missing or says inherit-parent, leave the model unset. When the tool rejects a model, use the host default and say so. Keep model names out of the brief.
+Pick a role from `egm-setup`. Read its value and effort and pass them to the spawn. A `provider/model` value splits at the first slash into the provider field and the model field. A plain value goes in the model field only. When the role is missing or says inherit-parent, pass neither and run on the parent model. When the tool rejects a value, use the host default and say so. Keep model names out of the brief.
 
 ## Collection and verification
 

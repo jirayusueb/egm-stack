@@ -12,7 +12,7 @@ Keep a Changelog, and this project adheres to Semantic Versioning.
 - Review engine `egm-review` with five stages, loop mode, and seven profiles.
 - `egm-resolve` for triage and approved fixes.
 - `egm-ask`, a read-only stage-aware assistant.
-- `egm-setup` with seventeen model roles.
+- `egm-setup` with seventeen model roles, provider/model values, and host effort levels.
 - `egm-drift` and experimental `egm-bootstrap`.
 - `delegate` for subagents and durable teams, including Agent Teams.
 - `rules` with fourteen MIT-licensed condensed rule packs.

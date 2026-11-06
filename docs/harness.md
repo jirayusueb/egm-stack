@@ -39,6 +39,21 @@ task list.
 A host with named personas gets the persona name. A host without them gets the
 persona file path in the brief.
 
+## Model values
+
+A role value in `~/.agents/egm-stack-models.md` is one of three shapes.
+
+| Shape | Pass to the tool |
+| --- | --- |
+| `provider/model` | split at the first slash into a provider field and a model field |
+| `model` | the model field only |
+| `inherit-parent` or `auto` | neither field; the child runs on the parent model |
+
+Hosts differ. Cursor encodes effort in the slug. Claude Code takes a model and
+an effort option. Codex and OpenCode vary by version. Agent Teams and DeepSeek
+Harness take provider, model, and effort separately. `egm-setup` offers the
+effort levels the host exposes and maps a budget to the nearest available level.
+
 ## Transcript locations for reflect
 
 `reflect` reads a session transcript. It reads only the folder for the current

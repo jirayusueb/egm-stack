@@ -384,6 +384,9 @@ function checkDelegation() {
     for (const role of MODEL_ROLES) {
       if (!text.includes(role)) fail(setup, `missing model role "${role}"`);
     }
+    for (const phrase of ['provider/model', 'effort levels', 'split it at the first slash']) {
+      if (!text.includes(phrase)) fail(setup, `setup is missing the harness model rule "${phrase}"`);
+    }
   }
 }
 
