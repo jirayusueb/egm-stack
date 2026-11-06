@@ -49,6 +49,7 @@ Files are hints. The review `Status:` line and the newest artifact decide.
 | `review/01-zoom-out.md` to `review/05-readiness.md`, no consolidated report | Review in progress | Resume `/egm-review` on the draft |
 | `review/consolidated_review_report.md`, no goldfish report | Review consolidated | `/egm-resolve` the draft with the reported findings |
 | `goldfish_review_report.md` with no `Status:` line | Findings pending | Answer the pending review gate in the session that asked it |
+| `goldfish_review_report.md` with `Status: unresolved` | Findings pending | `/egm-resolve` the target, then answer the gate |
 | `goldfish_review_report.md` with `Status: resolved` | Review settled | Promote the draft to `docs/designs/<slug>.md`, then implement |
 | `docs/designs/<slug>.md`, no other artifact | Approved spec | Run the implementation playbook through `/egm-mode` |
 | `domain_model.md` | Domain model | Review with `/egm-review` and the `ddd` profile |

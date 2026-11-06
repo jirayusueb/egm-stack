@@ -3,6 +3,21 @@
 All notable changes to this project are documented here. The format follows
 Keep a Changelog, and this project adheres to Semantic Versioning.
 
+## [0.6.1] - 2026-11-06
+
+### Added
+
+- A setup eval suite with show, reset, role, and profile cases.
+- Six recorded live results under `evals/results/`, with evidence, from fresh-context runs against 5b29fbb and a7c8528.
+
+### Fixed
+
+- `egm-review` now requires a non-empty user-facing message when the host has no subagent tool. The first live run stopped correctly but returned an empty message.
+- `egm-ask` forbids even a harmless shell command. A live run executed `true`.
+- The stage table maps `Status: unresolved` to the resolve step.
+- The harness command-form table names DeepSeek Harness.
+- `run-evals --summary` parses rows with an empty observed cell.
+
 ## [0.6.0] - 2026-11-06
 
 ### Added

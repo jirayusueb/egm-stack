@@ -53,6 +53,7 @@ host and the install route.
 | Codex | the skill picker |
 | Cursor | the skill picker or `/<skill>` when project skills are exposed |
 | OpenCode | the skill picker |
+| DeepSeek Harness | `/skill:<skill>` |
 
 A missing bare command usually means the plugin route is installed. Use the
 namespaced form, or install the skills route.
