@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "EGM Stack bootstrap worker return",
+  "description": "Adapted from the Elephant-Goldfish Model worker-return schema. Apache-2.0, commit 6a8001ea31ccf72430ba0603a467ec6df9f69dd7, https://github.com/google/elephant-goldfish-model. Rewritten for harness-neutral use.",
+  "type": "object",
+  "properties": {
+    "subtree_index": {
+      "type": "array",
+      "description": "One entry per documented directory, in post-order.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "description": "Repository-relative directory path."
+          },
+          "target": {
+            "type": "string",
+            "description": "Contract filename written in the directory."
+          },
+          "status": {
+            "type": "string",
+            "enum": ["created", "updated", "skipped"]
+          },
+          "summary": {
+            "type": "string",
+            "description": "One line description of the directory role."
+          },
+          "interface": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Public symbols, each cited as [file:symbol]."
+          },
+          "invariants": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Rules that must stay true, each cited as [file:symbol], or [\"None\"]."
+          },
+          "side_effects": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Writes, calls, locks, or external effects, each cited as [file:symbol], or [\"None\"]."
+          }
+        },
+        "required": ["path", "target", "status", "summary"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["subtree_index"],
+  "additionalProperties": false
+}

@@ -1,0 +1,45 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "egm-stack",
+  "version": "0.1.0",
+  "description": "Spec-first engineering for coding agents: draft with context, review without it, then build with evidence.",
+  "author": {
+    "name": "EGM Stack contributors"
+  },
+  "homepage": "https://github.com/OWNER/egm-stack",
+  "repository": "https://github.com/OWNER/egm-stack",
+  "license": "Apache-2.0",
+  "keywords": [
+    "agent-skills",
+    "spec-first",
+    "design-review",
+    "domain-driven-design",
+    "subagents",
+    "tdd"
+  ],
+  "extensions": {
+    "com.openai": {
+      "requires_local_executor": true,
+      "interface": {
+        "displayName": "EGM Stack",
+        "shortDescription": "Draft, review, and build with evidence",
+        "longDescription": "Spec-first engineering for coding agents. Draft with context, review with fresh-context critics, resolve findings, then build with verification. Includes a read-only ask assistant, delegation, DDD, and writing standards. Uses your host's models and permissions. Reviews require isolated subagents.",
+        "developerName": "EGM Stack contributors",
+        "brandColor": "#1B6EF3",
+        "category": "Developer Tools",
+        "capabilities": [
+          "Draft specifications",
+          "Review designs",
+          "Resolve findings",
+          "Deliver and verify"
+        ],
+        "websiteURL": "https://github.com/OWNER/egm-stack",
+        "supportURL": "https://github.com/OWNER/egm-stack/issues",
+        "privacyPolicyURL": "https://github.com/OWNER/egm-stack/blob/main/docs/privacy.md",
+        "termsOfServiceURL": "https://github.com/OWNER/egm-stack/blob/main/LICENSE",
+        "composerIcon": "./.cursor-plugin/assets/icon.svg",
+        "logo": "./.cursor-plugin/assets/icon.svg"
+      }
+    }
+  }
+}

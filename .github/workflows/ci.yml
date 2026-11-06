@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [20, 22]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - name: Tests
+        run: npm test
+      - name: Validate
+        run: npm run validate
+      - name: Build freshness
+        run: npm run build:check
+      - name: Embedded assets freshness
+        run: node scripts/sync-assets.mjs --check
+      - name: Eval coverage
+        run: node scripts/eval.mjs --check

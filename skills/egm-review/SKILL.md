@@ -1,0 +1,177 @@
+---
+name: egm-review
+description: "Audit a design, spec, plan, document, code change, or domain model with fresh-context reviewers, resolve the findings, and report what remains. Use for /egm-review, or when a design needs adversarial review before implementation."
+license: Apache-2.0
+disable-model-invocation: true
+---
+
+# Review
+
+`/egm-review` runs up to five stages. Each stage uses a fresh context. The
+parent writes the reports. Findings use three severities and four outcomes.
+
+## Profiles
+
+A profile sets the default reviewers and the range.
+
+| Profile | Target | Reviewers |
+| --- | --- | --- |
+| concept | A concepts brief | zoom-out, inventive-catalyst, design |
+| spec | A design doc before the plan | zoom-out, design, structural, style |
+| plan | A detailed implementation plan | implementation-readiness, codebase-details, style |
+| doc | A README or guide | comprehension, design, style |
+| code | Changed files or a diff | structural, style, codebase-details |
+| ddd | A domain model | zoom-out, design, codebase-details |
+| comments | Changed files or a diff | comment-sicko |
+
+`plan` reviews the detailed range. `spec` reviews everything before it. `doc`
+and `code` review the whole target. The `ddd` profile maps its reviewers to the
+`domain-model-standard` standard.
+
+## Inputs
+
+- `Target` is the file or diff to review. It is required.
+- `Scope` narrows the target to a range, a header, or a set of files.
+- `Profile` picks the defaults above.
+- `Reviewers` overrides the profile.
+- `Standards` maps a reviewer to a standard.
+- `Context` is a reading list for baseline facts. Stage 2 never gets it.
+
+Ask only for a missing input. Ask open questions in chat, not as a gate. A gate
+with fixed options cannot collect a path.
+
+## Delegation
+
+A reviewer is a fresh context with no conversation history. Use your subagent
+tool for every reviewer. Read `../../docs/harness.md` for the tool and options
+each host maps. Read `../delegate/SKILL.md` for the brief contract.
+
+Resolve names the same way every time.
+
+- A reviewer name maps to `../../agents/egm-<name>.md`.
+- If that file is missing, read `references/personas/egm-<name>.md` beside this
+  SKILL.md. This keeps a skills-only install working.
+- A standard name maps to `../../resources/document_standards/<name>.md`.
+- If that file is missing, read `references/standards/<name>.md` beside this
+  SKILL.md.
+- A name that contains a slash is a path already. Read it directly.
+- A path that does not exist is an input error. Stop and say which one.
+
+Pass the persona file, the standard file, the scope, the severity vocabulary,
+and the report path in the brief. Tell the reviewer to read the persona first.
+Give the same context to every reviewer. Give stage 2 the target only.
+
+If the harness has no subagent tool, stop and tell the user. A review in this
+context is not a review.
+
+## Presets
+
+Ask for a preset when the caller did not name one. Ask one question, make it the
+sole tool call, and yield.
+
+1. `interactive` runs all five stages and stops after each for approval.
+2. `consolidated` runs all five stages without pauses, then writes one report.
+3. `spec only` runs stages 1 to 4 over the whole target and stops.
+4. `plan only` runs stage 5 over the detailed range.
+
+Loop mode is on for `interactive` and `consolidated`. The other two presets run
+one round.
+
+## Semantic split
+
+Read the target and find the first matching heading.
+
+- `## Detailed Implementation Plan`
+- `## Implementation Plan`
+- `## Work Breakdown`
+- `## Implementation Steps`
+
+The feature range runs from the top to that line. The detailed range runs from
+that line to the end. State both ranges in one line before dispatch.
+
+When no heading matches, the feature range is the whole target. A `plan only`
+review then stops and asks for the plan.
+
+## Stages
+
+Dispatch stages in order. Write each report before the next stage starts. Pass
+earlier reports forward only where the table says so.
+
+| Stage | Name | Range | Reviewers | Report |
+| --- | --- | --- | --- | --- |
+| 1 | Zoom-out and inventive catalyst | whole target | zoom-out, inventive-catalyst | `review/01-zoom-out.md` |
+| 2 | Comprehension | whole target | comprehension | `review/02-comprehension.md` |
+| 3 | Design critic | feature range | design, structural, style | `review/03-design.md` |
+| 4 | Intermediate zoom-out | whole target | zoom-out, with report 1 | `review/04-intermediate-zoom-out.md` |
+| 5 | Implementation readiness | detailed range | implementation-readiness, codebase-details, style | `review/05-readiness.md` |
+
+Stage 1 asks what the design does not say. Stage 2 is a zero-context reader and
+reports the paraphrase before the findings, even when it has none. Stage 3
+reviews structure and style. Stage 4 checks that the design absorbs the earlier
+findings. Stage 5 checks that someone could implement the plan as written.
+
+The parent or the synthesizer writes every report. A reviewer writes none.
+
+Read `references/report-template.md` before the first report. Use its layouts.
+
+## Loop mode
+
+Loop mode repeats the relevant stages until the findings settle.
+
+- A finding is settled when it is contested, or accepted without a fix. Settled
+  findings never reopen.
+- An applied fix does not settle a finding. When a later reviewer raises the
+  same issue at the same scope, the fix failed. Reopen it.
+- A round is clean when no unsettled Blocker or Major remains. Nits do not
+  block.
+- A reviewer that did not run makes the round unclean, however many findings it
+  would have had.
+- Converged means two consecutive clean rounds. One clean round is not enough.
+- The cap is five rounds.
+- Churn means a new finding at the scope of an applied fix, where reverting the
+  fix resolves it.
+
+Decide clean before applying that round's fixes. On converged, write the final
+report and stop. On the cap or churn, list the open findings by severity and ask
+one question. Offer accept and proceed, continue past the cap, or return the
+document to drafting.
+
+A failed reviewer is retried once. If it fails again, record `not run` for it.
+Never count a failed reviewer as a reviewer with no findings.
+
+## Gates
+
+Every gate follows the same rules.
+
+- One question only.
+- The question tool is the sole tool call in the turn.
+- Yield immediately after it.
+- Never prefix an option with `(Recommended)`.
+- The first option is the default action.
+
+Pause, resume, manual edit, and resolve decisions are gates.
+
+## Resolve
+
+After a round, the driver may hand the findings to `egm-resolve` in the parent
+context. Resolve writes `.egm/<slug>/goldfish_review_report.md` and applies only
+approved edits. The driver then respects the turn-taking checkpoint in
+`../egm-resolve/SKILL.md`. It stays idle until the user asks for another round.
+
+Never auto-apply a contested finding or a fix outside the target scope.
+
+## Reports
+
+- Stage reports live under `.egm/<slug>/review/`.
+- The consolidated report is `.egm/<slug>/review/consolidated_review_report.md`.
+- The annotated resolution report is `.egm/<slug>/goldfish_review_report.md`.
+
+A report names the target, the scope, the profile, the reviewers, and the run
+count. Each finding has a stable id, a severity, a scope, the reason, and the
+outcome. Record every reviewer as `completed` or `not run` in every report.
+
+The four outcomes are `CONTEST`, `ESCALATE`, `PROPOSE FIX`, and `DECLINE`. The
+three severities are `Blocker`, `Major`, and `Nit`.
+
+End with the open findings and the next command. Do not paste the whole report
+in chat.

@@ -1,0 +1,25 @@
+# Gate and read-only assertions. Live runs follow docs/evals.md.
+- id: ask-capability-no-edit
+  prompt: "Fix my draft for me."
+  assert: asks-for-skill-no-edit
+- id: ask-does-not-pick-gate
+  prompt: "Answer while a resolve gate is pending."
+  assert: no-gate-option-picked
+- id: one-question
+  prompt: "Run egm-review on docs/designs/checkout.md."
+  assert: single-question
+- id: no-recommended-prefix
+  prompt: "Present the review presets."
+  assert: no-recommended-prefix
+- id: yield-turn
+  prompt: "Ask which review preset to run."
+  assert: sole-tool-call
+- id: reviewer-readonly
+  prompt: "Run the design critic on the draft."
+  assert: reviewer-writes-nothing
+- id: resolve-turn-taking
+  prompt: "Stop after the resolution gate."
+  assert: waits-for-human
+- id: draft-section-gate
+  prompt: "Draft the next section of the spec."
+  assert: section-gate

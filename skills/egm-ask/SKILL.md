@@ -1,0 +1,98 @@
+---
+name: egm-ask
+description: "Answer a question about where the user is in the EGM flow, which skill to run next, or whether the stack has a capability, without changing anything. Use for /egm-ask, or when the user asks where they are, what to run next, or how a host maps an action."
+license: Apache-2.0
+disable-model-invocation: true
+---
+
+# Ask
+
+`/egm-ask` is read-only and advisory. It answers a question about the flow and
+stops. It is not a workflow and it does not take part in one.
+
+## Read-only guarantee
+
+- This skill does not write. It does not edit. It creates no file and no directory.
+- Run no shell command.
+- Spawn no subagent and start no skill.
+- Read only these inputs.
+  - Artifact and report file names.
+  - The `Status:` and `**Target:**` lines of a review report.
+  - The frontmatter of installed skills.
+  - `references/stage-table.md`.
+  - `../../docs/harness.md`.
+- Never act on a pending gate. Never answer one and never pick an option for
+  the user.
+
+The reply is the whole output. End the turn after it.
+
+## Question types
+
+Name the type before you answer. It sets the read set.
+
+| Type | Example | Read set |
+| --- | --- | --- |
+| Next step | "What do I run now?" | Artifact names, report `Status:` lines, stage table |
+| Skill choice | "Which skill reviews a plan?" | Installed skill frontmatter, stage table, harness doc |
+| Capability request | "Fix my draft" | Installed skill frontmatter, harness doc |
+| Troubleshooting | "The review command fails" | `../../docs/harness.md`, installed skill frontmatter |
+| Out of scope | "Write the code" | The question only, then the boundary |
+
+A capability request names the skill that does the work and edits nothing. For
+"fix my draft", name `/egm-resolve` and the file it would touch. Do not fix it.
+
+Troubleshooting cites the harness doc line that applies. When the doc does not
+cover the case, say that the case is unverified.
+
+An out-of-scope question gets a short refusal, then the closest real step. Do not stretch this skill to cover it.
+
+## Stage detection
+
+1. Look for `.egm/` in the working directory. For each child directory, read
+   artifact names and the report lines named above.
+2. When `.egm/` is absent, look for `docs/designs/*.md` and the same artifact
+   names in the working directory.
+3. Files are hints, not proof. A draft does not prove approval. A report does
+   not prove it is current. Trust the `Status:` line and the newest artifact.
+4. When several `.egm/<slug>/` directories exist and the question names none,
+   ask which slug and list them. Ask, do not guess.
+5. When the stage is unknown, say so, list the artifacts you found, and point
+   to the stage table. Do not invent a stage.
+
+Read `references/stage-table.md` after stage detection. It maps the artifacts seen to a stage and a next action.
+
+## Implementation gate
+
+Advise implementation only when all three hold.
+
+- Target confirmed. `docs/designs/<slug>.md` exists, or the user names the file.
+- No review pending. The latest `goldfish_review_report.md` is missing, or it
+  has `Status: resolved`, or it has no unsettled Blocker or Major.
+- Approval confirmed. A human accepted the design.
+
+When a condition fails, name the missing condition and the step that clears it.
+Do not soften the answer.
+
+## Reply shape
+
+At most 20 lines.
+
+**Where you are**
+One line. Name the slug and the stage.
+
+**Answer**
+At most five sentences. Lead with the answer.
+
+**Next steps**
+At most three numbered items. Each is one copyable command in the host form
+from `../../docs/harness.md`, with a short reason.
+
+**Source**
+The files and frontmatter lines you read, by relative path.
+
+Use no other headings. Hold the line count by dropping prose, not the source
+line.
+
+## Commands
+
+Name only commands that exist in the installed skill frontmatter or the harness doc. Never invent a command, a flag, or a path. When the command the user asks for does not exist, say so and name the real skill.

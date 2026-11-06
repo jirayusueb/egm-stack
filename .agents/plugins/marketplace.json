@@ -1,0 +1,17 @@
+{
+  "name": "egm-stack",
+  "interface": {
+    "displayName": "EGM Stack"
+  },
+  "plugins": [
+    {
+      "name": "egm-stack",
+      "source": "./",
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    }
+  ]
+}

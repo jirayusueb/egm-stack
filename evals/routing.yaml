@@ -1,0 +1,139 @@
+# Routing cases. One prompt per skill and per playbook.
+# kind: skill | playbook. packs: comma list for the rules case.
+- id: ask-next-step
+  prompt: "Where am I in the workflow and what should I run next?"
+  expect: egm-ask
+  kind: skill
+- id: setup-models
+  prompt: "Configure the models this stack uses for each role."
+  expect: egm-setup
+  kind: skill
+- id: brainstorm-concept
+  prompt: "Help me turn a half-formed webhook idea into a concept brief."
+  expect: egm-brainstorm
+  kind: skill
+- id: draft-spec
+  prompt: "Write the design document from the brief section by section."
+  expect: egm-draft
+  kind: skill
+- id: review-design
+  prompt: "Review docs/designs/checkout.md with fresh reviewers."
+  expect: egm-review
+  kind: skill
+- id: resolve-findings
+  prompt: "Work through the review findings and apply the approved fixes."
+  expect: egm-resolve
+  kind: skill
+- id: drift-check
+  prompt: "Compare the checked-in design docs with the current code."
+  expect: egm-drift
+  kind: skill
+- id: delegate-one
+  prompt: "Spawn a subagent to audit the auth module in parallel."
+  expect: delegate
+  kind: skill
+- id: rules-pack
+  prompt: "Apply the clean architecture rules to this boundary change."
+  expect: rules
+  kind: skill
+  packs: a-philosophy-of-software-design, clean-architecture, clean-code, code-complete, designing-data-intensive-applications, domain-driven-design, domain-driven-design-distilled, implementing-domain-driven-design, patterns-of-enterprise-application-architecture, refactoring, refactoring-guru, release-it, the-pragmatic-programmer, working-effectively-with-legacy-code
+- id: how-subsystem
+  prompt: "How does the billing subsystem work and where does it live?"
+  expect: how
+  kind: skill
+- id: why-decision
+  prompt: "Why was the retry guard built this way?"
+  expect: why
+  kind: skill
+- id: arena-compare
+  prompt: "Try three designs for the cache layer and keep the best parts."
+  expect: arena
+  kind: skill
+- id: swarm-coverage
+  prompt: "Check every package against its test command and report once."
+  expect: swarm
+  kind: skill
+- id: tdd-bug
+  prompt: "Write a failing regression test first, then fix the bug."
+  expect: tdd
+  kind: skill
+- id: no-comments-pass
+  prompt: "Strip the comments and tell me which ones are load-bearing."
+  expect: no-comments
+  kind: skill
+- id: reflect-session
+  prompt: "Reflect on this session and propose skill edits."
+  expect: reflect
+  kind: skill
+- id: unslop-prose
+  prompt: "Remove the AI tells from this README."
+  expect: unslop
+  kind: skill
+- id: technical-writing
+  prompt: "Rewrite this how-to guide to the technical writing standard."
+  expect: technical-writing
+  kind: skill
+- id: ste100-procedure
+  prompt: "Rewrite this maintenance procedure in ASD-STE100 Simplified Technical English."
+  expect: ste100
+  kind: skill
+- id: statechart-model
+  prompt: "Model the checkout state machine and show the path that breaks the rule."
+  expect: statechart
+  kind: skill
+- id: ddd-contexts
+  prompt: "Find the bounded contexts and aggregates for the ordering domain."
+  expect: ddd
+  kind: skill
+- id: bootstrap-docs
+  prompt: "Bootstrap README files across this legacy repository."
+  expect: egm-bootstrap
+  kind: skill
+- id: investigation
+  prompt: "Investigate how cancellation works and answer with citations."
+  expect: investigation
+  kind: playbook
+- id: feature
+  prompt: "Build webhook delivery. Design it first, then implement and verify."
+  expect: feature
+  kind: playbook
+- id: bug-fix
+  prompt: "The scroll drifts every 750ms even when idle. Reproduce it and fix it."
+  expect: bug-fix
+  kind: playbook
+- id: refactoring
+  prompt: "Rename and extract the payment adapter without changing behavior."
+  expect: refactoring
+  kind: playbook
+- id: prototype
+  prompt: "Prototype two markdown renderers so we can decide cheaply."
+  expect: prototype
+  kind: playbook
+- id: review-only
+  prompt: "Just review this existing spec; skip the full design loop."
+  expect: review-only
+  kind: playbook
+- id: drift-maintenance
+  prompt: "Sweep the stale specs and propose follow-up work."
+  expect: drift-maintenance
+  kind: playbook
+- id: opening-a-pr
+  prompt: "Open a ready pull request from these ordered commits."
+  expect: opening-a-pr
+  kind: playbook
+- id: ddd-model
+  prompt: "Model the inventory domain with a glossary and aggregate boundaries."
+  expect: ddd-model
+  kind: playbook
+- id: ddd-review
+  prompt: "Review this domain model against DDD rules."
+  expect: ddd-review
+  kind: playbook
+- id: ddd-modernize
+  prompt: "Move this legacy CRUD service to bounded contexts incrementally."
+  expect: ddd-modernize
+  kind: playbook
+- id: orchestrate
+  prompt: "Run this whole migration across ten packages with one coordinator."
+  expect: orchestrate
+  kind: playbook

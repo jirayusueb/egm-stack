@@ -1,0 +1,20 @@
+{
+  "name": "egm-stack",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Spec-first engineering for coding agents: draft with context, review without it, then build with evidence.",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "build:check": "node scripts/build.mjs --check",
+    "validate": "node scripts/validate.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "sync-assets": "node scripts/sync-assets.mjs",
+    "check": "npm run validate && npm run build:check && npm run test && node scripts/sync-assets.mjs --check",
+    "test:statechart": "node --test skills/statechart/scripts/test/*.test.ts"
+  }
+}

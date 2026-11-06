@@ -1,0 +1,21 @@
+{
+  "assets": [
+    { "source": "agents/egm-zoom-out.md", "targets": ["skills/egm-brainstorm/references/personas/egm-zoom-out.md", "skills/egm-review/references/personas/egm-zoom-out.md"] },
+    { "source": "agents/egm-inventive-catalyst.md", "targets": ["skills/egm-brainstorm/references/personas/egm-inventive-catalyst.md", "skills/egm-review/references/personas/egm-inventive-catalyst.md"] },
+    { "source": "agents/egm-comprehension.md", "targets": ["skills/egm-brainstorm/references/personas/egm-comprehension.md", "skills/egm-review/references/personas/egm-comprehension.md"] },
+    { "source": "agents/egm-design.md", "targets": ["skills/egm-brainstorm/references/personas/egm-design.md", "skills/egm-review/references/personas/egm-design.md"] },
+    { "source": "agents/egm-structural.md", "targets": ["skills/egm-brainstorm/references/personas/egm-structural.md", "skills/egm-review/references/personas/egm-structural.md"] },
+    { "source": "agents/egm-style.md", "targets": ["skills/egm-brainstorm/references/personas/egm-style.md", "skills/egm-review/references/personas/egm-style.md"] },
+    { "source": "agents/egm-implementation-readiness.md", "targets": ["skills/egm-brainstorm/references/personas/egm-implementation-readiness.md", "skills/egm-review/references/personas/egm-implementation-readiness.md"] },
+    { "source": "agents/egm-codebase-details.md", "targets": ["skills/egm-brainstorm/references/personas/egm-codebase-details.md", "skills/egm-review/references/personas/egm-codebase-details.md"] },
+    { "source": "agents/egm-synthesizer.md", "targets": ["skills/egm-brainstorm/references/personas/egm-synthesizer.md", "skills/egm-review/references/personas/egm-synthesizer.md"] },
+    { "source": "agents/egm-bootstrap-orchestrator.md", "targets": ["skills/egm-bootstrap/references/personas/egm-bootstrap-orchestrator.md"] },
+    { "source": "agents/comment-sicko.md", "targets": ["skills/no-comments/references/comment-sicko.md"] },
+    { "source": "resources/document_standards/feature-spec-standard.md", "targets": ["skills/egm-review/references/standards/feature-spec-standard.md"] },
+    { "source": "resources/document_standards/implementation-readiness-standard.md", "targets": ["skills/egm-review/references/standards/implementation-readiness-standard.md"] },
+    { "source": "resources/document_standards/zoom-out-standard.md", "targets": ["skills/egm-review/references/standards/zoom-out-standard.md"] },
+    { "source": "resources/document_standards/heilmeier-standard.md", "targets": ["skills/egm-review/references/standards/heilmeier-standard.md"] },
+    { "source": "resources/document_standards/re-implementation-standard.md", "targets": ["skills/egm-review/references/standards/re-implementation-standard.md"] },
+    { "source": "resources/document_standards/domain-model-standard.md", "targets": ["skills/egm-review/references/standards/domain-model-standard.md"] }
+  ]
+}

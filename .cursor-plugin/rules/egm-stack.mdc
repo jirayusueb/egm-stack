@@ -1,0 +1,26 @@
+---
+description: Cursor runtime routing for egm-stack workflows.
+alwaysApply: true
+---
+
+Apply these instructions only to an egm-stack workflow.
+
+Before execution, identify the absolute path of the selected `SKILL.md`.
+For `EGM_ROOT/skills/<directory>/SKILL.md`, ascend three directories to `EGM_ROOT`.
+Confirm that `EGM_ROOT/plugin.json`, `EGM_ROOT/agents/`, and `EGM_ROOT/resources/` exist.
+If the skill path is unavailable, ask for the installed package's absolute path.
+
+Resolve `agents/`, `resources/`, and `docs/` against `EGM_ROOT`.
+Resolve `references/` against the invoked skill directory.
+Pass absolute file paths to every child.
+
+Keep drafting, synthesis, remediation, and report writes in the parent.
+Use direct dispatch to the registered reviewer personas.
+Start a fresh task for every independent reviewer. Never resume a reviewer.
+Supply the target, scope, persona path, standard path, and only the explicit context.
+Do not include parent history or deliberation.
+
+Wait for every reviewer before advancing a stage.
+Write each completed stage report before dispatching the next stage.
+Keep the canonical stage order and human approval gates.
+If a reviewer cannot start, read its files, or finish, stop the stage and report the incomplete review.

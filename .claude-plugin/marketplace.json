@@ -1,0 +1,16 @@
+{
+  "name": "egm-stack",
+  "owner": {
+    "name": "EGM Stack contributors"
+  },
+  "plugins": [
+    {
+      "name": "egm-stack",
+      "source": "./",
+      "description": "Spec-first engineering for coding agents: draft with context, review without it, then build with evidence."
+    }
+  ],
+  "metadata": {
+    "description": "Spec-first engineering for coding agents: draft with context, review without it, then build with evidence."
+  }
+}

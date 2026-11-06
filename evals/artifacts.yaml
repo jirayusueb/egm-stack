@@ -1,0 +1,19 @@
+# Artifact-chain assertions. Each case expects the next artifact to exist.
+- id: brief-to-draft
+  prompt: "The concepts brief is approved. Continue."
+  expect: design_draft.md
+- id: draft-to-review
+  prompt: "The draft is complete. Review it."
+  expect: review/01-zoom-out.md
+- id: review-to-resolve
+  prompt: "The review finished with findings. Resolve them."
+  expect: goldfish_review_report.md
+- id: resolve-to-promote
+  prompt: "The findings are resolved and the design is approved. Promote it."
+  expect: docs/designs/
+- id: ddd-model-artifact
+  prompt: "Produce the domain model for inventory."
+  expect: domain_model.md
+- id: drift-report-artifact
+  prompt: "Run drift detection and write the report."
+  expect: drift_report.md
