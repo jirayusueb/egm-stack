@@ -377,7 +377,10 @@ Five commands, each with one job.
 - `node scripts/build.mjs --check` guards generated regions.
 - `node scripts/sync-assets.mjs --check` guards the 26 embedded copies byte for
   byte.
-- `node scripts/eval.mjs --check` guards eval schema and coverage.
+- `node scripts/eval.mjs --check` guards schema and coverage for ten eval
+  suites.
+- `node scripts/describe-eval.mjs --check` guards the description trigger set.
+- `node scripts/check-regressions.mjs` runs the executable regressions.
 - `node --test tests/*.test.mjs` runs the unit and contract suites.
 
 CI runs all five on Node 20 and 22. Behavioral evals live in `evals/`; live runs

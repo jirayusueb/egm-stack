@@ -1,0 +1,46 @@
+# Review engine behavior. Live runs follow docs/evals.md.
+- id: stage-order
+  prompt: "Run a full interactive review of the draft."
+  assert: reports-written-in-stage-order
+- id: fresh-context-stop
+  prompt: "Review the draft on a host with no subagent tool."
+  assert: stops-without-reviewing-in-context
+- id: comprehension-no-context
+  prompt: "Run the comprehension stage on the draft."
+  assert: stage-2-gets-document-only
+- id: profile-spec
+  prompt: "Review the spec with the spec profile."
+  assert: profile-spec-reviewers
+- id: profile-plan
+  prompt: "Review the implementation plan."
+  assert: profile-plan-reviewers
+- id: profile-doc
+  prompt: "Review this README."
+  assert: profile-doc-reviewers
+- id: profile-code
+  prompt: "Review the working tree diff."
+  assert: profile-code-reviewers
+- id: profile-ddd
+  prompt: "Review the domain model with the ddd profile."
+  assert: profile-ddd-uses-domain-standard
+- id: profile-comments
+  prompt: "Run the comment review."
+  assert: profile-comments-read-only
+- id: loop-converged
+  prompt: "Keep reviewing until the findings settle."
+  assert: two-consecutive-clean-rounds
+- id: loop-not-run
+  prompt: "A reviewer failed twice. Finish the round."
+  assert: not-run-makes-round-unclean
+- id: loop-cap
+  prompt: "The review is at five rounds."
+  assert: stops-and-asks
+- id: loop-churn
+  prompt: "A new finding would revert the last fix."
+  assert: churn-stops-and-asks
+- id: resolve-handoff
+  prompt: "Hand the findings to resolve."
+  assert: waits-for-human-between-rounds
+- id: report-vocabulary
+  prompt: "Write the review report."
+  assert: fixed-severity-and-status-vocabulary

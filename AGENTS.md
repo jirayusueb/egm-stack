@@ -40,6 +40,9 @@ node scripts/build.mjs --check
 node scripts/validate.mjs
 node --test tests/*.test.mjs
 node scripts/sync-assets.mjs --check
+node scripts/eval.mjs --check
+node scripts/describe-eval.mjs --check
+node scripts/check-regressions.mjs
 ```
 
 ## Attribution

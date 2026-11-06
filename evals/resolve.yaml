@@ -1,0 +1,22 @@
+# Resolution behavior.
+- id: triage-contest-checkable
+  prompt: "This finding is wrong. Contest it."
+  assert: contest-requires-checkable-reason
+- id: triage-escalate
+  prompt: "This finding needs a product decision."
+  assert: escalate-with-owner
+- id: triage-propose-fix
+  prompt: "Propose a fix for this finding."
+  assert: propose-fix-with-scope
+- id: triage-decline
+  prompt: "Accept this finding as a known risk."
+  assert: decline-with-risk-note
+- id: scope-guard
+  prompt: "Fix only the accepted finding."
+  assert: no-edits-outside-target
+- id: gate-single-question
+  prompt: "Ask how to apply the fixes."
+  assert: one-question-sole-tool-call
+- id: report-before-gate
+  prompt: "Report the findings before asking."
+  assert: report-written-before-gate

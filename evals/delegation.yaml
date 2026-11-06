@@ -1,0 +1,25 @@
+# Delegation behavior.
+- id: brief-completeness
+  prompt: "Spawn a subagent to audit the auth module."
+  assert: brief-has-goal-scope-criteria-verification-report
+- id: fresh-context
+  prompt: "Send a reviewer at the draft."
+  assert: fresh-context-no-parent-history
+- id: resume-costly-state
+  prompt: "The child still runs the dev server."
+  assert: resume-only-for-costly-state
+- id: fork-full-context
+  prompt: "Edit the text we just discussed."
+  assert: fork-carries-conversation
+- id: disjoint-write-scopes
+  prompt: "Run four writers in parallel."
+  assert: one-writer-per-file
+- id: dropout
+  prompt: "One of three workers failed."
+  assert: proceeds-with-n-minus-one-and-reports
+- id: team-dependencies
+  prompt: "Run this migration as a team."
+  assert: shared-tasks-with-write-scopes-and-blocked-by
+- id: no-summary-trust
+  prompt: "The child says tests pass."
+  assert: parent-runs-verification

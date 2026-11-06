@@ -1,0 +1,166 @@
+# Description trigger cases. A positive expects the named skill. A negative
+# expects no egm-stack skill to fire.
+- id: mode-design
+  skill: egm-mode
+  query: "Design webhook delivery before writing code."
+  kind: positive
+- id: mode-route
+  skill: egm-mode
+  query: "Route this migration task to the right workflow."
+  kind: positive
+- id: ask-next
+  skill: egm-ask
+  query: "What should I run next?"
+  kind: positive
+- id: ask-choice
+  skill: egm-ask
+  query: "Which skill compares designs with code?"
+  kind: positive
+- id: setup-models
+  skill: egm-setup
+  query: "Configure the model for each role."
+  kind: positive
+- id: setup-budget
+  skill: egm-setup
+  query: "Change the reasoning budget for the stack."
+  kind: positive
+- id: brainstorm-idea
+  skill: egm-brainstorm
+  query: "Help me shape a rough idea into a concept."
+  kind: positive
+- id: brainstorm-test
+  skill: egm-brainstorm
+  query: "Stress test this concept before we commit."
+  kind: positive
+- id: draft-spec
+  skill: egm-draft
+  query: "Write the design document section by section."
+  kind: positive
+- id: draft-brief
+  skill: egm-draft
+  query: "Turn the brief into a specification."
+  kind: positive
+- id: review-design
+  skill: egm-review
+  query: "Review this design with fresh reviewers."
+  kind: positive
+- id: review-audit
+  skill: egm-review
+  query: "Audit the draft for missing assumptions."
+  kind: positive
+- id: resolve-findings
+  skill: egm-resolve
+  query: "Work through the review findings."
+  kind: positive
+- id: resolve-apply
+  skill: egm-resolve
+  query: "Apply the approved fixes from the report."
+  kind: positive
+- id: drift-check
+  skill: egm-drift
+  query: "Compare the design docs with the code."
+  kind: positive
+- id: drift-stale
+  skill: egm-drift
+  query: "Find stale specs that no longer match."
+  kind: positive
+- id: delegate-audit
+  skill: delegate
+  query: "Spawn a subagent to audit the auth module."
+  kind: positive
+- id: rules-architecture
+  skill: rules
+  query: "Apply the clean architecture rules to this change."
+  kind: positive
+- id: ddd-contexts
+  skill: ddd
+  query: "Find the bounded contexts for billing."
+  kind: positive
+- id: how-subsystem
+  skill: how
+  query: "How does the retry path work?"
+  kind: positive
+- id: why-decision
+  skill: why
+  query: "Why was the guard built this way?"
+  kind: positive
+- id: tdd-failing-test
+  skill: tdd
+  query: "Write a failing test first, then fix the bug."
+  kind: positive
+- id: comments-pass
+  skill: no-comments
+  query: "Strip the comments and flag the load-bearing ones."
+  kind: positive
+- id: reflect-session
+  skill: reflect
+  query: "Reflect on this session and propose skill edits."
+  kind: positive
+- id: unslop-readme
+  skill: unslop
+  query: "Remove the AI tells from this README."
+  kind: positive
+- id: writing-guide
+  skill: technical-writing
+  query: "Rewrite this how-to guide to the documentation standard."
+  kind: positive
+- id: ste100-procedure
+  skill: ste100
+  query: "Rewrite this procedure in Simplified Technical English."
+  kind: positive
+- id: statechart-model
+  skill: statechart
+  query: "Model the checkout state machine."
+  kind: positive
+- id: arena-designs
+  skill: arena
+  query: "Try three designs for the cache and keep the best parts."
+  kind: positive
+- id: swarm-packages
+  skill: swarm
+  query: "Check every package in parallel and report once."
+  kind: positive
+- id: bootstrap-legacy
+  skill: egm-bootstrap
+  query: "Document this legacy repository."
+  kind: positive
+- id: negative-weather
+  skill: none
+  query: "What is the weather in Bangkok?"
+  kind: negative
+- id: negative-sql
+  skill: none
+  query: "Write a SQL query for monthly revenue."
+  kind: negative
+- id: negative-typescript
+  skill: none
+  query: "Fix this TypeScript error."
+  kind: negative
+- id: negative-logo
+  skill: none
+  query: "Generate a logo for my startup."
+  kind: negative
+- id: negative-kubernetes
+  skill: none
+  query: "Explain how Kubernetes scheduling works."
+  kind: negative
+- id: negative-flight
+  skill: none
+  query: "Book a flight to Tokyo."
+  kind: negative
+- id: negative-translate
+  skill: none
+  query: "Translate this paragraph into French."
+  kind: negative
+- id: negative-summarize
+  skill: none
+  query: "Summarize this article."
+  kind: negative
+- id: negative-marketing
+  skill: none
+  query: "Create a marketing plan."
+  kind: negative
+- id: negative-css
+  skill: none
+  query: "Debug my CSS layout."
+  kind: negative

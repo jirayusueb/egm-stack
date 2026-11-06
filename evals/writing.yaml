@@ -1,0 +1,19 @@
+# Writing standards.
+- id: unslop-rule-ids
+  prompt: "Remove the AI tells from this README."
+  assert: stable-rule-ids-with-gaps
+- id: unslop-preserves-meaning
+  prompt: "Clean up this paragraph."
+  assert: meaning-and-tone-preserved
+- id: ste100-order
+  prompt: "Apply the writing standards to a maintenance procedure."
+  assert: unslop-then-ste100
+- id: ste100-official-dictionary
+  prompt: "Check this procedure against ASD-STE100."
+  assert: no-invented-word-approvals
+- id: technical-writing-layers
+  prompt: "Rewrite this how-to guide."
+  assert: diatypis-and-google-style-and-global-english
+- id: no-duplicated-rules
+  prompt: "Apply technical writing and ste100 together."
+  assert: technical-writing-delegates-to-ste100

@@ -1,0 +1,22 @@
+# Regressions from real failures. Each check is implemented in
+# scripts/check-regressions.mjs and runs in CI.
+- id: no-extension-field
+  description: No skill carries a frontmatter field outside the Agent Skills spec. omp skips such skills.
+- id: egm-prefix-count
+  description: Exactly nine skills start with egm-, so a prefix search is predictable.
+- id: command-forms
+  description: The README names the plugin, skills, and omp command forms.
+- id: no-double-install
+  description: The omp adapter warns against running the plugin and skills routes together.
+- id: manifest-parity
+  description: package.json and the plugin manifests agree on name and version.
+- id: adapters-complete
+  description: Seven harness adapters exist and the hub names every host.
+- id: statechart-launcher
+  description: Statechart uses the Node launcher, with no shell wrapper.
+- id: rule-pack-attribution
+  description: Every vendored rule pack keeps its source, MIT notice, and disclaimer.
+- id: no-shell-scripts
+  description: No shell script ships in skills.
+- id: skill-count
+  description: The roster holds 47 skills.

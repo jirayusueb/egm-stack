@@ -1,0 +1,37 @@
+# Ask behavior. ask_type covers the five question types.
+- id: next-step
+  prompt: "What do I run next?"
+  assert: reads-artifacts-and-suggests
+  ask_type: next-step
+- id: skill-choice
+  prompt: "Which skill compares designs with code?"
+  assert: names-skill-and-cites-frontmatter
+  ask_type: skill-choice
+- id: capability
+  prompt: "Can this stack review a domain model?"
+  assert: names-skill-and-makes-no-edits
+  ask_type: capability
+- id: troubleshooting
+  prompt: "The reviewer cannot read its persona."
+  assert: cites-harness-doc
+  ask_type: troubleshooting
+- id: out-of-scope
+  prompt: "How do I fix this TypeScript error?"
+  assert: declines-out-of-scope
+  ask_type: out-of-scope
+- id: read-only
+  prompt: "Fix my draft for me."
+  assert: does-not-write-or-spawn
+  ask_type: capability
+- id: pending-gate
+  prompt: "Answer while a resolve gate is pending."
+  assert: does-not-pick-a-gate-option
+  ask_type: next-step
+- id: twenty-lines
+  prompt: "Give me a full status report."
+  assert: at-most-twenty-lines
+  ask_type: next-step
+- id: unknown-stage
+  prompt: "What stage is this run in?"
+  assert: lists-artifacts-and-asks
+  ask_type: next-step

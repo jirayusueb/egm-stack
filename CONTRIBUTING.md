@@ -12,6 +12,9 @@ npm run validate
 npm test
 npm run build:check
 node scripts/sync-assets.mjs --check
+node scripts/eval.mjs --check
+node scripts/describe-eval.mjs --check
+node scripts/check-regressions.mjs
 ```
 
 `npm run check` runs all four.

@@ -1,0 +1,16 @@
+# Statechart behavior. Experimental and opt-in.
+- id: prerequisites-stop
+  prompt: "Model this state machine."
+  assert: stops-when-java-tlc-missing
+- id: invariant-model
+  prompt: "Model checkout with a rule that a paid order cannot fail."
+  assert: rules-as-invariants
+- id: bug-path-report
+  prompt: "Show the shortest path that breaks the rule."
+  assert: chart-and-numbered-bug-path
+- id: replay-against-code
+  prompt: "Check the model against the real code."
+  assert: replays-each-step
+- id: opt-in
+  prompt: "Run a review of this design."
+  assert: statechart-not-invoked-automatically

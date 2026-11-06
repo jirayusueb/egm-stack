@@ -26,3 +26,19 @@ jobs:
         run: node scripts/sync-assets.mjs --check
       - name: Eval coverage
         run: node scripts/eval.mjs --check
+      - name: Description coverage
+        run: node scripts/describe-eval.mjs --check
+      - name: Regressions
+        run: node scripts/check-regressions.mjs
+
+  install-smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Skills CLI discovers the roster
+        run: npx --yes skills add . --list | tee /tmp/skills.txt
+      - name: Roster count is 47
+        run: grep -q "Found 47 skills" /tmp/skills.txt

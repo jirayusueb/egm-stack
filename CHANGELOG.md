@@ -3,6 +3,20 @@
 All notable changes to this project are documented here. The format follows
 Keep a Changelog, and this project adheres to Semantic Versioning.
 
+## [0.4.0] - 2026-11-06
+
+### Added
+
+- Ten eval suites: routing, review, resolve, ask, delegation, writing, ddd, statechart, gates, and artifacts. The static check enforces minimum case counts, unique ids, ask-type coverage, routing coverage, and artifact names.
+- `scripts/run-evals.mjs` for live runs: list cases, print a brief, record a verdict, and summarize.
+- `scripts/describe-eval.mjs` with 41 description trigger cases: two positives per core skill and ten negatives.
+- `scripts/check-regressions.mjs` with ten executable regressions taken from real failures, including the omp frontmatter skip and the duplicate-install case.
+- A CI install-smoke job that runs the skills CLI and asserts the roster count.
+
+### Changed
+
+- `docs/evals.md` documents the tools, the result template, and the updated release gate.
+
 ## [0.3.1] - 2026-11-06
 
 ### Removed

@@ -1,0 +1,22 @@
+# Domain-driven design behavior.
+- id: strategic-pass
+  prompt: "Find the bounded contexts for the ordering domain."
+  assert: capability-subdomain-context-language
+- id: core-domain-investment
+  prompt: "Where should we spend modeling effort?"
+  assert: core-domain-protected
+- id: aggregate-boundary
+  prompt: "Design the aggregate for an order."
+  assert: small-aggregate-root-invariants
+- id: context-relationships
+  prompt: "How do billing and identity integrate?"
+  assert: explicit-context-relationship
+- id: ddd-review
+  prompt: "Review this domain model."
+  assert: rubric-scored-with-fail-signals
+- id: modernize-acl
+  prompt: "Move this legacy service to a bounded context."
+  assert: anticorruption-layer-and-incremental-extraction
+- id: no-ceremony-for-crud
+  prompt: "Model this simple settings table with DDD."
+  assert: declines-full-tactical-ddd
