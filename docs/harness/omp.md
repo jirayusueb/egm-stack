@@ -61,6 +61,26 @@ omp uses the Claude-compatible fallback manifest at
 validator that rejects `disable-model-invocation`, the fallback is the path that
 works. Report the version if you hit that case.
 
+## Do not also install with the skills CLI
+
+The plugin route already provides every skill. Running `npx skills add` into the
+same project duplicates all 47 skills under `.agents/skills/`, and two skills
+with the same name shadow each other. Pick one route per host.
+
+After an install or update, restart omp, or run `/reload-plugins`. The skill
+catalog is built when a session starts.
+
+## Update
+
+The marketplace clone is a git checkout. Pull it, reinstall with force, and
+restart.
+
+```sh
+git -C ~/.omp/plugins/cache/marketplaces/egm-stack pull --ff-only
+omp plugin install egm-stack@egm-stack --force
+omp plugin list
+```
+
 ## Paths
 
 Resolve the plugin root from the installed skill path. Plugin resources resolve

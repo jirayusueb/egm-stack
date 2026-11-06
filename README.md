@@ -65,7 +65,10 @@ omp plugin install egm-stack@egm-stack
 
 Restart omp, or run `/reload-plugins`. Skills are invoked as `/skill:egm-mode`
 or read through `skill://egm-mode`. Personas in `agents/` register as `task`
-agents. This install path is documented but unverified in this release.
+agents. Restart omp after install. Do not also run `npx skills add` for this
+project, because the plugin already provides the same skills and the duplicate
+names shadow each other. This install path is documented but unverified in this
+release.
 
 ### Manual copy
 
