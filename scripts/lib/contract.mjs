@@ -31,12 +31,12 @@ export const DOMAIN_SKILLS = ['ddd'];
 export const EXPERIMENTAL_SKILLS = ['egm-bootstrap'];
 
 export const LINE_BUDGETS = {
-  'egm-mode': 300,
+  'egm-mode': 320,
   'egm-ask': 100,
   'egm-setup': 110,
   'egm-brainstorm': 120,
   'egm-draft': 140,
-  'egm-review': 190,
+  'egm-review': 220,
   'egm-resolve': 110,
   'egm-drift': 80,
   delegate: 130,
