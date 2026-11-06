@@ -16,8 +16,18 @@ Pick one route. The [README](../../README.md) has the full list.
 - Any Agent Skills host. `npx skills add jirayusueb/egm-stack`.
 - Manual. Copy `skills/<name>/` into the host skill directory.
 
-Claude Code installs a plugin and may namespace the command. On that host the
-router can appear as `/egm-stack:egm-mode`.
+Command form depends on the route.
+
+| Route | Form |
+| --- | --- |
+| Claude Code plugin | `/egm-stack:egm-mode` |
+| Claude Code skills route | `/egm-mode` |
+| omp | `/skill:egm-mode` |
+| Other hosts | the skill picker, or `skill://egm-mode` where supported |
+
+A skill is a directory with `SKILL.md`, not a command file. The bare form exists
+only where the host maps project skills to slash commands. A plugin always
+prefixes its name.
 
 ## Set models
 

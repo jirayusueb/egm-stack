@@ -39,6 +39,23 @@ task list.
 A host with named personas gets the persona name. A host without them gets the
 persona file path in the brief.
 
+## Command forms
+
+A skill is loaded from `skills/<name>/SKILL.md`. The form you type depends on the
+host and the install route.
+
+| Host and route | Form |
+| --- | --- |
+| Claude Code plugin | `/egm-stack:<skill>` |
+| Claude Code project or personal skills | `/<skill>` |
+| omp | `/skill:<skill>`, or `skill://<skill>` |
+| Codex | the skill picker |
+| Cursor | the skill picker or `/<skill>` when project skills are exposed |
+| OpenCode | the skill picker |
+
+A missing bare command usually means the plugin route is installed. Use the
+namespaced form, or install the skills route.
+
 ## Model values
 
 A role value in `~/.agents/egm-stack-models.md` is one of three shapes.

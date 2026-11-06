@@ -414,6 +414,12 @@ function checkDocs() {
     'docs/skills.md',
   ];
   for (const rel of required) if (!existsSync(join(ROOT, rel))) fail(rel, 'missing');
+  if (existsSync(join(ROOT, 'README.md'))) {
+    const readme = read('README.md');
+    for (const phrase of ['/egm-stack:egm-setup', '/skill:egm-setup', 'Command form']) {
+      if (!readme.includes(phrase)) fail('README.md', `install docs are missing "${phrase}"`);
+    }
+  }
   for (const rel of ['README.md', 'docs/getting_started.md']) {
     if (existsSync(join(ROOT, rel))) {
       if (!read(rel).includes('generated:') && !read(rel).includes('stage-table:start')) {

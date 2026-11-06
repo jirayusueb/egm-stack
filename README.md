@@ -18,6 +18,15 @@ context is the trick.
 The skills route works everywhere. The plugin route adds agents, rules, and
 update management on hosts that support plugins.
 
+The command form depends on the route. A plugin namespaces its skills.
+
+| Route | Command form |
+| --- | --- |
+| Claude Code plugin | `/egm-stack:egm-setup` |
+| Claude Code skills route | `/egm-setup` |
+| omp | `/skill:egm-setup` |
+| Codex, Cursor, OpenCode | the skill picker, or the skill name |
+
 ```sh
 npx skills add jirayusueb/egm-stack
 ```
@@ -69,6 +78,9 @@ Copy `skills/<name>/` into a host skill directory, project scope or user scope.
 | Cursor | `.cursor/skills/` | `~/.cursor/skills/` |
 
 ## Quickstart
+
+The commands below use the bare skill form. On a Claude Code plugin install,
+prefix them, for example `/egm-stack:egm-mode`.
 
 ```text
 /egm-setup
