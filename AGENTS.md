@@ -9,6 +9,9 @@ This repository is an agent-first skill stack. Read
   `name` (equal to the directory), `description` (imperative, names the
   command and the situation, at most 1024 characters), `license: Apache-2.0`,
   `disable-model-invocation: true`.
+- Exception: the 24 `principle-*` leaves start their description with
+  `Apply when` and are cited rather than invoked. Everything else names its
+  command in `/form`.
 - Stay within the line budget for the skill. Move detail into `references/`
   and say when to read it.
 - Do not use harness-specific tool names, absolute paths, or shell commands in
@@ -34,7 +37,7 @@ This repository is an agent-first skill stack. Read
 ```sh
 node scripts/build.mjs --check
 node scripts/validate.mjs
-node --test tests/
+node --test tests/*.test.mjs
 node scripts/sync-assets.mjs --check
 ```
 

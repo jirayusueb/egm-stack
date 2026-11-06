@@ -73,6 +73,11 @@ function checkSkills() {
     const description = String(data.description ?? '');
     if (!description) fail(file, 'description is missing');
     if (description.length > 1024) fail(file, `description is ${description.length} characters, limit is 1024`);
+    if (dir.startsWith('principle-')) {
+      if (!/^Apply when/.test(description)) fail(file, 'principle description must start with "Apply when"');
+    } else if (!description.includes('/')) {
+      fail(file, 'description must name its command in /form');
+    }
     if (data.license !== 'Apache-2.0') fail(file, 'license must be Apache-2.0');
     if (data['disable-model-invocation'] !== true) fail(file, 'disable-model-invocation must be true');
     for (const key of Object.keys(data)) {

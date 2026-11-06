@@ -227,7 +227,7 @@ approved spec to `docs/designs/<slug>.md`. See [docs/artifacts.md](docs/artifact
 | Codex | plugin or skills | Documented, unverified |
 | Cursor | skills or plugin manifest | Documented, unverified |
 | OpenCode | skills | Documented, unverified |
-| Agent Teams | skills | Documented, unverified |
+| Agent Teams | skills | Verified in this build; host docs unverified |
 
 ## Statechart prerequisites
 

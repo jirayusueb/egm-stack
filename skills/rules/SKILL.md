@@ -25,7 +25,7 @@ Pick one pack. The mapping names the candidates for each task type.
 
 ## Select exactly one pack
 
-Pick the one pack that matches the decision in front of you. A playbook may name several packs. Choose the pack that owns that decision. When a second pack is truly needed, finish the first task and start a new load.
+Pick the one pack that matches the decision in front of you. A playbook may name up to three packs. Choose the pack that owns that decision. When a second pack is truly needed, finish the first task and start a new load.
 
 ## Load only that file
 

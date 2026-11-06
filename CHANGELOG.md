@@ -15,7 +15,7 @@ Keep a Changelog, and this project adheres to Semantic Versioning.
 - `egm-setup` with seventeen model roles.
 - `egm-drift` and experimental `egm-bootstrap`.
 - `delegate` for subagents and durable teams, including Agent Teams.
-- `rules` with fourteen MIT-licensed book rule packs.
+- `rules` with fourteen MIT-licensed condensed rule packs.
 - `how`, `why`, `arena`, `swarm`, `tdd`, `no-comments`, `reflect`.
 - Writing standards: `unslop`, `technical-writing`, `ste100` with a heuristic linter.
 - Domain-driven design: `ddd` plus three DDD playbooks and a domain-model standard.
