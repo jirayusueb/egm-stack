@@ -13,6 +13,8 @@ jobs:
         node: [20, 22]
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node }}
@@ -30,6 +32,14 @@ jobs:
         run: node scripts/describe-eval.mjs --check
       - name: Regressions
         run: node scripts/check-regressions.mjs
+      - name: Dependency graph
+        run: node scripts/skill-graph.mjs --check
+      - name: Injection guardrails
+        run: node scripts/check-injection.mjs
+      - name: Skill changelog
+        env:
+          BASE: ${{ github.event.pull_request.base.sha || github.event.before }}
+        run: node scripts/check-skill-changelog.mjs
 
   install-smoke:
     runs-on: ubuntu-latest

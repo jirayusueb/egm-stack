@@ -12,6 +12,9 @@ a human how to drive them.
 | Follow a chapter-by-chapter guide | [guide/README.md](guide/README.md) |
 | Know what a run writes and where | [artifacts.md](artifacts.md) |
 | Test a skill change | [evals.md](evals.md) |
+| Test prompt injection defenses | [injection.md](injection.md) |
+| See the skill dependency graph | [skill-graph.md](skill-graph.md) (generated) |
+| Deprecate a skill | [deprecation.md](deprecation.md) |
 | Map an action to a host | [harness.md](harness.md) |
 | Look up a skill, playbook, or principle | [skills.md](skills.md) (generated) |
 | Read the architecture contract | [designs/egm-stack.md](designs/egm-stack.md) |

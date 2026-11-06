@@ -112,7 +112,7 @@ quality target.
 | Skill | Budget | Responsibility |
 | --- | --- | --- |
 | `egm-mode` | 320 | Router, non-negotiables, autonomy, delegation pointer, harness mapping, generated indexes |
-| `egm-ask` | 100 | Read-only contextual answers and next steps |
+| `egm-ask` | 110 | Read-only contextual answers and next steps |
 | `egm-setup` | 140 | 17-role model configuration, provider/model values, host effort levels |
 | `egm-brainstorm` | 120 | Concept stress-test, brief artifact |
 | `egm-draft` | 140 | Section-by-section spec drafting |
@@ -381,6 +381,12 @@ Five commands, each with one job.
   suites.
 - `node scripts/describe-eval.mjs --check` guards the description trigger set.
 - `node scripts/check-regressions.mjs` runs the executable regressions.
+- `node scripts/skill-graph.mjs --check` fails on dangling references, an
+  unallowed cycle, or a stale graph document.
+- `node scripts/check-injection.mjs` checks the untrusted-content guardrail and
+  the injection fixtures.
+- `node scripts/check-skill-changelog.mjs` fails when a skill changes without a
+  per-skill changelog update.
 - `node --test tests/*.test.mjs` runs the unit and contract suites.
 
 CI runs all five on Node 20 and 22. Behavioral evals live in `evals/`; live runs

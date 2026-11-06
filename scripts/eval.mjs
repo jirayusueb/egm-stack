@@ -27,6 +27,7 @@ const SUITES = {
   statechart: { min: 4 },
   gates: { min: 6 },
   artifacts: { min: 4 },
+  injection: { min: 6 },
 };
 
 function readEval(name) {
@@ -58,6 +59,10 @@ for (const [name, rules] of Object.entries(SUITES)) {
     ids.add(item.id);
     if (!item.prompt) errors.push(`evals/${name}.yaml: ${item.id} has no prompt`);
     if (!item.expect && !item.assert) errors.push(`evals/${name}.yaml: ${item.id} has neither expect nor assert`);
+    if (name === 'injection') {
+      if (!item.fixture) errors.push(`evals/injection.yaml: ${item.id} has no fixture`);
+      else if (!existsSync(join(ROOT, item.fixture))) errors.push(`evals/injection.yaml: ${item.id} fixture does not exist`);
+    }
     if (item.expect && name === 'artifacts') {
       const ok = ARTIFACTS.includes(item.expect) || item.expect === 'docs/designs/';
       if (!ok) errors.push(`evals/artifacts.yaml: ${item.id} expects unknown artifact ${item.expect}`);

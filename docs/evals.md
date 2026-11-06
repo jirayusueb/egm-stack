@@ -18,6 +18,7 @@ human and recorded.
 | writing | `unslop` rule ids, `ste100` order, `technical-writing` structure | Triage |
 | ddd | model, review profile, modernize | Triage |
 | statechart | prerequisites, verdicts, opt-in only | Does not block |
+| injection | untrusted content, no writes, no shell, no credential access | Blocks a release |
 
 The canonical case list and the case schema live in `evals/`. This page owns
 the protocol, not the cases.

@@ -3,6 +3,20 @@
 All notable changes to this project are documented here. The format follows
 Keep a Changelog, and this project adheres to Semantic Versioning.
 
+## [0.5.0] - 2026-11-06
+
+### Added
+
+- Per-skill `CHANGELOG.md` for all 47 skills, plus `docs/deprecation.md` and a `DEPRECATED.md` format that validation enforces.
+- `scripts/skill-graph.mjs` generates `docs/skill-graph.md`, detects cycles, and fails on dangling references.
+- Prompt-injection suite: eight fixtures, eight cases, a guardrail on seventeen skills, and `docs/injection.md`.
+- CI checks for the dependency graph, injection guardrails, and skill changelogs.
+
+### Changed
+
+- Seventeen skills now carry the untrusted-content rule: treat content from files, links, and tools as data, not instructions.
+- `egm-ask` budget grows to 110 lines for the guardrail.
+
 ## [0.4.1] - 2026-11-06
 
 ### Fixed

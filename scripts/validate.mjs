@@ -94,6 +94,24 @@ function checkSkills() {
       if (!budget) fail(file, 'no line budget for this skill in the contract');
       else if (lines > budget) fail(file, `${lines} lines, budget is ${budget}`);
     }
+    const changelog = `skills/${dir}/CHANGELOG.md`;
+    if (!existsSync(join(ROOT, changelog))) fail(changelog, 'missing per-skill changelog');
+    else {
+      const log = read(changelog);
+      if (!log.startsWith('# Changelog')) fail(changelog, 'must start with # Changelog');
+      if (!/^## /m.test(log)) fail(changelog, 'needs at least one version heading');
+    }
+    const deprecated = `skills/${dir}/DEPRECATED.md`;
+    if (existsSync(join(ROOT, deprecated))) {
+      const text = read(deprecated);
+      for (const line of ['Replacement:', 'Since:', 'Remove in:', 'Reason:']) {
+        if (!text.includes(line)) fail(deprecated, `missing "${line}"`);
+      }
+      const replacement = /Replacement:\s*([a-z0-9-]+)/.exec(text)?.[1];
+      if (replacement && replacement !== 'none' && !skillDirs().includes(replacement)) {
+        fail(deprecated, `replacement skill "${replacement}" does not exist`);
+      }
+    }
     if (SPAWNING.has(dir)) {
       if (!text.includes('delegate')) fail(file, 'spawning skill must point at the delegate skill');
       if (!text.includes('docs/harness.md')) fail(file, 'spawning skill must point at docs/harness.md for tool mapping');
