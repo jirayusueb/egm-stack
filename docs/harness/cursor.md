@@ -45,6 +45,12 @@ scope. Test a local plugin by copying the folder into `~/.cursor/plugins/local/`
 and reloading the window. Cursor reads both the Agent Plugins manifest and the
 Cursor Plugins manifest, and the install flow is the same for both.
 
+## Update
+
+Refresh the marketplace in the `/plugin` UI, then install the newer version. A
+team marketplace imports the repository and auto-refreshes within about ten
+minutes. Cursor has no portable CLI update command in this release.
+
 ## Paths
 
 | Item | Path |

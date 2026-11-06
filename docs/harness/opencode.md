@@ -47,6 +47,17 @@ run OpenCode with `OPENCODE_CONFIG=<path>`. OpenCode merges custom, global,
 project, and managed configuration. Inspect the effective config before a run,
 because a later layer can override a permission.
 
+## Update
+
+Use the skills route, then restart the session.
+
+```sh
+npx skills update
+npx skills list
+```
+
+For a user-scope install, add `-g` to the update command.
+
 ## Paths
 
 | Item | Path |
