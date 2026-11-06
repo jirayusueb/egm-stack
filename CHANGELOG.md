@@ -3,6 +3,12 @@
 All notable changes to this project are documented here. The format follows
 Keep a Changelog, and this project adheres to Semantic Versioning.
 
+## [0.6.2] - 2026-11-06
+
+### Added
+
+- The second live round: a full five-stage review with five stage reports and a consolidated report, plus resolve, delegation, writing, ddd, statechart, and two injection cases. Fifteen cases pass. The two earlier failures remain in the record and pass on rerun.
+
 ## [0.6.1] - 2026-11-06
 
 ### Added
