@@ -301,9 +301,12 @@ Seventeen model roles are configured by `egm-setup` into
 `~/.agents/egm-stack-models.md`, `~/.claude/rules/egm-stack-models.md`, and
 `~/.cursor/rules/egm-stack-models.mdc`. Defaults are `inherit-parent`.
 
-`egm-setup` detects models by enumerating the slugs the subagent tool accepts in
-the current session, plus a host command when one exists. It never writes a slug
-it did not detect. The roles are `egm drafting`, `egm reviewers`,
+`egm-setup` detects models by enumerating the values the subagent tool accepts in
+the current session, plus a host command when one exists. Values may be plain
+slugs or `provider/model` pairs. It also records the effort levels the host
+exposes and maps the chosen budget to the nearest available level. It never
+writes a value it did not detect. It always writes the shared file, and writes
+the Claude or Cursor rule file only when that host is in use. The roles are `egm drafting`, `egm reviewers`,
 `egm synthesizer`, `egm delivery`, `egm judgment and prose`, `egm hardest
 tasks`, `egm verification`, `delegate workers`, `how explorer`, `how
 explainer`, `why investigators`, `why synthesizer`, `reflect reviewers`,

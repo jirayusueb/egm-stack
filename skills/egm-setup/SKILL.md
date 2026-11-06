@@ -95,8 +95,13 @@ Every real value in the output must be in the detected set. `inherit-parent` and
 `auto` always pass. When a chosen value is unavailable, stop and ask again.
 Never write a value you could not confirm.
 
-Write all three files on every run. Overwrite the whole file. Do not append.
-Keep user-changed roles.
+Write `~/.agents/egm-stack-models.md` on every run. Overwrite the whole file. Do
+not append. Keep user-changed roles.
+
+Write the Claude and Cursor files only when the user uses those hosts. A value
+that resolves here may not resolve there, and a rule file is loaded by the
+host. When you write one, overwrite the whole file and add the Cursor
+frontmatter below.
 
 ```text
 # EGM model configuration. One line per role.
@@ -121,9 +126,9 @@ alwaysApply: true
 
 Tell the user which files were written and when each applies.
 
-- `~/.agents/egm-stack-models.md` is read by skills that pick a model.
-- `~/.claude/rules/egm-stack-models.md` is loaded by Claude Code.
-- `~/.cursor/rules/egm-stack-models.mdc` is loaded by Cursor and always applies.
+- `~/.agents/egm-stack-models.md` is read by skills that pick a model. Always write it.
+- `~/.claude/rules/egm-stack-models.md` is loaded by Claude Code. Write it only when Claude Code is in use.
+- `~/.cursor/rules/egm-stack-models.mdc` is loaded by Cursor and always applies. Write it only when Cursor is in use.
 
 The rules apply to new sessions. A re-run updates every file. A host that reads
 none of them still gets the values because skills read
