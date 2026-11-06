@@ -91,6 +91,19 @@ Cursor also loads Agent Plugins, so the portable root manifest works there.
 Official listing goes through a manual review. A team marketplace imports a repo
 and can auto-refresh.
 
+## omp (Oh My Pi)
+
+omp installs Claude Code marketplace plugins. It reads `.claude-plugin/`
+manifests and the root `skills/` directory, so a plugin needs no omp-specific
+files. Install with `omp plugin marketplace add <repo>`, then
+`omp plugin install <plugin>@<marketplace>`. Skills are invoked as
+`/skill:<name>` or read through `skill://<name>`. Personas in `agents/`
+register as `task` agents, and the `task` tool replaces the Agent tool. The
+install path and command forms are community-documented, not verified in this
+release. EGM also reports that older builds reject a manifest that declares the
+Agent Plugins `$schema` together with `disable-model-invocation`, which is why
+omp is documented through the Claude-compatible fallback.
+
 ## Agent Plugins 1.0.0
 
 `plugin.json` at the plugin root needs `$schema` and `name`. The schema is
@@ -128,3 +141,7 @@ everywhere.
 - https://cursor.com/docs/plugins
 - https://cursor.com/docs/reference/plugins
 - https://agent-plugins.org/plugin-authors/manifest
+- https://omp.sh/docs/marketplace
+- https://github.com/can1357/oh-my-pi
+- https://github.com/addyosmani/agent-skills/blob/main/docs/omp-setup.md
+- https://github.com/google/elephant-goldfish-model/blob/main/docs/harnesses.md

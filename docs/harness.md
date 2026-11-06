@@ -20,6 +20,7 @@ date when you verify a row.
 | Codex | `spawn_agent` plus a wait tool. The schema varies by version. | No, a general agent reads the persona file | Detect at runtime | No | None built in | Partial. See the adapter. |
 | Cursor | `Task` tool | Yes, `.cursor/agents/` | Unverified | No | None built in | Fields verified. Live run unverified. |
 | OpenCode | `task` in V1, `subagent` in V2 | Yes, agents with `mode: subagent` | Unverified | No | None built in | Unverified here. |
+| omp (Oh My Pi) | `task` | Yes, personas from `agents/` | Reported, unverified | No | None built in | Unverified here. |
 | Agent Teams | `spawn_teammate` | Yes, named teammates | One level | Yes, shared task board | Workspace plus task board | Verified in this runtime. |
 
 ## What the matrix decides
@@ -52,6 +53,7 @@ workspace. It reads the newest transcript file. It never reads another project.
 | Codex | No documented path | Unverified. The public docs describe subagent workflows, not transcript files. Do not guess a path. |
 | OpenCode | `opencode export <session-id>` | Reported by the EGM OpenCode adapter. The on-disk path is unverified. |
 | Agent Teams | The task board and the messages | Verified in this runtime. There is no transcript file to parse. |
+| omp (Oh My Pi) | No documented path | Unverified. Do not guess a path. |
 
 Rules for `reflect`.
 

@@ -342,7 +342,7 @@ table says so.
 
 ## Harnesses
 
-Five adapters under `docs/harness/`, each with the same six sections: tools,
+Six adapters under `docs/harness/`, each with the same six sections: tools,
 subagent fields, models, install, paths, host-only features. The capability
 matrix is in [docs/harness.md](../harness.md).
 
@@ -352,6 +352,7 @@ matrix is in [docs/harness.md](../harness.md).
 | Codex | `spawn_agent`, schema varies by version | Partial; live run unverified |
 | Cursor | `Task` | Fields verified; live run unverified |
 | OpenCode | `task` in V1 | Unverified |
+| omp (Oh My Pi) | `task` | Install path documented, unverified; uses the Claude-compatible manifest |
 | Agent Teams | `spawn_teammate` | Verified in this build (the build used it); host documentation unverified |
 
 Unverified means one secondary source or an inference. The adapter says so in

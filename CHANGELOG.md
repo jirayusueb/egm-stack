@@ -22,7 +22,8 @@ Keep a Changelog, and this project adheres to Semantic Versioning.
 - Experimental `statechart` with a portable Node launcher.
 - Twenty-four principles with source attribution.
 - Static validation, generated indexes, behavioral eval suites, and CI.
-- Harness adapters for Claude Code, Codex, Cursor, OpenCode, and Agent Teams.
+- Harness adapters for Claude Code, Codex, Cursor, OpenCode, omp (Oh My Pi), and
+  Agent Teams.
 
 ### Known limits
 

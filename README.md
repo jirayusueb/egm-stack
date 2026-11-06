@@ -44,6 +44,20 @@ codex plugin add egm-stack@egm-stack
 Codex support is documented but unverified in this release. The skills route is
 the fallback.
 
+### omp (Oh My Pi)
+
+omp installs Claude Code marketplace plugins, so it reads `.claude-plugin/` and
+the root `skills/` directory.
+
+```sh
+omp plugin marketplace add OWNER/egm-stack
+omp plugin install egm-stack@egm-stack
+```
+
+Restart omp, or run `/reload-plugins`. Skills are invoked as `/skill:egm-mode`
+or read through `skill://egm-mode`. Personas in `agents/` register as `task`
+agents. This install path is documented but unverified in this release.
+
 ### Manual copy
 
 Copy `skills/<name>/` into a host skill directory, project scope or user scope.
@@ -227,6 +241,7 @@ approved spec to `docs/designs/<slug>.md`. See [docs/artifacts.md](docs/artifact
 | Codex | plugin or skills | Documented, unverified |
 | Cursor | skills or plugin manifest | Documented, unverified |
 | OpenCode | skills | Documented, unverified |
+| omp (Oh My Pi) | plugin or skills | Documented, unverified |
 | Agent Teams | skills | Verified in this build; host docs unverified |
 
 ## Statechart prerequisites
