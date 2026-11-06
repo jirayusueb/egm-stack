@@ -41,7 +41,7 @@ when omp accepts them.
 ## Install
 
 ```sh
-omp plugin marketplace add OWNER/egm-stack
+omp plugin marketplace add jirayusueb/egm-stack
 omp plugin install egm-stack@egm-stack
 ```
 

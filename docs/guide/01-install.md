@@ -7,13 +7,13 @@ answers.
 
 Pick one route. The [README](../../README.md) has the full list.
 
-- Claude Code. `claude plugin marketplace add OWNER/egm-stack` then
+- Claude Code. `claude plugin marketplace add jirayusueb/egm-stack` then
   `claude plugin install egm-stack@egm-stack`.
-- Codex. `codex plugin marketplace add OWNER/egm-stack` then
+- Codex. `codex plugin marketplace add jirayusueb/egm-stack` then
   `codex plugin add egm-stack@egm-stack`.
-- omp. `omp plugin marketplace add OWNER/egm-stack` then
+- omp. `omp plugin marketplace add jirayusueb/egm-stack` then
   `omp plugin install egm-stack@egm-stack`. Skills use `/skill:egm-mode`.
-- Any Agent Skills host. `npx skills add OWNER/egm-stack`.
+- Any Agent Skills host. `npx skills add jirayusueb/egm-stack`.
 - Manual. Copy `skills/<name>/` into the host skill directory.
 
 Claude Code installs a plugin and may namespace the command. On that host the

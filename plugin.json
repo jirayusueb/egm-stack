@@ -6,8 +6,8 @@
   "author": {
     "name": "EGM Stack contributors"
   },
-  "homepage": "https://github.com/OWNER/egm-stack",
-  "repository": "https://github.com/OWNER/egm-stack",
+  "homepage": "https://github.com/jirayusueb/egm-stack",
+  "repository": "https://github.com/jirayusueb/egm-stack",
   "license": "Apache-2.0",
   "keywords": [
     "agent-skills",
@@ -33,10 +33,10 @@
           "Resolve findings",
           "Deliver and verify"
         ],
-        "websiteURL": "https://github.com/OWNER/egm-stack",
-        "supportURL": "https://github.com/OWNER/egm-stack/issues",
-        "privacyPolicyURL": "https://github.com/OWNER/egm-stack/blob/main/docs/privacy.md",
-        "termsOfServiceURL": "https://github.com/OWNER/egm-stack/blob/main/LICENSE",
+        "websiteURL": "https://github.com/jirayusueb/egm-stack",
+        "supportURL": "https://github.com/jirayusueb/egm-stack/issues",
+        "privacyPolicyURL": "https://github.com/jirayusueb/egm-stack/blob/main/docs/privacy.md",
+        "termsOfServiceURL": "https://github.com/jirayusueb/egm-stack/blob/main/LICENSE",
         "composerIcon": "./.cursor-plugin/assets/icon.svg",
         "logo": "./.cursor-plugin/assets/icon.svg"
       }

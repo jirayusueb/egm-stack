@@ -19,7 +19,7 @@ The skills route works everywhere. The plugin route adds agents, rules, and
 update management on hosts that support plugins.
 
 ```sh
-npx skills add OWNER/egm-stack
+npx skills add jirayusueb/egm-stack
 ```
 
 Select the core skills and the twenty-four principles. The router routes to
@@ -28,7 +28,7 @@ what is installed.
 ### Claude Code
 
 ```sh
-claude plugin marketplace add OWNER/egm-stack
+claude plugin marketplace add jirayusueb/egm-stack
 claude plugin install egm-stack@egm-stack
 ```
 
@@ -37,7 +37,7 @@ Restart the session after install. Plugin commands may carry a host namespace.
 ### Codex
 
 ```sh
-codex plugin marketplace add OWNER/egm-stack
+codex plugin marketplace add jirayusueb/egm-stack
 codex plugin add egm-stack@egm-stack
 ```
 
@@ -50,7 +50,7 @@ omp installs Claude Code marketplace plugins, so it reads `.claude-plugin/` and
 the root `skills/` directory.
 
 ```sh
-omp plugin marketplace add OWNER/egm-stack
+omp plugin marketplace add jirayusueb/egm-stack
 omp plugin install egm-stack@egm-stack
 ```
 
@@ -283,7 +283,7 @@ Apache-2.0. See [LICENSE](LICENSE). Vendored MIT material keeps its own notice.
 
 ## Publish checklist
 
-- Replace `OWNER` in the four manifests and the docs.
+- Confirm the repository URL is `https://github.com/jirayusueb/egm-stack` in the manifests and docs.
 - Keep one version string across `package.json`, `plugin.json`, and the four
   host manifests. Validation fails on drift.
 - Confirm `docs/privacy.md` still matches the manifests' `privacyPolicyURL`
