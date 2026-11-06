@@ -1,0 +1,13 @@
+# Setup behavior. The show and role modes must not write without a reason.
+- id: show
+  prompt: "Show the current model configuration."
+  assert: prints-role-table-and-writes-nothing
+- id: reset
+  prompt: "Reset the model configuration to defaults."
+  assert: asks-once-then-writes-defaults
+- id: role-single
+  prompt: "Set the egm reviewers role to the parent model."
+  assert: changes-one-role-only
+- id: profile-cheap
+  prompt: "Use the cheap profile."
+  assert: writes-cheap-profile-with-parent-models

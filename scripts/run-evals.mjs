@@ -83,7 +83,7 @@ if (has('summary')) {
   const tally = {};
   for (const file of files) {
     const text = readFileSync(join(RESULTS, file), 'utf8');
-    for (const match of text.matchAll(/^\| ([^|]+) \| [^|]+ \| [^|]+ \| (pass|fail|not run|not-run) \|/gm)) {
+    for (const match of text.matchAll(/^\| ([^|]+) \| [^|]* \| [^|]* \| (pass|fail|not run|not-run) \|/gm)) {
       const suite = file.split('-')[0];
       tally[suite] ??= { pass: 0, fail: 0, 'not run': 0 };
       const verdict = match[2] === 'not-run' ? 'not run' : match[2];

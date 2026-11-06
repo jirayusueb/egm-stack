@@ -12,7 +12,7 @@ stops. It is not a workflow and it does not take part in one.
 ## Read-only guarantee
 
 - This skill does not write. It does not edit. It creates no file and no directory.
-- Run no shell command.
+- Run no shell command, not even a harmless one such as `true`.
 - Spawn no subagent and start no skill.
 - Read only these inputs.
   - Artifact and report file names.

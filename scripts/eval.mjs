@@ -28,6 +28,7 @@ const SUITES = {
   gates: { min: 6 },
   artifacts: { min: 4 },
   injection: { min: 6 },
+  setup: { min: 4 },
 };
 
 function readEval(name) {
