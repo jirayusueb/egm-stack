@@ -39,6 +39,6 @@ jobs:
         with:
           node-version: 22
       - name: Skills CLI discovers the roster
-        run: npx --yes skills add . --list | tee /tmp/skills.txt
+        run: npx --yes skills add . --list | perl -pe 's/\e\[[0-9;]*m//g' | tee /tmp/skills.txt
       - name: Roster count is 47
         run: grep -q "Found 47 skills" /tmp/skills.txt

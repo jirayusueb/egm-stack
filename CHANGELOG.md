@@ -3,6 +3,12 @@
 All notable changes to this project are documented here. The format follows
 Keep a Changelog, and this project adheres to Semantic Versioning.
 
+## [0.4.1] - 2026-11-06
+
+### Fixed
+
+- The CI install-smoke job now strips ANSI color codes before it checks the roster count. The skills CLI colors the number, so the plain grep failed.
+
 ## [0.4.0] - 2026-11-06
 
 ### Added
