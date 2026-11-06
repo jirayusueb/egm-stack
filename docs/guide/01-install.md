@@ -60,6 +60,16 @@ It opens a todo list. It cites the principle it applied.
 If the command is missing, check the host namespace first. If two stacks are
 installed, check which one owns the name.
 
+## Only some skills appear
+
+Nine skills start with `egm-`. The other 38 have their own names. A prefix
+filter matches names, not the package.
+
+If a host shows fewer than nine, check the route. A Claude Code plugin shows
+`/egm-stack:egm-mode`. omp shows `/skill:egm-mode`. Codex, Cursor, and OpenCode
+show a picker. On the skills route, an interactive install can select a subset.
+Rerun with `-y` to install all 47.
+
 ## Coexistence
 
 Several names in this stack also exist in other collections, for example

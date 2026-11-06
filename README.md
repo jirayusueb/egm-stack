@@ -256,6 +256,22 @@ approved spec to `docs/designs/<slug>.md`. See [docs/artifacts.md](docs/artifact
 | omp (Oh My Pi) | plugin or skills | Documented, unverified |
 | Agent Teams | skills | Verified in this build; host docs unverified |
 
+### Why `/egm-` does not list every skill
+
+Nine skills start with `egm-`: `egm-mode`, `egm-ask`, `egm-setup`,
+`egm-brainstorm`, `egm-draft`, `egm-review`, `egm-resolve`, `egm-drift`, and
+`egm-bootstrap`. The other 38 keep their own names, such as `delegate`, `how`,
+`why`, `ddd`, `rules`, `tdd`, and the 24 `principle-*` leaves.
+
+`/egm-` filters by name prefix. It is not a package filter. Use
+[docs/skills.md](docs/skills.md) to see all 47.
+
+A slash menu can also rename skills. A Claude Code plugin prefixes its name, so
+the form is `/egm-stack:egm-mode`. omp uses `/skill:egm-mode`. Codex, Cursor, and
+OpenCode use a skill picker. If fewer than nine `egm-*` entries appear on the
+Claude Code skills route, the interactive install selected a subset. Install all
+with `npx skills add jirayusueb/egm-stack -y`, then restart the session.
+
 ## Statechart prerequisites
 
 `statechart` is experimental. It needs Node 22.18 or later, Java, and the TLA+
