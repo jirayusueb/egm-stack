@@ -271,8 +271,8 @@ Apache-2.0. See [LICENSE](LICENSE). Vendored MIT material keeps its own notice.
 - Replace `OWNER` in the four manifests and the docs.
 - Keep one version string across `package.json`, `plugin.json`, and the four
   host manifests. Validation fails on drift.
-- Add `docs/privacy.md` or remove the `privacyPolicyURL` fields. Two manifests
-  point at that path today.
+- Confirm `docs/privacy.md` still matches the manifests' `privacyPolicyURL`
+  fields.
 - Run `npm run build`, then `npm run check`.
 - Confirm no generated region was hand-edited, and `LICENSE`, `NOTICE`, and the
   `UPSTREAM.md` pins are current.
