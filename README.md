@@ -324,6 +324,6 @@ Apache-2.0. See [LICENSE](LICENSE). Vendored MIT material keeps its own notice.
 - Confirm no generated region was hand-edited, and `LICENSE`, `NOTICE`, and the
   `UPSTREAM.md` pins are current.
 - Add a row to `docs/designs/README.md` for each new design document.
-- Tag `v0.2.0`.
+- Tag `v0.2.1`.
 - Test each documented install route on a clean machine, and confirm the tree
   has no secrets and no absolute local paths.

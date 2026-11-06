@@ -2,7 +2,6 @@
 name: egm-draft
 description: "Draft a design document one section at a time, with an approval gate after each section, from a concepts brief or the user's notes. Use for /egm-draft, or when a concept is ready to become a spec with goals, alternatives, risks, and an implementation plan."
 license: Apache-2.0
-disable-model-invocation: true
 ---
 
 # Draft

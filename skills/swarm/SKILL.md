@@ -2,7 +2,6 @@
 name: swarm
 description: Fan out parallel workers for /swarm or for coverage, races, and exploration. Declare the shape and the done predicate, drain the workers, and return one consolidated report.
 license: Apache-2.0
-disable-model-invocation: true
 ---
 
 # Swarm

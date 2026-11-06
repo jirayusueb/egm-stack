@@ -2,7 +2,6 @@
 name: ste100
 description: Apply ASD-STE100 Simplified Technical English constraints for /ste100 or when a procedure, warning, or maintenance instruction must read the same way to every reader. Paraphrase the documented rules, check words against the official Issue 9 dictionary, and report lint findings separately from judgment calls.
 license: Apache-2.0
-disable-model-invocation: true
 ---
 
 # STE100

@@ -2,7 +2,6 @@
 name: ddd
 description: Coach strategic and tactical domain-driven design for a model, a spec, or a legacy system. Use for /ddd, or when subdomains, bounded contexts, ubiquitous language, aggregates, or domain events decide the design.
 license: Apache-2.0
-disable-model-invocation: true
 ---
 
 # Domain-driven design

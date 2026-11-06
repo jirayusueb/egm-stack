@@ -2,7 +2,6 @@
 name: principle-fix-root-causes
 description: "Apply when debugging. Trace each symptom to the first place the system did something wrong and fix it there."
 license: Apache-2.0
-disable-model-invocation: true
 ---
 
 # Fix Root Causes

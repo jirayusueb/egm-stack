@@ -2,7 +2,6 @@
 name: egm-bootstrap
 description: Document an existing codebase subtree with README contracts for interfaces, invariants, and side effects. Use for /egm-bootstrap on a legacy repository, or to repair stale READMEs. Experimental. Asks before a tree above fifteen directories.
 license: Apache-2.0
-disable-model-invocation: true
 ---
 
 # EGM bootstrap (experimental)

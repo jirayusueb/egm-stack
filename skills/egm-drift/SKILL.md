@@ -2,7 +2,6 @@
 name: egm-drift
 description: "Compare design documents and READMEs against the code, then report where the implementation diverged from the written contract without editing code. Use for /egm-drift, or when a spec, README, or architecture doc may be stale."
 license: Apache-2.0
-disable-model-invocation: true
 ---
 
 # Drift

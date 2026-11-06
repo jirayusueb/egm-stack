@@ -2,7 +2,6 @@
 name: principle-sequence-verifiable-units
 description: "Apply when breaking multi-step work into units or stacking commits. Give each unit a checkable end state and check each before the next."
 license: Apache-2.0
-disable-model-invocation: true
 ---
 
 # Sequence Verifiable Units

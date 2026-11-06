@@ -2,7 +2,6 @@
 name: why
 description: "Investigate why code has its current shape with /why. Use for design rationale, regressions, postmortems, and data-backed thresholds. Discovers MCP tools, maps each to one of seven evidence categories, runs investigators, and returns a cited answer that separates facts from inference."
 license: Apache-2.0
-disable-model-invocation: true
 ---
 
 # Why

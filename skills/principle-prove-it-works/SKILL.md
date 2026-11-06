@@ -2,7 +2,6 @@
 name: principle-prove-it-works
 description: "Apply when completing a task and before declaring it done. Check the real artifact, not a proxy, a self-report, or a successful compile."
 license: Apache-2.0
-disable-model-invocation: true
 ---
 
 # Prove It Works

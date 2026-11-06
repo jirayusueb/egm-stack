@@ -2,7 +2,6 @@
 name: egm-ask
 description: "Answer a question about where the user is in the EGM flow, which skill to run next, or whether the stack has a capability, without changing anything. Use for /egm-ask, or when the user asks where they are, what to run next, or how a host maps an action."
 license: Apache-2.0
-disable-model-invocation: true
 ---
 
 # Ask

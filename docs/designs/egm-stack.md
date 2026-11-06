@@ -93,9 +93,12 @@ Every skill lives at `skills/<name>/SKILL.md` with frontmatter:
 name: <directory name>
 description: <imperative, names /command and the situation, <=1024 chars>
 license: Apache-2.0
-disable-model-invocation: true
 ---
 ```
+
+Skills are model-invocable. Do not add extension fields such as
+`disable-model-invocation`. A strict Agent Plugins consumer skips a skill that
+carries one, which is how omp silently dropped all 47 skills in testing.
 
 Exception: the 24 `principle-*` leaves carry a trigger, start their
 description with `Apply when`, and are cited rather than invoked.

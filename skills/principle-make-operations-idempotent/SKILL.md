@@ -2,7 +2,6 @@
 name: principle-make-operations-idempotent
 description: "Apply when designing commands, lifecycle steps, or loops that run amid crashes and retries. Derive each step from current state so re-execution converges."
 license: Apache-2.0
-disable-model-invocation: true
 ---
 
 # Make Operations Idempotent

@@ -2,7 +2,6 @@
 name: egm-brainstorm
 description: "Stress-test a half-formed idea with eight adversarial lenses, then write a concepts brief that drafting can use. Use for /egm-brainstorm, or when a user has a feature idea but no agreed problem, scope, or alternatives."
 license: Apache-2.0
-disable-model-invocation: true
 ---
 
 # Brainstorm

@@ -2,7 +2,6 @@
 name: principle-separate-before-serializing-shared-state
 description: "Apply when concurrent actors may write the same file, branch, key, or state object. Remove the sharing first and serialize structurally only for a real invariant."
 license: Apache-2.0
-disable-model-invocation: true
 ---
 
 # Separate Before Serializing Shared State

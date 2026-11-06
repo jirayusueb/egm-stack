@@ -2,7 +2,6 @@
 name: egm-resolve
 description: "Triage reviewer findings against the target, write an annotated report, and apply only the fixes the author approves. Use for /egm-resolve, or when a review round leaves findings to settle before the next stage."
 license: Apache-2.0
-disable-model-invocation: true
 ---
 
 # Resolve

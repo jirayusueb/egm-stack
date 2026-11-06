@@ -1,31 +1,38 @@
-# 0002. Four frontmatter keys and disable-model-invocation
+# 0002. Three spec keys and no invocation extension
 
 - Status: Accepted
 - Date: 2026-11-06
 
 ## Context
 
-The Agent Skills spec defines two required fields and four optional ones. Hosts
-add their own. `disable-model-invocation` is a Claude Code extension, not part of
-the spec. Claude's upload path rejects unknown keys with a hard error.
+The Agent Skills spec defines required `name` and `description`, optional
+`license`, `compatibility`, `metadata`, and `allowed-tools`. Hosts add their own
+fields. `disable-model-invocation` is a Claude Code extension, not part of the
+spec.
 
-Our skills must not start on their own. `egm-mode` owns a todo list and a gate
-sequence, and a model that starts it from a stray match runs a long workflow
-without consent.
+An early version of this stack set that field on all 47 skills. omp's Agent
+Plugins loader rejected each skill with "unexpected frontmatter field" and
+skipped it. A portability decision that hides skills from a supported host is a
+bug, not a preference.
 
 ## Decision
 
-Every skill carries exactly four keys. `name` equals the directory. `description`
-is imperative and names the command. `license` is Apache-2.0. And
-`disable-model-invocation: true`.
+Every skill carries exactly three keys: `name`, `description`, and `license`.
+`name` equals the directory. `description` is imperative and names the command.
+No extension fields, including `disable-model-invocation`.
+
+Skills are model-invocable. Routing is controlled by descriptions and by
+`egm-mode`, which owns the todo list and the gates.
 
 ## Consequences
 
-The router and the workflows cannot self-start. That is the behavior we want.
-The cost is that Claude Code hides the skill from automatic discovery, so a user
-types the command or reads the skill file. Our host doc says so in plain words.
+Every host that implements the spec can load the skills. omp, Claude Code,
+Codex, Cursor, OpenCode, and the DeepSeek Harness register them without
+warning.
 
-The key is not spec. A host that does not know it ignores it, and a strict
-consumer may reject it. We accept that, because a skill that self-starts mid-task
-is a worse failure than a skill that needs a typed command. A future host that
-rejects the key gets a generated adapter, not a change to the shared text.
+A model may start a workflow from a matching description. The mitigation is the
+description wording and the router, not a hidden field. A host that needs
+stricter control can use its own permission or skill overrides.
+
+If a future spec revision adds an invocation policy, adopt it and record the
+change here. Do not reintroduce a vendor field that a strict consumer rejects.

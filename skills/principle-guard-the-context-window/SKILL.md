@@ -2,7 +2,6 @@
 name: principle-guard-the-context-window
 description: "Apply when context fills with large outputs, long files, or repeated reads. Route bulk work to fresh contexts and keep summaries in the main thread."
 license: Apache-2.0
-disable-model-invocation: true
 ---
 
 # Guard the Context Window

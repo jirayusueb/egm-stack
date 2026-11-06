@@ -2,7 +2,6 @@
 name: principle-outcome-oriented-execution
 description: "Apply when planning a rewrite or migration with explicit phase boundaries. Converge on the verifiable end state instead of preserving every intermediate state."
 license: Apache-2.0
-disable-model-invocation: true
 ---
 
 # Outcome-Oriented Execution

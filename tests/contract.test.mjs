@@ -29,7 +29,7 @@ test('every skill has valid frontmatter and a budget', () => {
     assert.ok(parsed.ok, `${dir}: ${parsed.reason}`);
     assert.equal(parsed.data.name, dir, `${dir}: name mismatch`);
     assert.equal(parsed.data.license, 'Apache-2.0', `${dir}: license`);
-    assert.equal(parsed.data['disable-model-invocation'], true, `${dir}: hidden flag`);
+    assert.ok(!Object.hasOwn(parsed.data, 'disable-model-invocation'), `${dir}: extension field present`);
     assert.ok(String(parsed.data.description).length <= 1024, `${dir}: description too long`);
     const budget = dir.startsWith('principle-') ? PRINCIPLE_BUDGET : LINE_BUDGETS[dir];
     assert.ok(budget, `${dir}: no budget`);

@@ -59,9 +59,8 @@ With Agent Teams, install once per workspace. The team board is per session.
 
 ## Host-only features
 
-- The `/skill:` menu lists every installed skill. A skill with
-  `disable-model-invocation: true` still appears, marked user only, so explicit
-  invocation works.
+- The `/skill:` menu lists every installed skill. Skills are model-invocable
+  and user-invocable.
 - Agent Teams provides durable teammates, shared tasks with write scopes, and
   `blocked_by` dependencies. The Lead owns the final diff and the test run.
 - Background jobs (`job_output`, `job_kill`) replace polling.

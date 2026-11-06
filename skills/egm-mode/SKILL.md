@@ -2,7 +2,6 @@
 name: egm-mode
 description: Run /egm-mode to route any engineering task through the EGM spec-first stack. Use it at the start of design work, review, implementation, investigation, or delegation, when you need the right playbook or pipeline skill. It classifies the request, opens the matching playbook or pipeline skill, enforces review with fresh context, and keeps replies short and evidence-backed.
 license: Apache-2.0
-disable-model-invocation: true
 ---
 
 # EGM mode

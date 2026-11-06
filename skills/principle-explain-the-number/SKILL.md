@@ -2,7 +2,6 @@
 name: principle-explain-the-number
 description: "Apply when you are about to trust, report, or act on a measured number. Find what limits it and rule out that it measured something other than the work."
 license: Apache-2.0
-disable-model-invocation: true
 ---
 
 # Explain the Number

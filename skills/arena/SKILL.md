@@ -2,7 +2,6 @@
 name: arena
 description: Run a controlled arena for /arena or when one attempt at a non-trivial artifact would lock in the wrong shape. Fan out candidates under one brief, cross-judge them from another model family, pick a base, graft the strongest parts, and verify the result.
 license: Apache-2.0
-disable-model-invocation: true
 ---
 
 # Arena

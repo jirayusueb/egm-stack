@@ -5,10 +5,11 @@ This repository is an agent-first skill stack. Read
 
 ## Authoring rules
 
-- Every skill is `skills/<name>/SKILL.md` with exactly four frontmatter keys:
+- Every skill is `skills/<name>/SKILL.md` with exactly three frontmatter keys:
   `name` (equal to the directory), `description` (imperative, names the
-  command and the situation, at most 1024 characters), `license: Apache-2.0`,
-  `disable-model-invocation: true`.
+  command and the situation, at most 1024 characters), `license: Apache-2.0`.
+  Do not add extension fields such as `disable-model-invocation`; strict Agent
+  Plugins consumers skip a skill that carries one.
 - Exception: the 24 `principle-*` leaves start their description with
   `Apply when` and are cited rather than invoked. Everything else names its
   command in `/form`.

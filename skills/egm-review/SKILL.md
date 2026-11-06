@@ -2,7 +2,6 @@
 name: egm-review
 description: "Audit a design, spec, plan, document, code change, or domain model with fresh-context reviewers, resolve the findings, and report what remains. Use for /egm-review, or when a design needs adversarial review before implementation."
 license: Apache-2.0
-disable-model-invocation: true
 ---
 
 # Review

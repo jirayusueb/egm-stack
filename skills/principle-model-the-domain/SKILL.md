@@ -2,7 +2,6 @@
 name: principle-model-the-domain
 description: "Apply when stateful logic branches heavily or repeats a shape assumption. Encode the domain in a structure so invalid states cannot be represented."
 license: Apache-2.0
-disable-model-invocation: true
 ---
 
 # Model the Domain

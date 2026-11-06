@@ -2,7 +2,6 @@
 name: principle-never-block-on-the-human
 description: "Apply when tempted to ask whether to do reversible work. Make a reasonable decision, proceed, and present the result for correction."
 license: Apache-2.0
-disable-model-invocation: true
 ---
 
 # Never Block on the Human

@@ -2,7 +2,6 @@
 name: principle-laziness-protocol
 description: "Apply when refactoring, judging diff size, or tempted to add abstractions. Bias toward deletion and the smallest change that solves the problem."
 license: Apache-2.0
-disable-model-invocation: true
 ---
 
 # Laziness Protocol

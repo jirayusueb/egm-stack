@@ -2,7 +2,6 @@
 name: principle-minimize-reader-load
 description: "Apply when code is hard to trace. Count layers between question and answer and hidden state the reader must hold, then cut one of each."
 license: Apache-2.0
-disable-model-invocation: true
 ---
 
 # Minimize Reader Load

@@ -2,7 +2,6 @@
 name: principle-build-the-lever
 description: "Apply when work is non-trivial. Build the tool that does it or proves it, so a reviewer can read and rerun the work instead of trusting it."
 license: Apache-2.0
-disable-model-invocation: true
 ---
 
 # Build the Lever

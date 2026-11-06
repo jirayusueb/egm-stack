@@ -10,7 +10,7 @@ was not executed here, so isolation stays unverified.
 | Spawn a subagent | `Agent` tool, also called Task. `subagent_type` is required when no general agent is registered. |
 | Ask one question | `AskUserQuestion`. It is absent in `-p` mode, so ask in plain text there. |
 | Track work | `TodoWrite`, or TaskCreate, TaskGet, TaskList, TaskUpdate |
-| Run another skill | Read its `SKILL.md` and follow it. The `Skill` tool refuses a skill with `disable-model-invocation: true`. |
+| Run another skill | Read its `SKILL.md` and follow it. Skills are model-invocable. |
 | Shell and files | `Bash`, `Read`, `Grep`, `Glob` |
 
 ## Subagent fields
@@ -63,7 +63,7 @@ In a plugin a skill runs as `/egm-stack:<skill>` and an agent as
 
 ## Host-only features
 
-`disable-model-invocation: true` hides a skill from automatic loading, which we
+Skills are model-invocable, so Claude can load one from its description. The
 set on every skill because the router decides what runs. Hooks, plan mode,
 worktrees, and background subagents are available. Subagents nest three layers
 below the main thread. Instruction files load as `CLAUDE.md`, or `AGENTS.md` when

@@ -2,7 +2,6 @@
 name: principle-test-behavior-not-implementation
 description: "Apply when writing, changing, or keeping a test. Assert what the code's users can observe so the test fails on a broken contract and survives a refactor."
 license: Apache-2.0
-disable-model-invocation: true
 ---
 
 # Test Behavior, Not Implementation

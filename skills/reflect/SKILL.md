@@ -2,7 +2,6 @@
 name: reflect
 description: Mine the current conversation for durable learnings with /reflect. Locate the active transcript, run three parallel reviewers, and route accepted items to a concrete skill edit after explicit approval.
 license: Apache-2.0
-disable-model-invocation: true
 ---
 
 # Reflect

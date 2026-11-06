@@ -79,9 +79,9 @@ function checkSkills() {
       fail(file, 'description must name its command in /form');
     }
     if (data.license !== 'Apache-2.0') fail(file, 'license must be Apache-2.0');
-    if (data['disable-model-invocation'] !== true) fail(file, 'disable-model-invocation must be true');
     for (const key of Object.keys(data)) {
-      if (!['name', 'description', 'license', 'disable-model-invocation'].includes(key)) {
+      if (Object.hasOwn(data, 'disable-model-invocation')) fail(file, 'disable-model-invocation breaks strict Agent Plugins consumers; remove it');
+      if (!['name', 'description', 'license'].includes(key)) {
         fail(file, `unexpected frontmatter key "${key}"`);
       }
     }

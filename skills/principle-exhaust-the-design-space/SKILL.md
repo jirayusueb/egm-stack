@@ -2,7 +2,6 @@
 name: principle-exhaust-the-design-space
 description: "Apply when a novel interaction or architecture decision has no precedent. Build 2 or 3 competing prototypes and compare them side by side before committing."
 license: Apache-2.0
-disable-model-invocation: true
 ---
 
 # Exhaust the Design Space

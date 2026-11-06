@@ -2,7 +2,6 @@
 name: no-comments
 description: Remove comments and workaround code for /no-comments or when a diff adds narration, banners, or suppression comments. Spawn Comment Sicko read-only, reject scope escapes, fix accepted findings at the root, and report open items.
 license: Apache-2.0
-disable-model-invocation: true
 ---
 
 # No comments

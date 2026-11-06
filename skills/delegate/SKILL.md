@@ -2,7 +2,6 @@
 name: delegate
 description: "Delegate a bounded task with /delegate and a self-contained brief. Use when work is independent, parallel, or needs a fresh context, and the parent must keep the scope, the diff review, and the checks."
 license: Apache-2.0
-disable-model-invocation: true
 ---
 
 # Delegate

@@ -2,7 +2,6 @@
 name: principle-attack-the-premise
 description: "Apply when two or more fixes that share one premise fail the same gate. Write the premise down and test it before writing another fix."
 license: Apache-2.0
-disable-model-invocation: true
 ---
 
 # Attack the Premise

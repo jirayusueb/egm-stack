@@ -12,16 +12,13 @@ Every skill is `skills/<name>/SKILL.md` with exactly four frontmatter keys.
 name: <directory name>
 description: <imperative, names /command and the situation, <=1024 chars>
 license: Apache-2.0
-disable-model-invocation: true
 ---
 ```
 
 The name equals the directory. Validation fails when they disagree. The
 description is the trigger surface, so it names the command and the situation.
-`disable-model-invocation` keeps the skill out of the model's own catalog. The
-user types the command, or another skill reads the path.
-
-## Line budgets
+Stick to the three spec keys. A strict Agent Plugins consumer skips a skill
+that carries an extension field such as `disable-model-invocation`.
 
 A budget is a promise that the skill stays readable. Put detail in
 `references/` and say when to read it.

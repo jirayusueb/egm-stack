@@ -2,7 +2,6 @@
 name: principle-experience-first
 description: "Apply when product, UX, or feature-scope trade-offs appear. Choose user delight over implementation convenience and ship fewer polished features."
 license: Apache-2.0
-disable-model-invocation: true
 ---
 
 # Experience First

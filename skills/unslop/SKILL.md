@@ -2,7 +2,6 @@
 name: unslop
 description: Cut AI tells from any writing. Use for /unslop or when a draft reads generated, padded, or vague. Scan for the stable rule ids, then rewrite without changing meaning or tone.
 license: Apache-2.0
-disable-model-invocation: true
 ---
 
 # Unslop

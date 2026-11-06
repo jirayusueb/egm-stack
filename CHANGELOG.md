@@ -3,6 +3,13 @@
 All notable changes to this project are documented here. The format follows
 Keep a Changelog, and this project adheres to Semantic Versioning.
 
+## [0.2.1] - 2026-11-06
+
+### Fixed
+
+- Removed `disable-model-invocation` from all 47 skills. omp's Agent Plugins loader treats an unknown frontmatter field as an error, logs `Skipping skill`, and drops the whole skill, so the plugin installed but no `/skill:egm-*` command appeared.
+- Skills are now model-invocable on every host. Descriptions and `egm-mode` control routing. ADR-0002 records the reversal.
+
 ## [0.2.0] - 2026-11-06
 
 ### Added

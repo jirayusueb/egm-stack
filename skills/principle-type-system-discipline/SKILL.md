@@ -2,7 +2,6 @@
 name: principle-type-system-discipline
 description: "Apply when designing types or reviewing a signature in a statically typed language. Make impossible states, mismatched primitives, and unhandled variants compile errors."
 license: Apache-2.0
-disable-model-invocation: true
 ---
 
 # Type System Discipline

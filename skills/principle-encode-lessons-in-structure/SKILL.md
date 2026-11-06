@@ -2,7 +2,6 @@
 name: principle-encode-lessons-in-structure
 description: "Apply when the same instruction appears twice or a correction repeats. Encode the rule as a lint, metadata flag, runtime check, or script instead of more prose."
 license: Apache-2.0
-disable-model-invocation: true
 ---
 
 # Encode Lessons in Structure

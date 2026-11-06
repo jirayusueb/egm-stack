@@ -2,7 +2,6 @@
 name: technical-writing
 description: Apply the layered technical-writing standard for /technical-writing or when writing or reviewing docs, RFCs, READMEs, PR descriptions, or commit messages. Pick the Diátaxis mode, write Google developer style sentences, disambiguate with Global English, and hand controlled language and AI tells to their own skills.
 license: Apache-2.0
-disable-model-invocation: true
 ---
 
 # Technical writing

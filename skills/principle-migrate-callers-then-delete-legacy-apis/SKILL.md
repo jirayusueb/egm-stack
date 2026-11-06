@@ -2,7 +2,6 @@
 name: principle-migrate-callers-then-delete-legacy-apis
 description: "Apply when introducing a new internal API while old callers exist. Migrate every caller and delete the old API in the same wave."
 license: Apache-2.0
-disable-model-invocation: true
 ---
 
 # Migrate Callers Then Delete Legacy APIs

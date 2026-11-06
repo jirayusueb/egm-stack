@@ -2,7 +2,6 @@
 name: rules
 description: "Load one condensed book rule pack with /rules and apply its decision rules, trigger rules, and checklist as constraints for the current task. Use for design, boundaries, code review, data, DDD, refactoring, release, legacy, and prototyping work when a decision needs the book rules behind it."
 license: Apache-2.0
-disable-model-invocation: true
 ---
 
 # Rules

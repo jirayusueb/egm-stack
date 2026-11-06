@@ -2,7 +2,6 @@
 name: how
 description: "Explain how a subsystem works with /how. Use for code walkthroughs before a change, onboarding, placement and ownership questions, and runtime flow. Produces Overview, Key Concepts, How It Works, Where Things Live, and Gotchas."
 license: Apache-2.0
-disable-model-invocation: true
 ---
 
 # How

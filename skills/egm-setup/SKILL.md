@@ -2,7 +2,6 @@
 name: egm-setup
 description: "Configure which model each EGM role uses, set one reasoning budget, and write the result to the rule files that harnesses load. Use for /egm-setup, or when the user asks to change EGM models, set a budget, or pick a model for a role."
 license: Apache-2.0
-disable-model-invocation: true
 ---
 
 # Setup

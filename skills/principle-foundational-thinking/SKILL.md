@@ -2,7 +2,6 @@
 name: principle-foundational-thinking
 description: "Apply when choosing core types, writing initial logic, or sequencing scaffold and feature work. Get the data shape right so downstream code becomes obvious."
 license: Apache-2.0
-disable-model-invocation: true
 ---
 
 # Foundational Thinking

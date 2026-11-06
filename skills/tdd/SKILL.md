@@ -2,7 +2,6 @@
 name: tdd
 description: Drive a fix with /tdd when the user asks for a failing test or a regression test, or when a cheap local test path exists. Write the failing test, confirm the intended failure, apply the smallest fix, and rerun.
 license: Apache-2.0
-disable-model-invocation: true
 ---
 
 # TDD

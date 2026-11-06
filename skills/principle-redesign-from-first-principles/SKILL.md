@@ -2,7 +2,6 @@
 name: principle-redesign-from-first-principles
 description: "Apply when integrating a new requirement into an existing design. Redesign as if the requirement was foundational, then deliver in verifiable increments."
 license: Apache-2.0
-disable-model-invocation: true
 ---
 
 # Redesign From First Principles

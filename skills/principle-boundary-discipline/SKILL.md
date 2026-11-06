@@ -2,7 +2,6 @@
 name: principle-boundary-discipline
 description: "Apply when wiring validation, error handling, or framework adapters. Validate at system boundaries, trust internal types, and keep business logic in pure functions."
 license: Apache-2.0
-disable-model-invocation: true
 ---
 
 # Boundary Discipline

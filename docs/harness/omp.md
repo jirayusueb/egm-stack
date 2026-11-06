@@ -57,9 +57,10 @@ omp plugin install egm-stack@egm-stack
 
 omp uses the Claude-compatible fallback manifest at
 `.claude-plugin/plugin.json`. The root `plugin.json` declares the Agent Plugins
-`$schema`. If your omp version routes schema-declaring manifests to a strict
-validator that rejects `disable-model-invocation`, the fallback is the path that
-works. Report the version if you hit that case.
+`$schema`. omp skips a skill whose frontmatter carries a field outside the Agent Skills
+spec. This stack uses the three spec keys, so every skill loads. Do not add
+`disable-model-invocation`; omp reports it as an unexpected field and skips the
+whole skill.
 
 ## Do not also install with the skills CLI
 
