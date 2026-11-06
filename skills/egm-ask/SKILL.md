@@ -92,6 +92,42 @@ The files and frontmatter lines you read, by relative path.
 Use no other headings. Hold the line count by dropping prose, not the source
 line.
 
+## First run
+
+Treat the session as a first run when all three hold.
+
+- No `.egm/` directory and no `docs/designs/*.md`.
+- None of the model config files exist: `~/.agents/egm-stack-models.md`,
+  `~/.claude/rules/egm-stack-models.md`, `~/.cursor/rules/egm-stack-models.mdc`.
+- The user has not named an artifact.
+
+Answer in the normal shape with the first-run content.
+
+- Setup is recommended before the first review. It is not required to ask a
+  question.
+- Three commands.
+  1. `/egm-setup` sets models and a budget.
+  2. `/egm-mode add webhook delivery; design it first, then implement and verify`
+     starts work with a checkable outcome.
+  3. `/egm-ask where am I` returns here.
+- One copyable prompt, short, with a checkable outcome.
+
+Do not ask a setup question yourself. Name the command.
+
+## Resume summary
+
+When the user asks where they were or says continue, answer in one screen.
+
+- **Where you are** names the slug, the stage, and the newest artifact.
+- **Files** lists the artifacts present on one line.
+- **Open findings** counts unsettled Blocker, Major, and Nit from
+  `goldfish_review_report.md`, or says none recorded when the file is absent.
+  Never invent a count.
+- **Next** gives one copyable command and the reason.
+
+Keep the reply under 20 lines. When the newest artifact is older than the code,
+say the summary may be stale.
+
 ## Commands
 
 Name only commands that exist in the installed skill frontmatter or the harness doc. Never invent a command, a flag, or a path. When the command the user asks for does not exist, say so and name the real skill.

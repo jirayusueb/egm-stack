@@ -83,3 +83,7 @@ It is a program, not a task.
 
 [05-principles.md](05-principles.md) explains how to steer an agent by naming a
 principle.
+
+For a one-file change under fifty lines that moves no public contract,
+use the `small-change` playbook. It skips the design loop and keeps the
+verification and the pull request.

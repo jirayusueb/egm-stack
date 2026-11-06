@@ -122,6 +122,22 @@ Frame impact for the consumer and the maintainer. Name who the work is for befor
 
 Give the answer first. Support it after.
 
+## Recovery
+
+Name the failure and the exact next action. Do not guess.
+
+- No subagent tool. Reviews stop. Delegation runs inline. Name the host limit and
+  offer the skills route.
+- No model config. Run `egm-setup`, or proceed on the parent model and say so.
+- A rejected model value. Fall back to the role default, then to the parent
+  model. State the fallback once.
+- A reviewer did not run. The round is unclean. Retry once, then record it as
+  `not run` and do not call the review complete.
+- A missing artifact. Run the skill that writes it, or ask for the slug. Never
+  invent content.
+- A dirty worktree or a failed check. Stop, and report the command and its
+  output.
+
 ## Principles
 
 Read the leaf skill for any principle you apply. In your reply, name the principle and the decision it changed. Cite only principles whose leaf you read this session.
@@ -184,6 +200,7 @@ Match the request to one playbook and open it. Copy its steps into the only todo
 - **Prototype.** You own the decision, not the code. The prototype is throwaway. ([steps](playbooks/prototype.md))
 - **Refactoring.** You own the contract. The structure moves and the behavior does not. ([steps](playbooks/refactoring.md))
 - **Review-only.** You own the review. Reviewers read and you write the report. ([steps](playbooks/review-only.md))
+- **Small change.** You own the change. Skip the design loop, keep the verification. ([steps](playbooks/small-change.md))
 <!-- generated:playbooks:end -->
 
 ## Pipeline routing

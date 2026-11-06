@@ -6,6 +6,7 @@ Files are hints. The review `Status:` line and the newest artifact decide.
 
 | Artifacts seen | Stage | Suggest |
 | --- | --- | --- |
+| No `.egm/`, no `docs/designs/*.md`, no model config | First run | `/egm-setup`, then `/egm-mode <task>` |
 | `concepts_brief.md`, no draft | Concept | `/egm-draft .egm/<slug>/concepts_brief.md` |
 | `design_draft.md`, no `review/` directory | Draft | `/egm-review .egm/<slug>/design_draft.md` |
 | `review/01-zoom-out.md` to `review/05-readiness.md`, no consolidated report | Review in progress | Resume `/egm-review` on the draft |

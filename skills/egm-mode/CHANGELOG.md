@@ -2,6 +2,10 @@
 
 All changes to the `egm-mode` skill are recorded here.
 
+## 0.6.0 - 2026-11-06
+
+- Added the recovery section and the small-change playbook.
+
 ## 0.5.0 - 2026-11-06
 
 - Initial per-skill changelog.

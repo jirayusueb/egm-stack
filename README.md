@@ -166,6 +166,7 @@ and an applied fix does not settle. Read [the guide](docs/guide/README.md).
 | `Prototype` | You own the decision, not the code. The prototype is throwaway. |
 | `Refactoring` | You own the contract. The structure moves and the behavior does not. |
 | `Review-only` | You own the review. Reviewers read and you write the report. |
+| `Small change` | You own the change. Skip the design loop, keep the verification. |
 <!-- generated:playbooks:end -->
 
 ## Principles
@@ -246,6 +247,10 @@ copyable next steps, and it never answers another skill's pending gate.
 Runs write under `.egm/<slug>/`, which is ignored by default. Promote an
 approved spec to `docs/designs/<slug>.md`. See [docs/artifacts.md](docs/artifacts.md).
 
+## Commands
+
+Every skill, with its form on each host, is in [docs/commands.md](docs/commands.md).
+
 ## Harnesses
 
 `docs/harness.md` maps every action to each host. Unverified hosts are labeled.
@@ -324,6 +329,6 @@ Apache-2.0. See [LICENSE](LICENSE). Vendored MIT material keeps its own notice.
 - Confirm no generated region was hand-edited, and `LICENSE`, `NOTICE`, and the
   `UPSTREAM.md` pins are current.
 - Add a row to `docs/designs/README.md` for each new design document.
-- Tag `v0.5.0`.
+- Tag `v0.6.0`.
 - Test each documented install route on a clean machine, and confirm the tree
   has no secrets and no absolute local paths.

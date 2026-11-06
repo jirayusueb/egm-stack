@@ -112,8 +112,8 @@ quality target.
 | Skill | Budget | Responsibility |
 | --- | --- | --- |
 | `egm-mode` | 320 | Router, non-negotiables, autonomy, delegation pointer, harness mapping, generated indexes |
-| `egm-ask` | 110 | Read-only contextual answers and next steps |
-| `egm-setup` | 140 | 17-role model configuration, provider/model values, host effort levels |
+| `egm-ask` | 140 | Read-only answers, first-run guidance, and resume summary |
+| `egm-setup` | 175 | Role configuration, show/reset/role/profile modes, provider/model values, host effort levels |
 | `egm-brainstorm` | 120 | Concept stress-test, brief artifact |
 | `egm-draft` | 140 | Section-by-section spec drafting |
 | `egm-review` | 220 | Review engine, stages, loop, profiles, gates |
@@ -170,9 +170,9 @@ rule, not a summary.
 title, bold thesis, numbered steps naming skills, a `Read first:` line naming
 rule packs, and a `**Reply:**`.
 
-Twelve: investigation, feature, bug-fix, refactoring, prototype, review-only,
-drift-maintenance, opening-a-pr, ddd-model, ddd-review, ddd-modernize,
-orchestrate.
+Thirteen: investigation, feature, small-change, bug-fix, refactoring,
+prototype, review-only, drift-maintenance, opening-a-pr, ddd-model, ddd-review,
+ddd-modernize, orchestrate.
 
 | Playbook | Read first |
 | --- | --- |
@@ -182,6 +182,7 @@ orchestrate.
 | refactoring | refactoring, refactoring-guru, working-effectively-with-legacy-code |
 | prototype | the-pragmatic-programmer |
 | review-only | clean-code, code-complete |
+| small-change | clean-code |
 | drift-maintenance | working-effectively-with-legacy-code |
 | opening-a-pr | release-it, the-pragmatic-programmer |
 | ddd-model | domain-driven-design, domain-driven-design-distilled |

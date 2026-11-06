@@ -76,6 +76,33 @@ sole tool call, and yield.
 Loop mode is on for `interactive` and `consolidated`. The other two presets run
 one round.
 
+## Plan preview
+
+Before the first dispatch, show the plan in one compact table. Do not start a
+reviewer until the table is on screen.
+
+| Field | Value |
+| --- | --- |
+| Preset | the chosen preset |
+| Stages | the stages that will run |
+| Reviewers | the reviewers for each stage |
+| Spawns per round | the sum of reviewers per stage |
+| Round cap | one, or five in loop mode |
+| Worst case | spawns per round times the round cap |
+
+A full interactive review runs ten reviewer spawns per round. With the loop cap
+it can reach fifty. State that number before the user pays for it.
+
+Name the cheaper option when it fits.
+
+- One section, or no implementation plan: `spec only`.
+- A plan with no design questions: `plan only`.
+- A README or guide: the `doc` profile, one round.
+- A small diff: the `code` profile, one round.
+
+The preview is information, not a gate. The preset gate already collected the
+choice.
+
 ## Semantic split
 
 Read the target and find the first matching heading.

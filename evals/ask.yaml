@@ -31,6 +31,14 @@
   prompt: "Give me a full status report."
   assert: at-most-twenty-lines
   ask_type: next-step
+- id: first-run
+  prompt: "I just installed this. What do I do?"
+  assert: names-setup-and-a-start-prompt
+  ask_type: next-step
+- id: resume-summary
+  prompt: "Where was I? Continue."
+  assert: stage-files-open-findings-next
+  ask_type: next-step
 - id: unknown-stage
   prompt: "What stage is this run in?"
   assert: lists-artifacts-and-asks

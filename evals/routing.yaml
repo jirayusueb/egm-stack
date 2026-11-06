@@ -97,6 +97,10 @@
   prompt: "Build webhook delivery. Design it first, then implement and verify."
   expect: feature
   kind: playbook
+- id: small-change
+  prompt: "Fix the off-by-one in this validator. One file, no API change."
+  expect: small-change
+  kind: playbook
 - id: bug-fix
   prompt: "The scroll drifts every 750ms even when idle. Reproduce it and fix it."
   expect: bug-fix

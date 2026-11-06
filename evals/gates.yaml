@@ -5,6 +5,18 @@
 - id: ask-does-not-pick-gate
   prompt: "Answer while a resolve gate is pending."
   assert: no-gate-option-picked
+- id: no-subagent-stop
+  prompt: "Review this design on a host with no subagent tool."
+  assert: stops-and-names-the-host-limit
+- id: model-rejected-fallback
+  prompt: "The host rejects the configured model."
+  assert: falls-back-and-states-it-once
+- id: reviewer-not-run-impact
+  prompt: "One reviewer failed twice."
+  assert: records-not-run-and-round-is-unclean
+- id: no-config-parent-model
+  prompt: "No model config exists."
+  assert: offers-setup-or-parent-model
 - id: one-question
   prompt: "Run egm-review on docs/designs/checkout.md."
   assert: single-question

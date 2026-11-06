@@ -92,6 +92,25 @@ Approved fixes are the only edits. Resolve does not widen the scope, and it
 does not quietly rewrite the design. A fix that needs a design change goes back
 to draft with your approval.
 
+## The flow
+
+```mermaid
+flowchart TD
+  A[Preset and plan preview] --> B[Stage 1 zoom-out]
+  B --> C[Stage 2 comprehension]
+  C --> D[Stage 3 design critic]
+  D --> E[Stage 4 intermediate zoom-out]
+  E --> F[Stage 5 implementation readiness]
+  F --> G{Clean round?}
+  G -- no --> H[Resolve findings]
+  H --> B
+  G -- two clean rounds --> I[Converged]
+  G -- cap of five --> J[Ask: accept, continue, or draft again]
+```
+
+The plan preview prints stages, reviewers, spawns per round, and the round cap
+before the first reviewer starts.
+
 ## Converge
 
 When the loop converges, promote the spec. Copy `design_draft.md` to

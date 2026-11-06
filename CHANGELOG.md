@@ -3,6 +3,24 @@
 All notable changes to this project are documented here. The format follows
 Keep a Changelog, and this project adheres to Semantic Versioning.
 
+## [0.6.0] - 2026-11-06
+
+### Added
+
+- `egm-ask` first-run guidance with three commands and a copyable prompt, plus a one-screen resume summary.
+- `egm-review` plan preview: stages, reviewers, spawns per round, round cap, and the cheaper preset for small targets.
+- The `small-change` playbook for one-file or under-fifty-line changes that move no public contract.
+- Generated `docs/commands.md` with the command form per host, including the omp collision form.
+- `egm-setup` modes: show, reset, role, and profile `cheap`, `standard`, or `thorough`.
+- A recovery section in `egm-mode` for missing subagents, rejected models, failed reviewers, missing artifacts, and failed checks.
+- Export guidance for review reports and a review flow diagram in the guide.
+- Thai quickstart and glossary under `docs/th/`.
+
+### Changed
+
+- `egm-ask` budget grows to 140 lines and `egm-setup` to 175.
+- The opening-a-pr playbook assembles the body from artifacts and points at the export guide.
+
 ## [0.5.0] - 2026-11-06
 
 ### Added

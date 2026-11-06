@@ -10,6 +10,30 @@ license: Apache-2.0
 budget, maps the seventeen roles, validates every model, and writes the same
 settings to three rule files. A re-run updates the files in place.
 
+## Modes
+
+The default run detects, asks for one budget, and writes. Four other modes skip
+the budget question.
+
+| Invocation | Effect |
+| --- | --- |
+| `/egm-setup show` | Read the config files and print the current role table. Write nothing. |
+| `/egm-setup reset` | Write the defaults after one confirmation. Every role becomes `inherit-parent`, the budget becomes `standard`. |
+| `/egm-setup role <name> <value>` | Change one role after validating the value against the detected set. Keep every other line. |
+| `/egm-setup profile cheap\|standard\|thorough` | Write a profile. No budget question. |
+
+Profiles map to effort and panels.
+
+- `cheap`: every real value at the lowest detected effort, the parent model for
+  every role, and one entry in each panel. Use it for exploration.
+- `standard`: the host default effort, detected models, and one entry per panel.
+  This is the normal run.
+- `thorough`: the highest detected effort, and two entries in each panel when
+  two models exist. Use it for a hard review.
+
+A profile writes the shared config file. It writes the Claude or Cursor file
+only when that host is in use, as the write rule below says.
+
 ## 1. Detect available models
 
 - Enumerate the model values your subagent tool accepts. Two forms exist. A

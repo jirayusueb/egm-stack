@@ -17,6 +17,8 @@ a human how to drive them.
 | Deprecate a skill | [deprecation.md](deprecation.md) |
 | Map an action to a host | [harness.md](harness.md) |
 | Look up a skill, playbook, or principle | [skills.md](skills.md) (generated) |
+| Find the command form for each host | [commands.md](commands.md) (generated) |
+| อ่านภาษาไทย | [th/README.md](th/README.md) |
 | Read the architecture contract | [designs/egm-stack.md](designs/egm-stack.md) |
 | Read the design index | [designs/README.md](designs/README.md) |
 | Change the repository | [../AGENTS.md](../AGENTS.md) and [../CONTRIBUTING.md](../CONTRIBUTING.md) |
