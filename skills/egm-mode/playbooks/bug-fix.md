@@ -8,7 +8,7 @@ Read first: the `working-effectively-with-legacy-code` rule pack.
 2. Run **diagnose** end to end. Reproduce, minimise, hypothesise with separating tests, instrument, and bisect when the table runs dry. A flaky test gets the triage loop, never a rerun until green. Confirm the mechanism, not the symptom.
 3. Write the failing test first with **tdd** when a cheap local test path exists. The failing test is the repro in history.
 4. Fix the root cause. Ship the smallest change the evidence justifies, and revert anything that only "might help".
-5. Verify on the same surface. The original repro now passes and the new test stays green.
+5. Verify on the same surface with **egm-verify** discipline: the original repro now passes, the new test stays green, and the evidence is shown.
 6. Check the scope. Re-read the diff and revert every change the defect did not require.
 7. Run the **opening-a-pr** playbook.
 

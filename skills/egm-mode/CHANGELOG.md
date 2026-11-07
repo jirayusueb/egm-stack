@@ -2,6 +2,10 @@
 
 All changes to the `egm-mode` skill are recorded here.
 
+## 0.17.0 - 2026-11-07
+
+- Wired egm-verify into the feature, small-change, bug-fix, and opening-a-pr playbooks, and added non-negotiables for verify and bootstrap.
+
 ## 0.12.0 - 2026-11-07
 
 - Added the spawn cap counter that stops and asks at the configured cap.

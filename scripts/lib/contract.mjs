@@ -130,6 +130,7 @@ export const PRINCIPLE_GROUPS = {
     'experience-first',
     'exhaust-the-design-space',
     'build-the-lever',
+    'gate-before-spend',
   ],
   Architecture: [
     'model-the-domain',

@@ -189,6 +189,7 @@ and an applied fix does not settle. Read [the guide](docs/guide/README.md).
 | `principle-explain-the-number` | Apply when you are about to trust, report, or act on a measured number. |
 | `principle-fix-root-causes` | Apply when debugging. |
 | `principle-foundational-thinking` | Apply when choosing core types, writing initial logic, or sequencing scaffold and feature work. |
+| `principle-gate-before-spend` | Apply when paying for the rest of a plan: a review's later stages, a fan-out's next wave, or a whole-file re-run. |
 | `principle-guard-the-context-window` | Apply when context fills with large outputs, long files, or repeated reads. |
 | `principle-laziness-protocol` | Apply when refactoring, judging diff size, or tempted to add abstractions. |
 | `principle-make-operations-idempotent` | Apply when designing commands, lifecycle steps, or loops that run amid crashes and retries. |
@@ -288,7 +289,7 @@ Ten skills start with `egm-`: `egm-mode`, `egm-ask`, `egm-setup`,
 `why`, `ddd`, `rules`, `tdd`, and the 24 `principle-*` leaves.
 
 `/egm-` filters by name prefix. It is not a package filter. Use
-[docs/skills.md](docs/skills.md) to see all 49.
+[docs/skills.md](docs/skills.md) to see all 50.
 
 A slash menu can also rename skills. A Claude Code plugin prefixes its name, so
 the form is `/egm-stack:egm-mode`. omp uses `/skill:egm-mode`. Codex, Cursor, and
@@ -344,6 +345,6 @@ Apache-2.0. See [LICENSE](LICENSE). Vendored MIT material keeps its own notice.
 - Confirm no generated region was hand-edited, and `LICENSE`, `NOTICE`, and the
   `UPSTREAM.md` pins are current.
 - Add a row to `docs/designs/README.md` for each new design document.
-- Tag `v0.16.0`.
+- Tag `v0.17.0`.
 - Test each documented install route on a clean machine, and confirm the tree
   has no secrets and no absolute local paths.

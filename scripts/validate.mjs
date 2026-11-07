@@ -121,7 +121,7 @@ function checkSkills() {
 
 function checkPrinciples() {
   const expected = Object.values({
-    core: ['laziness-protocol', 'foundational-thinking', 'redesign-from-first-principles', 'attack-the-premise', 'subtract-before-you-add', 'minimize-reader-load', 'outcome-oriented-execution', 'experience-first', 'exhaust-the-design-space', 'build-the-lever'],
+    core: ['laziness-protocol', 'foundational-thinking', 'redesign-from-first-principles', 'attack-the-premise', 'subtract-before-you-add', 'minimize-reader-load', 'outcome-oriented-execution', 'experience-first', 'exhaust-the-design-space', 'build-the-lever', 'gate-before-spend'],
     arch: ['model-the-domain', 'boundary-discipline', 'type-system-discipline', 'make-operations-idempotent', 'migrate-callers-then-delete-legacy-apis', 'separate-before-serializing-shared-state'],
     ver: ['prove-it-works', 'fix-root-causes', 'sequence-verifiable-units', 'test-behavior-not-implementation', 'explain-the-number'],
     del: ['guard-the-context-window', 'never-block-on-the-human'],

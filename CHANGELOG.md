@@ -3,6 +3,18 @@
 All notable changes to this project are documented here. The format follows
 Keep a Changelog, and this project adheres to Semantic Versioning.
 
+## [0.17.0] - 2026-11-07
+
+### Added
+
+- The `gate-before-spend` principle: decide with in-hand evidence before paying for the rest of a plan. The twenty-fifth principle.
+- `egm-verify` is now routed: the feature, small-change, bug-fix, and opening-a-pr playbooks call it, and the router has a non-negotiable for a task called done against named criteria.
+- `egm-bootstrap` has a router non-negotiable and is no longer an orphan.
+
+### Fixed
+
+- The coverage audit found `egm-verify` and `egm-bootstrap` referenced by no playbook and no router rule. Both are wired.
+
 ## [0.16.0] - 2026-11-07
 
 ### Added

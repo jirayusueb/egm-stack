@@ -12,7 +12,7 @@ Read first: the `a-philosophy-of-software-design` and `clean-architecture` rule 
 6. Run **egm-resolve** to triage findings and apply the approved fixes.
 7. After the human approves the design, delegate implementation with **delegate** and your subagent tool per `../../../docs/harness.md`. Name the data shape before any code, and keep one owner per artifact.
 8. Implement with **tdd** where a cheap test path exists. Otherwise build the smallest change the evidence supports.
-9. Verify on the real surface. Run the project's checks and exercise the change. A type check alone is not a pass.
+9. Run **egm-verify** against the design's success criteria. Each criterion gets a check and evidence. A type check alone is not a pass.
 10. Run the **opening-a-pr** playbook.
 
 **Reply:** what you built, the design choice and why, the review verdict, the verification evidence, and open decisions. Link the design doc and the pull request you opened.

@@ -134,12 +134,13 @@ experimental and requires approval above fifteen directories. `statechart` is
 experimental too, vendors 407 files (3.8 MB), and needs Node 22.18 or later,
 Java, and TLC. The core never depends on it.
 
-### Principles (24)
+### Principles (25)
 
 `skills/principle-<title>/SKILL.md`, 30 lines maximum each. Core: laziness
 protocol, foundational thinking, redesign from first principles, attack the
 premise, subtract before you add, minimize reader load, outcome-oriented
-execution, experience first, exhaust the design space, build the lever.
+execution, experience first, exhaust the design space, build the lever, gate
+before spend.
 Architecture: model the domain, boundary discipline, type system discipline,
 make operations idempotent, migrate callers then delete legacy APIs, separate
 before serializing shared state. Verification: prove it works, fix root causes,

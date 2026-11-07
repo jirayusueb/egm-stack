@@ -5,7 +5,7 @@
 Read first: the `release-it` and `the-pragmatic-programmer` rule packs.
 
 1. Run **no-comments** over the diff. Keep only comments that explain a non-obvious why.
-2. Run **technical-writing** over the pull request title and body. Then run **unslop**.
+2. Run **technical-writing** over the pull request title and body. Then run **unslop**. When a design doc exists, its verification report from **egm-verify** goes in the evidence section.
 3. Rebase into small ordered commits. Each commit is landable and tells one step of the story.
 4. Assemble the body from the artifacts. The why comes from the design doc, the verdict from the consolidated review report, and the evidence from the verification run. State the scope and the blast radius.
 5. When the reviewer needs the full findings, attach the reports with [export.md](../../../docs/export.md). Ask before posting anything.

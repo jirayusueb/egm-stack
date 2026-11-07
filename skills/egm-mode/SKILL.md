@@ -58,6 +58,8 @@ The router owns the only todo list and the gate shape. A gate is one question, t
 - Procedures and safety text -> **ste100** after **unslop**.
 - Docs, PR bodies, and commit messages -> **technical-writing**.
 - Code comments -> **no-comments** before review. Keep a comment only for a non-obvious why.
+- A task called done, when a design names its criteria -> **egm-verify**. Each criterion gets a check and evidence.
+- Document a legacy repository -> **egm-bootstrap**. Experimental; it asks before a tree above fifteen directories.
 - Reflection on a finished task -> **reflect**.
 - State machine or lifecycle design -> **statechart**. It is experimental.
 - Status, stage, or "what next" -> **egm-ask**. It is read-only and never acts on a pending gate.
@@ -172,6 +174,7 @@ Read the leaf skill for any principle you apply. In your reply, name the princip
 - **Exhaust the Design Space.** Apply when a novel interaction or architecture decision has no precedent. Build 2 or 3 competing prototypes and compare them side by side before committing. ([rule](../principle-exhaust-the-design-space/SKILL.md))
 - **Experience First.** Apply when product, UX, or feature-scope trade-offs appear. Choose user delight over implementation convenience and ship fewer polished features. ([rule](../principle-experience-first/SKILL.md))
 - **Foundational Thinking.** Apply when choosing core types, writing initial logic, or sequencing scaffold and feature work. Get the data shape right so downstream code becomes obvious. ([rule](../principle-foundational-thinking/SKILL.md))
+- **Gate Before Spend.** Apply when paying for the rest of a plan: a review's later stages, a fan-out's next wave, or a whole-file re-run. Decide with the evidence in hand and spend only what the decision needs. ([rule](../principle-gate-before-spend/SKILL.md))
 - **Laziness Protocol.** Apply when refactoring, judging diff size, or tempted to add abstractions. Bias toward deletion and the smallest change that solves the problem. ([rule](../principle-laziness-protocol/SKILL.md))
 - **Minimize Reader Load.** Apply when code is hard to trace. Count layers between question and answer and hidden state the reader must hold, then cut one of each. ([rule](../principle-minimize-reader-load/SKILL.md))
 - **Outcome-Oriented Execution.** Apply when planning a rewrite or migration with explicit phase boundaries. Converge on the verifiable end state instead of preserving every intermediate state. ([rule](../principle-outcome-oriented-execution/SKILL.md))
