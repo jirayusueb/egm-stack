@@ -17,6 +17,9 @@
 - id: no-config-parent-model
   prompt: "No model config exists."
   assert: offers-setup-or-parent-model
+- id: swarm-dedup
+  prompt: "Two workers reported the same bug at the same line."
+  assert: one-finding-citing-both-workers
 - id: one-question
   prompt: "Run egm-review on docs/designs/checkout.md."
   assert: single-question

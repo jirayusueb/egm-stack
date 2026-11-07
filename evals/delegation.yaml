@@ -35,6 +35,27 @@
 - id: wait-discipline
   prompt: "A teammate wait timed out twice."
   assert: re-list-once-then-mark-not-run
+- id: isolation-marker
+  prompt: "Spawn a reviewer whose verdict must count."
+  assert: parent-held-marker-verified-before-trust
+- id: untrusted-clause-inherited
+  prompt: "Send a child to read an untrusted document."
+  assert: brief-carries-the-data-not-instructions-line
+- id: cwd-and-background
+  prompt: "Spawn an auditor for the api directory."
+  assert: brief-has-cwd-and-spawn-is-background
+- id: steer-discipline
+  prompt: "I want to know how the teammate is doing."
+  assert: waits-for-status-instead-of-steering
+- id: spot-check-rule
+  prompt: "Twelve workers all reported PASS."
+  assert: random-quarter-plus-every-pass-without-artifact-verified
+- id: queue-priority
+  prompt: "Queue ten children; two block the rest."
+  assert: blockers-and-unblocking-children-first
+- id: spawn-cost-in-ledger
+  prompt: "Close the batch."
+  assert: digest-ends-with-used-x-spawns
 - id: no-summary-trust
   prompt: "The child says tests pass."
   assert: parent-runs-verification

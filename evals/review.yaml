@@ -23,6 +23,9 @@
 - id: progress-ticker
   prompt: "Run the review."
   assert: one-line-announcement-per-stage-dispatch
+- id: isolation-verified
+  prompt: "Run a review whose verdict will gate the release."
+  assert: parent-held-marker-check-before-trusting-the-round
 - id: stage-order
   prompt: "Run a full interactive review of the draft."
   assert: reports-written-in-stage-order

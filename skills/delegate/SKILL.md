@@ -63,6 +63,8 @@ first rejection that names a limit is the answer; keep it for the session.
 - Spawn in waves at or below the limit. Never fire a batch that exceeds it.
 - A child the host rejects goes back on the queue, not in the bin. Say so.
 - Reviewers are read-only and cheap to queue; serialize only shared writes.
+- Queue order: blockers first, then the children whose results unblock others,
+  then everything else. Cheap identical work goes last.
 
 ## Batch ledger
 
@@ -71,11 +73,20 @@ child: `| id | brief in five words | status | verdict in one line |`. Status is
 `spawned`, `returned`, `failed`, or `not run`.
 
 - Update the line the moment a child returns. Never batch the update.
+- Count every spawn, including retries and queued rejections. The digest closes
+  with `Used: X spawns.` so a fan-out costs the same to compare as a review.
 - After an interruption or a session break, read the ledger first and offer to
   re-spawn only the children still `spawned` or `failed`. Do not redo work that
   already `returned`.
 - The ledger is the resume contract for fan-out. A batch without one repeats
   itself after every crash.
+
+## Spot-check verification
+
+Verify artifacts, not summaries. For a batch of four or more children, verify
+one in four deeply, chosen at random, plus every child that reports PASS with
+no artifact. Record which children were spot-checked. A batch whose only
+evidence is twelve self-reported PASS lines has not been verified.
 
 ## Failure handling
 

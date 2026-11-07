@@ -3,6 +3,18 @@
 All notable changes to this project are documented here. The format follows
 Keep a Changelog, and this project adheres to Semantic Versioning.
 
+## [0.10.0] - 2026-11-07
+
+### Added
+
+- Isolation marker: the parent holds a marker no brief carries; a child that names it is not fresh, and a gated review verifies this before trusting the round.
+- Every brief carries the untrusted-content line, a `cwd:` field, and spawns background by default.
+- Queue priority: blockers and unblocking children first.
+- Spot-check verification: one in four at random, plus every PASS without an artifact.
+- Steer discipline in teams: steer only on a wrong brief, changed scope, or an irreversible action.
+- The ledger digest closes with `Used: X spawns.`
+- Swarm dedup: same scope plus same issue is one finding citing every worker.
+
 ## [0.9.0] - 2026-11-07
 
 ### Added

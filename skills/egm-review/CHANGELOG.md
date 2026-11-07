@@ -2,6 +2,10 @@
 
 All changes to the `egm-review` skill are recorded here.
 
+## 0.10.0 - 2026-11-07
+
+- Added the parent-held isolation marker check for reviews whose verdict gates a release.
+
 ## 0.8.0 - 2026-11-07
 
 - Added the stage-dispatch ticker and the usage line with spawn, round, and not-run counts.

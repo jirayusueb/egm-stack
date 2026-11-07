@@ -71,3 +71,11 @@ loop and never assume a timeout means failure without the re-list.
 | A program of tasks with dependencies | teammates plus the shared board |
 
 When both would work, use the subagent. It is cheaper to collect.
+
+## Steer discipline
+
+Steer a teammate only when the brief is wrong, the scope changed, or the
+teammate is about to do something irreversible. Curiosity is not a reason.
+Progress questions go unanswered until the status line arrives; steering to ask
+for them costs the teammate its turn. One steer that changes nothing is noise
+the whole team pays for.
