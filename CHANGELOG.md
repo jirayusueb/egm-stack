@@ -3,6 +3,19 @@
 All notable changes to this project are documented here. The format follows
 Keep a Changelog, and this project adheres to Semantic Versioning.
 
+## [0.15.0] - 2026-11-07
+
+### Added
+
+- `fast` preset: stages 1 and 2 dispatch together, one gate at the end, for consolidated runs where wall-clock time beats per-stage checkpoints.
+- Adaptive early exit: after each stage, a zero-blocker capped run is offered a stop, and a premise-breaking blocker is offered a return to drafting. A declined offer is never re-offered.
+- Diff-scoped re-audit: a manual edit re-reviews only the changed ranges plus context, not the whole file.
+- Stage tiering in `egm-setup`: optional per-stage model lines overriding the reviewers role.
+
+### Changed
+
+- `egm-review` budget grows to 285 and `egm-setup` to 195.
+
 ## [0.14.0] - 2026-11-07
 
 ### Added

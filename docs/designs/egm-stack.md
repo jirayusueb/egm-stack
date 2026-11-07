@@ -113,11 +113,11 @@ quality target.
 | --- | --- | --- |
 | `egm-mode` | 320 | Router, non-negotiables, autonomy, delegation pointer, harness mapping, generated indexes |
 | `egm-ask` | 170 | Read-only answers, first-run guidance, resume and catch-up summaries, review quality, and one hint line |
-| `egm-setup` | 175 | Role configuration, show/reset/role/profile modes, provider/model values, host effort levels |
+| `egm-setup` | 195 | Role and stage-tier configuration, modes, provider/model values, host effort levels, spawn cap, reply language |
 | `egm-verify` | 100 | Prove a change against the approved design's success criteria |
 | `egm-brainstorm` | 120 | Concept stress-test, brief artifact |
 | `egm-draft` | 140 | Section-by-section spec drafting |
-| `egm-review` | 270 | Review engine, stages, presets, resume, loop, profiles, stage gates with the re-audit cap, the link protocol, digest |
+| `egm-review` | 285 | Review engine, stages, six presets including fast, resume, loop, early exit, diff-scoped re-audit, profiles, gates, digest |
 | `egm-resolve` | 130 | Triage, approved fixes, and the settled registry |
 | `egm-drift` | 80 | Spec-versus-code drift |
 

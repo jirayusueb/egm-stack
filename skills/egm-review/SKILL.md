@@ -83,6 +83,9 @@ sole tool call, and yield.
 3. `spec only` runs stages 1 to 4 over the whole target and stops.
 4. `plan only` runs stage 5 over the detailed range.
 5. `quick` runs one design-critic pass over the whole target, one round.
+6. `fast` runs the full panel with stages 1 and 2 dispatched together, then
+   stage 3 onward in order, and one gate at the end. It trades per-stage
+   checkpoints for wall-clock time. Offer it for consolidated runs.
 
 Loop mode is on for `interactive` and `consolidated`. The other three presets
 run one round.
@@ -151,6 +154,19 @@ that line to the end. State both ranges in one line before dispatch.
 When no heading matches, the feature range is the whole target. A `plan only`
 review then stops and asks for the plan.
 
+## Early exit
+
+The plan is not a contract to spend. After each stage's report is written, one
+adaptive check runs before the next dispatch.
+
+- Stage 1 found zero Blockers and the run is on a budget profile or a spawn
+  cap: offer to stop. Name what the remaining stages would add and let one
+  question decide.
+- Stage 1 found a Blocker that invalidates the design's premise: offer to stop
+  and return the document to drafting. Running four more stages on a document
+  that will be rewritten is spend without signal.
+- Otherwise continue as planned. A declined offer is never re-offered.
+
 ## Stages
 
 Dispatch stages in order. Write each report before the next stage starts. Pass
@@ -213,7 +229,10 @@ Every gate follows the same rules.
 
 A manual edit triggers one re-audit of that stage, and only one. Re-read the
 target, recompute the ranges, re-apply the link rules to links added since,
-and re-run the stage. A second re-audit request for the same stage declares
+and re-run the stage. Scope the re-audit to what changed: compare the edited
+target with the version the stage last reviewed, and give the reviewer the
+changed ranges plus the surrounding context, not the whole file. Say which
+ranges the re-audit covered. A second re-audit request for the same stage declares
 the cap: record the residual findings as accepted trade-offs and advance to
 the next stage. Say that the cap was hit.
 

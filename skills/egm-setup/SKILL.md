@@ -10,6 +10,15 @@ license: Apache-2.0
 budget, maps the seventeen roles, validates every model, and writes the same
 settings to three rule files. A re-run updates the files in place.
 
+## Stage tiering
+
+Optional lines map a review stage to its own model, overriding the `egm
+reviewers` role for that stage. The names are `stage zoom-out`, `stage
+comprehension`, `stage design`, `stage intermediate zoom-out`, `stage
+readiness`. A line of `inherit-parent` runs that stage on the parent model.
+Cheap tiers fit comprehension and style work; strong tiers fit zoom-out and
+readiness. Write only the lines that differ from the role default.
+
 ## Spawn cap
 
 Ask once on a full run: the maximum spawns one run may use before the parent

@@ -2,6 +2,10 @@
 
 All changes to the `egm-review` skill are recorded here.
 
+## 0.15.0 - 2026-11-07
+
+- Added the fast preset with parallel stages 1 and 2, the adaptive early-exit check after each stage, and the diff-scoped re-audit that reviews only changed ranges.
+
 ## 0.14.0 - 2026-11-07
 
 - Added the stage-gate options with the pause-and-edit choice, the one-reaudit cap per stage, and the target link protocol with symlink and URL handling.

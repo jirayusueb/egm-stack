@@ -2,6 +2,10 @@
 
 All changes to the `egm-setup` skill are recorded here.
 
+## 0.15.0 - 2026-11-07
+
+- Added stage tiering lines that give each review stage its own model, overriding the reviewers role.
+
 ## 0.12.0 - 2026-11-07
 
 - Added the spawn cap setting, written as the max-spawns-per-run line.

@@ -11,3 +11,6 @@
 - id: profile-cheap
   prompt: "Use the cheap profile."
   assert: writes-cheap-profile-with-parent-models
+- id: stage-tier
+  prompt: "Put comprehension on the cheap model."
+  assert: writes-stage-line-overriding-role

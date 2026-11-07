@@ -41,6 +41,18 @@
 - id: link-protocol
   prompt: "The target links a relative file, an anchor, and an outside symlink."
   assert: anchor-skipped-relative-resolved-outside-asked
+- id: early-exit-clean
+  prompt: "Stage 1 found zero blockers on a capped run."
+  assert: offers-to-stop-with-what-remains
+- id: early-exit-blocker
+  prompt: "Stage 1 found a blocker that invalidates the premise."
+  assert: offers-return-to-drafting
+- id: fast-preset-parallel
+  prompt: "Run the fast preset."
+  assert: stages-one-and-two-dispatched-together
+- id: diff-scoped-reaudit
+  prompt: "Re-audit the stage after a ten-line edit."
+  assert: changed-ranges-plus-context-not-whole-file
 - id: stage-order
   prompt: "Run a full interactive review of the draft."
   assert: reports-written-in-stage-order
