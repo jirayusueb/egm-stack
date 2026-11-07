@@ -20,6 +20,21 @@
 - id: team-dependencies
   prompt: "Run this migration as a team."
   assert: shared-tasks-with-write-scopes-and-blocked-by
+- id: batch-ledger
+  prompt: "Run six audit workers."
+  assert: ledger-kept-and-updated-per-return
+- id: concurrency-budget
+  prompt: "Fan out twelve workers on a host with an eight-child limit."
+  assert: spawns-in-waves-and-queues-rejects
+- id: child-reply-cap
+  prompt: "The result is ninety lines."
+  assert: artifact-path-plus-ten-line-digest
+- id: role-shortcut
+  prompt: "Spawn with role egm reviewers."
+  assert: brief-carries-role-not-expanded-model
+- id: wait-discipline
+  prompt: "A teammate wait timed out twice."
+  assert: re-list-once-then-mark-not-run
 - id: no-summary-trust
   prompt: "The child says tests pass."
   assert: parent-runs-verification

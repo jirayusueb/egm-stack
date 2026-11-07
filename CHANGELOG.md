@@ -3,6 +3,20 @@
 All notable changes to this project are documented here. The format follows
 Keep a Changelog, and this project adheres to Semantic Versioning.
 
+## [0.9.0] - 2026-11-07
+
+### Added
+
+- `delegate` batch ledger at `.egm/<slug>/team/ledger.md`: one line per child, updated on return, and the resume contract after an interruption.
+- Concurrency budget: learn the host child limit, spawn in waves, queue rejects.
+- Child reply cap of 40 lines with an artifact path plus a digest.
+- Role shortcut in the brief, expanded by the parent at spawn time.
+- Result digest appended to the ledger after a batch.
+- Wait discipline: re-list once after a timeout, twice marks the member not run.
+- Subagent-versus-teammate chooser table.
+- Live status lines in `swarm` and `arena` for each returning child.
+- `orchestrate` keeps and resumes from the ledger.
+
 ## [0.8.0] - 2026-11-07
 
 ### Added

@@ -55,6 +55,28 @@ Pick a role from `egm-setup`. Read its value and effort and pass them to the spa
 - Check the write scope. An edit outside the scope is a finding.
 - Accept PASS only with evidence. Read `references/report.md` for the report contract.
 
+## Concurrency budget
+
+Before a fan-out above three children, learn the host's active-child limit. The
+first rejection that names a limit is the answer; keep it for the session.
+
+- Spawn in waves at or below the limit. Never fire a batch that exceeds it.
+- A child the host rejects goes back on the queue, not in the bin. Say so.
+- Reviewers are read-only and cheap to queue; serialize only shared writes.
+
+## Batch ledger
+
+For any fan-out, keep a ledger at `.egm/<slug>/team/ledger.md`. One line per
+child: `| id | brief in five words | status | verdict in one line |`. Status is
+`spawned`, `returned`, `failed`, or `not run`.
+
+- Update the line the moment a child returns. Never batch the update.
+- After an interruption or a session break, read the ledger first and offer to
+  re-spawn only the children still `spawned` or `failed`. Do not redo work that
+  already `returned`.
+- The ledger is the resume contract for fan-out. A batch without one repeats
+  itself after every crash.
+
 ## Failure handling
 
 - BLOCKED is reported with its reason. The parent decides the next step.

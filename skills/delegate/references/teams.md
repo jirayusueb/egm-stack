@@ -52,3 +52,22 @@ Use a durable team when work spans turns or needs more than one writer. A durabl
 - Stop teammates that no longer matter.
 - Report dropouts with the work they owed.
 - Retire the tasks. Leave no ready task unowned.
+
+## Wait discipline
+
+After a wait times out, re-list the members once before deciding. A member
+still running waits again. A second timeout on the same member is treated as
+hung: mark its task `not run`, report the gap, and move on. Never poll in a
+loop and never assume a timeout means failure without the re-list.
+
+## Subagent or teammate
+
+| Situation | Use |
+| --- | --- |
+| One bounded task, result in one reply | a subagent |
+| Work the parent will steer mid-flight | a teammate |
+| State that must survive the turn, like a dev server | a teammate |
+| A fan-out of three or more identical briefs | subagents, in waves |
+| A program of tasks with dependencies | teammates plus the shared board |
+
+When both would work, use the subagent. It is cheaper to collect.

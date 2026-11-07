@@ -12,4 +12,8 @@ Read first: the `the-pragmatic-programmer` rule pack.
 6. Integrate and verify each unit before the next one starts. Rerun the check at each integration point.
 7. Run a final review with **egm-review** over the integrated diff. The Lead owns the final diff and the test run.
 
+Keep the batch ledger from `../delegate` under `.egm/<slug>/team/ledger.md` and
+update it as each task completes. After any interruption, resume from the
+ledger, not from memory.
+
 **Reply:** what landed against the done predicate, each task's state, the final review verdict, and every open decision.

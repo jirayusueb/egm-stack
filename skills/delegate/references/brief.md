@@ -44,3 +44,11 @@ Build every subagent brief from this template. Fill every field. Write `none` wh
 ## Read-only briefs
 
 A read-only child gets a read-only scope, a report path, and an explicit ban on writing. The parent writes the artifact from the child's report. When the host cannot enforce read-only, tell the child that the parent checks the working tree before and after.
+
+## Role shortcut
+
+The brief may carry one line, `role: <role name>`. At spawn time, expand it
+yourself from the `egm-setup` config into the provider, model, and effort
+fields. Never paste the expanded values into the brief the child sees; the
+child does not need them. When the role is missing or `inherit-parent`, omit
+the model fields.
