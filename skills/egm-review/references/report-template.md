@@ -82,3 +82,12 @@ Read this before writing the first report. Keep every heading and field.
 - Do not copy a reviewer report verbatim. Inline the finding and keep the
   evidence.
 - Write dates as YYYY-MM-DD.
+
+## Usage line
+
+The last line of the consolidated report, after the open findings:
+
+`Used: X spawns, Y rounds, Z not run. Cap N.`
+
+Count every reviewer spawn across all rounds, including retries. This is what
+the next preset decision is made on.

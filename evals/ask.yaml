@@ -39,6 +39,14 @@
   prompt: "Where was I? Continue."
   assert: stage-files-open-findings-next
   ask_type: next-step
+- id: catch-up
+  prompt: "What changed since I left?"
+  assert: git-log-plus-artifact-trail-one-screen
+  ask_type: next-step
+- id: hint-line
+  prompt: "Where am I?"
+  assert: at-most-one-related-skill-hint
+  ask_type: next-step
 - id: unknown-stage
   prompt: "What stage is this run in?"
   assert: lists-artifacts-and-asks

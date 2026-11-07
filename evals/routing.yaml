@@ -1,5 +1,9 @@
 # Routing cases. One prompt per skill and per playbook.
 # kind: skill | playbook. packs: comma list for the rules case.
+- id: verbosity-brief
+  prompt: "brief: review the auth module for missing checks."
+  expect: review-only
+  kind: playbook
 - id: ask-next-step
   prompt: "Where am I in the workflow and what should I run next?"
   expect: egm-ask

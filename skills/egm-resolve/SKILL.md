@@ -15,6 +15,11 @@ review.
 - `Target` is the file to edit.
 - `Findings` is the list from one or more reports.
 - `Range` is the line range the findings cover.
+- `FindingId`, optional, names one finding such as `design-1-1`.
+
+When `FindingId` is present, run single-finding mode. Load that finding only,
+apply its fix after one confirmation, touch nothing outside its scope, and
+report the remaining findings as untouched. Skip the full gate.
 
 Ask for a missing input in chat. Do not invent a finding.
 

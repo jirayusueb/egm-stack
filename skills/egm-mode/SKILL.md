@@ -8,6 +8,13 @@ license: Apache-2.0
 
 Draft with context, review without it, build with evidence.
 
+## Verbosity
+
+The first words may set reply length for the whole session. `brief` before the
+task keeps every reply to one screen: verdict first, evidence as one line per
+item, open questions as a list. `detail` restores the full reply. Unset means
+detail. State the active level once when it changes.
+
 ## How routing works
 
 Classify the request first. Then run one playbook or one pipeline skill.

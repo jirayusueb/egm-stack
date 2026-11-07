@@ -11,6 +11,9 @@
 - id: resolve-to-promote
   prompt: "The findings are resolved and the design is approved. Promote it."
   expect: docs/designs/
+- id: draft-interview
+  prompt: "Draft a design. There is no brief."
+  expect: concepts_brief.md
 - id: ddd-model-artifact
   prompt: "Produce the domain model for inventory."
   expect: domain_model.md

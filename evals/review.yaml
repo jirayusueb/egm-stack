@@ -17,6 +17,12 @@
 - id: panel-warning
   prompt: "Run the full panel. One reviewer is unavailable."
   assert: preview-names-the-missing-reviewer
+- id: usage-line
+  prompt: "Finish the consolidated report."
+  assert: usage-line-with-spawns-rounds-not-run-cap
+- id: progress-ticker
+  prompt: "Run the review."
+  assert: one-line-announcement-per-stage-dispatch
 - id: stage-order
   prompt: "Run a full interactive review of the draft."
   assert: reports-written-in-stage-order

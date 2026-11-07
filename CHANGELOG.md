@@ -3,6 +3,22 @@
 All notable changes to this project are documented here. The format follows
 Keep a Changelog, and this project adheres to Semantic Versioning.
 
+## [0.8.0] - 2026-11-07
+
+### Added
+
+- Cost meter: the consolidated report closes with `Used: X spawns, Y rounds, Z not run. Cap N.`
+- Progress ticker: one line per stage dispatch and completion.
+- Draft interview mode: `/egm-draft` with no brief asks four questions and writes the brief.
+- Fix-one-finding: `/egm-resolve` accepts a finding id for single-finding mode.
+- Ask catch-up: `what changed since I left` reads git log plus the artifact trail, and answers end with one related-skill hint.
+- Reply verbosity: `brief` and `detail` prefixes set the reply length for the session.
+- A worked example under `docs/example/` with every artifact shape including the digest and the usage line.
+
+### Changed
+
+- `egm-ask` budget grows to 160 lines.
+
 ## [0.7.0] - 2026-11-07
 
 ### Added

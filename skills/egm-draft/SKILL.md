@@ -20,8 +20,17 @@ Take the first that exists.
 2. `.egm/<slug>/concepts_brief.md`.
 3. The user's notes, asked for in chat.
 
-If nothing exists, ask for the problem, the users, and the constraints. Do not
-invent them.
+When nothing exists, run the interview instead. Ask four questions in chat,
+one at a time, and keep each answer to a sentence or two.
+
+1. What problem does this solve?
+2. What must be true when it is done?
+3. What must not change?
+4. What alternatives were already considered?
+
+Write the answers into `.egm/<slug>/concepts_brief.md` yourself, show the brief,
+and continue. Do not invent answers. When the user skips a question, record
+`not answered` and let review catch the gap.
 
 Derive the slug from the feature name in kebab case. Confirm it once.
 

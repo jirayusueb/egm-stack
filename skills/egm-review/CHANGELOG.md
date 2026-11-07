@@ -2,6 +2,10 @@
 
 All changes to the `egm-review` skill are recorded here.
 
+## 0.8.0 - 2026-11-07
+
+- Added the stage-dispatch ticker and the usage line with spawn, round, and not-run counts.
+
 ## 0.7.0 - 2026-11-07
 
 - Added the `quick` preset for short documents: one reviewer, one round.

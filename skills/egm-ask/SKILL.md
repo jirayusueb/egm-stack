@@ -128,6 +128,14 @@ When the user asks where they were or says continue, answer in one screen.
 Keep the reply under 20 lines. When the newest artifact is older than the code,
 say the summary may be stale.
 
+For catch-up, when the user asks what changed since they left, you may run one
+read-only command, `git log --oneline -20`. Combine it with the artifact trail
+into the same one-screen shape. Name the command you ran under Source.
+
+End every answer with one hint line when a natural next skill exists:
+`If you want <outcome>, use <command>.` One line maximum, inside the 20-line
+cap. No hint when the next steps already cover it.
+
 ## Commands
 
 Name only commands that exist in the installed skill frontmatter or the harness doc. Never invent a command, a flag, or a path. When the command the user asks for does not exist, say so and name the real skill.
