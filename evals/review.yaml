@@ -74,6 +74,12 @@
 - id: profile-doc
   prompt: "Review this README."
   assert: profile-doc-reviewers
+- id: code-two-axis
+  prompt: "Review the branch diff since main."
+  assert: standards-and-spec-axes-in-parallel-with-pinned-point
+- id: spec-discovery
+  prompt: "Review this diff. No spec was named."
+  assert: discovery-order-then-no-spec-available-not-a-stop
 - id: profile-code
   prompt: "Review the working tree diff."
   assert: profile-code-reviewers

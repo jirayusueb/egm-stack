@@ -3,6 +3,19 @@
 All notable changes to this project are documented here. The format follows
 Keep a Changelog, and this project adheres to Semantic Versioning.
 
+## [0.20.0] - 2026-11-07
+
+### Added
+
+- The implement loop in the feature and small-change playbooks: the author fixes, a separate report-only reviewer attacks the new head for hard findings only, rounds repeat without asking the user, judgement-call smells stay optional, and the closing report names the next step that waits on the merge.
+- The two-axis code profile: Standards and Spec run as parallel fresh reviewers over a pinned diff, with a spec-source discovery order and `no spec available` as a recorded state, not a stop.
+- Construction rules in `tdd`: innermost layer first, caller-defined interfaces, hand-written fakes over mocking libraries, no sleeping or time-window tests, three seed-varied runs with one serial.
+- `diagnose` runs the three-seed front line before any deeper flaky hunt.
+
+### Changed
+
+- `egm-review` budget grows to 300 and `tdd` to 65.
+
 ## [0.19.0] - 2026-11-07
 
 ### Added

@@ -19,7 +19,17 @@ A profile sets the default reviewers and the range.
 | spec | A design doc before the plan | zoom-out, design, structural, style |
 | plan | A detailed implementation plan | implementation-readiness, codebase-details, style |
 | doc | A README or guide | comprehension, design, style, and the `doc-standard` |
-| code | Changed files or a diff | structural, style, codebase-details |
+| code | Changed files or a diff | structural, style, codebase-details, run as two axes |
+
+The `code` profile runs two axes in parallel fresh reviewers: Standards, the
+diff against this repository's own documented rules plus the smell baseline;
+Spec, the diff against the originating issue or design. Find the spec source
+in order: issue refs in commit messages, a path the user named, a spec file
+under `docs/`, then ask; with none, the Spec axis reports `no spec available`
+and continues. Pin the fixed point yourself, `git diff <point>...HEAD`, and
+confirm the ref resolves and the diff is non-empty before any dispatch. A
+documented repo rule always overrides the smell baseline, per
+`../../docs/intentional.md`.
 | ddd | A domain model | zoom-out, design, codebase-details |
 | comments | Changed files or a diff | comment-sicko |
 | specs | Every document in `docs/designs/` | zoom-out, design |

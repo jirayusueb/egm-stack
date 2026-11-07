@@ -50,5 +50,5 @@ transfer. Opening a link follows your browser, not this repository. Vendored
 files are listed in [../UPSTREAM.md](../UPSTREAM.md) and [../NOTICE](../NOTICE),
 with the source, the commit, and the licence.
 
-This page describes version 0.19.0. A change that alters what leaves your machine
+This page describes version 0.20.0. A change that alters what leaves your machine
 is a decision record under `docs/adr/`.

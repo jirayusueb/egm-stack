@@ -33,6 +33,17 @@ Prefer no new test over a bad test. A bad test mostly tests mocks, encodes imple
 - Make a flaky test deterministic where you can. Document the signal that the test locks down.
 - When the bug exposes a wider class of failures, land the focused regression first and then consider sibling coverage.
 
+## Construction rules
+
+- Build the innermost layer first. Add each next layer only after the layers
+  inside it exist, and connect them last.
+- Define a layer's interface by what its caller needs, not what it owns.
+- Prefer a fake you write by hand to a mocking library.
+- Do not write a test that sleeps or depends on a time window. Freeze the
+  clock and fix the seed instead.
+- Run the new suite three times with a different seed each run, once in
+  serial. A failure in any run is a finding, not bad luck.
+
 ## Report
 
 Report the evidence, not just the outcome.

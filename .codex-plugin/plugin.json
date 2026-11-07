@@ -1,6 +1,6 @@
 {
   "name": "egm-stack",
-  "version": "0.19.0",
+  "version": "0.20.0",
   "description": "Spec-first engineering for coding agents: draft with context, review without it, then build with evidence.",
   "author": {
     "name": "EGM Stack contributors"

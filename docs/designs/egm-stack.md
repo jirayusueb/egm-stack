@@ -117,14 +117,14 @@ quality target.
 | `egm-verify` | 100 | Prove a change against the approved design's success criteria |
 | `egm-brainstorm` | 120 | Concept stress-test, brief artifact |
 | `egm-draft` | 140 | Section-by-section spec drafting |
-| `egm-review` | 285 | Review engine, stages, six presets including fast, resume, loop, early exit, diff-scoped re-audit, profiles, gates, digest |
+| `egm-review` | 300 | Review engine, stages, six presets including fast, resume, loop, early exit, diff-scoped re-audit, profiles, gates, digest |
 | `egm-resolve` | 130 | Triage, approved fixes, and the settled registry |
 | `egm-drift` | 80 | Spec-versus-code drift |
 
 ### Extended (13)
 
 `delegate` 130, `rules` 100, `diagnose` 95, `how` 55, `why` 120, `arena` 60, `swarm` 55,
-`tdd` 50, `no-comments` 60, `reflect` 120, `unslop` 100, `technical-writing`
+`tdd` 65, `no-comments` 60, `reflect` 120, `unslop` 100, `technical-writing`
 110, `ste100` 110, `statechart` 100 (experimental).
 
 ### Domain (1) and experimental (1)

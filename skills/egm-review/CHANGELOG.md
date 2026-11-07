@@ -2,6 +2,10 @@
 
 All changes to the `egm-review` skill are recorded here.
 
+## 0.20.0 - 2026-11-07
+
+- Added the two-axis code profile: Standards and Spec as parallel fresh reviewers, with fixed-point pinning, the spec-source discovery order, and the repo-rules-override rule.
+
 ## 0.19.0 - 2026-11-07
 
 - Added the author map: severity-sorted findings with section, line, decision id, and a Fix, Decide, or Ignore next action.

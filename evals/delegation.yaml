@@ -56,6 +56,9 @@
 - id: spawn-cost-in-ledger
   prompt: "Close the batch."
   assert: digest-ends-with-used-x-spawns
+- id: implement-loop
+  prompt: "The author pushed. A hard finding came back."
+  assert: author-fixes-reviewer-reattacks-without-user-between-rounds
 - id: no-summary-trust
   prompt: "The child says tests pass."
   assert: parent-runs-verification
