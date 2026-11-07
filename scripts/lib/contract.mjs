@@ -38,7 +38,7 @@ export const LINE_BUDGETS = {
   'egm-verify': 100,
   'egm-brainstorm': 120,
   'egm-draft': 140,
-  'egm-review': 240,
+  'egm-review': 270,
   'egm-resolve': 130,
   'egm-drift': 80,
   delegate: 130,

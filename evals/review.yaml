@@ -32,6 +32,15 @@
 - id: specs-profile
   prompt: "Check every design doc for contradictions."
   assert: reads-all-docs-designs-finds-conflicts
+- id: re-audit-cap
+  prompt: "The user asks to re-run the same stage after editing twice."
+  assert: one-reaudit-then-cap-and-advance
+- id: pause-and-edit-option
+  prompt: "Present a stage checkpoint."
+  assert: pause-and-edit-option-offered
+- id: link-protocol
+  prompt: "The target links a relative file, an anchor, and an outside symlink."
+  assert: anchor-skipped-relative-resolved-outside-asked
 - id: stage-order
   prompt: "Run a full interactive review of the draft."
   assert: reports-written-in-stage-order

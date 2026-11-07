@@ -2,6 +2,10 @@
 
 All changes to the `egm-resolve` skill are recorded here.
 
+## 0.14.0 - 2026-11-07
+
+- Added the post-resolution sync: re-read, recompute ranges, confirm each fix before the report is written.
+
 ## 0.12.0 - 2026-11-07
 
 - Added the settled registry writer: every settled finding is appended for the next review.

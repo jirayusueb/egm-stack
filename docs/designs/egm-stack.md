@@ -117,7 +117,7 @@ quality target.
 | `egm-verify` | 100 | Prove a change against the approved design's success criteria |
 | `egm-brainstorm` | 120 | Concept stress-test, brief artifact |
 | `egm-draft` | 140 | Section-by-section spec drafting |
-| `egm-review` | 240 | Review engine, stages, presets including quick, resume, loop, profiles, gates, digest |
+| `egm-review` | 270 | Review engine, stages, presets, resume, loop, profiles, stage gates with the re-audit cap, the link protocol, digest |
 | `egm-resolve` | 130 | Triage, approved fixes, and the settled registry |
 | `egm-drift` | 80 | Spec-versus-code drift |
 

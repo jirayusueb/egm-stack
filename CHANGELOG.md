@@ -3,6 +3,18 @@
 All notable changes to this project are documented here. The format follows
 Keep a Changelog, and this project adheres to Semantic Versioning.
 
+## [0.14.0] - 2026-11-07
+
+### Added
+
+- Stage checkpoints carry the pause-and-edit option, and a manual edit triggers exactly one re-audit per stage; the second request caps the stage, records residual findings as accepted, and advances.
+- The target link protocol: anchors skipped, fragments stripped, relative links resolved against the target folder, outside-workspace symlinks approved first, URLs saved into the artifact directory, headless gaps reported.
+- Resolve post-resolution sync: re-read the target, recompute ranges, confirm each fix landed, then write the report with current line numbers.
+
+### Changed
+
+- `egm-review` budget grows to 270 lines.
+
 ## [0.13.0] - 2026-11-07
 
 ### Added

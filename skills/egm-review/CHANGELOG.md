@@ -2,6 +2,10 @@
 
 All changes to the `egm-review` skill are recorded here.
 
+## 0.14.0 - 2026-11-07
+
+- Added the stage-gate options with the pause-and-edit choice, the one-reaudit cap per stage, and the target link protocol with symlink and URL handling.
+
 ## 0.13.0 - 2026-11-07
 
 - Reviewers carry the stress-test mandates, and every run loads the intentional-conventions ledger as context.

@@ -26,6 +26,14 @@ Ask for a missing input in chat. Do not invent a finding.
 This skill does not spawn a reviewer. When a fix needs a helper, write the brief
 with `../delegate/SKILL.md`. Name host commands from `../../docs/harness.md`.
 
+## Post-resolution sync
+
+After applying every approved fix, re-read the target and recompute the line
+ranges the findings name. Confirm each fix landed by reading the lines it
+changed. The report's exit block states, per fix, applied or still open, the
+new line range, and anything the re-read revealed that the fixes missed. A
+report whose line numbers predate the edits is wrong; sync before writing it.
+
 ## Settled registry
 
 Append every settled finding to `.egm/<slug>/settled.md`: one line with the

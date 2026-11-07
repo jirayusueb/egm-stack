@@ -11,6 +11,9 @@
 - id: triage-decline
   prompt: "Accept this finding as a known risk."
   assert: decline-with-risk-note
+- id: post-resolution-sync
+  prompt: "All approved fixes are applied."
+  assert: reread-recompute-confirm-before-report
 - id: settled-write
   prompt: "A finding was declined as an accepted risk."
   assert: appended-to-settled-md

@@ -42,7 +42,16 @@ with fixed options cannot collect a path.
 
 ## Delegation
 
-A reviewer is a fresh context with no conversation history. Use your subagent
+A reviewer is a fresh context with no conversation history.
+
+Before the first dispatch, gather the target's own links into the reading
+list. Skip anchor-only links and strip the fragment from the rest. Resolve
+each relative link against the target's folder, not the working directory.
+Follow symlinks once: a link that resolves outside the workspace is listed in
+chat and included only with approval. Save the raw page of each URL as a file
+under the artifact directory and pass its path, because some reviewers cannot
+open URLs. With no human to answer, leave unapproved and unsavable links out,
+say which, and keep going. Use your subagent
 tool for every reviewer. Read `../../docs/harness.md` for the tool and options
 each host maps. Read `../delegate/SKILL.md` for the brief contract.
 
@@ -198,6 +207,15 @@ Every gate follows the same rules.
 - Yield immediately after it.
 - Never prefix an option with `(Recommended)`.
 - The first option is the default action.
+- Stage checkpoints carry the pause-and-edit option: `I will update the
+  document first. Pause, and re-run this stage when I say the edits are done.`
+  Stages 3 and 5 also offer `Resolve findings first`.
+
+A manual edit triggers one re-audit of that stage, and only one. Re-read the
+target, recompute the ranges, re-apply the link rules to links added since,
+and re-run the stage. A second re-audit request for the same stage declares
+the cap: record the residual findings as accepted trade-offs and advance to
+the next stage. Say that the cap was hit.
 
 Pause, resume, manual edit, and resolve decisions are gates.
 
