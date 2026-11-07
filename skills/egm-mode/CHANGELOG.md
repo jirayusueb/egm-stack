@@ -2,6 +2,10 @@
 
 All changes to the `egm-mode` skill are recorded here.
 
+## 0.8.0 - 2026-11-07
+
+- Added the brief and detail reply levels.
+
 ## 0.6.0 - 2026-11-06
 
 - Added the recovery section and the small-change playbook.
