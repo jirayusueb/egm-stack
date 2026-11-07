@@ -3,6 +3,12 @@
 All notable changes to this project are documented here. The format follows
 Keep a Changelog, and this project adheres to Semantic Versioning.
 
+## [0.20.1] - 2026-11-08
+
+### Fixed
+
+- `describe-eval --summary` parsed a four-column row while the recorder writes five, so every real row failed to match and the summary always reported nothing. The parser now reads the recorded shape and tallies by the skill column.
+
 ## [0.20.0] - 2026-11-07
 
 ### Added
