@@ -3,6 +3,12 @@
 All notable changes to this project are documented here. The format follows
 Keep a Changelog, and this project adheres to Semantic Versioning.
 
+## [0.11.1] - 2026-11-07
+
+### Added
+
+- The round-five live eval: eight cases covering the quick preset, mid-review resume, the digest and usage line, the draft interview, single-finding resolve, the batch ledger with waves and queue priority, the isolation marker, and the brief verbosity prefix. All eight pass.
+
 ## [0.11.0] - 2026-11-07
 
 ### Added
