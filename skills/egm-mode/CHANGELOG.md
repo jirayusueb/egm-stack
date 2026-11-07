@@ -2,6 +2,10 @@
 
 All changes to the `egm-mode` skill are recorded here.
 
+## 0.12.0 - 2026-11-07
+
+- Added the spawn cap counter that stops and asks at the configured cap.
+
 ## 0.11.0 - 2026-11-07
 
 - Added the reply-language section that reads the config line; artifacts stay in English.

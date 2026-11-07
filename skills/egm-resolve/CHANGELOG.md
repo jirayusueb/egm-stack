@@ -2,6 +2,10 @@
 
 All changes to the `egm-resolve` skill are recorded here.
 
+## 0.12.0 - 2026-11-07
+
+- Added the settled registry writer: every settled finding is appended for the next review.
+
 ## 0.8.0 - 2026-11-07
 
 - Added single-finding mode via a FindingId input: one finding, one confirmation, no other edits.

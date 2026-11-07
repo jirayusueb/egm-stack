@@ -36,7 +36,7 @@ const checks = {
   },
   'egm-prefix-count': () => {
     const count = skillDirs().filter((name) => name.startsWith('egm-')).length;
-    return count === 9 ? true : `expected 9 egm-* skills, found ${count}`;
+    return count === 10 ? true : `expected 10 egm-* skills, found ${count}`;
   },
   'command-forms': () => {
     const text = read('README.md');
@@ -92,7 +92,7 @@ const checks = {
   },
   'skill-count': () => {
     const count = skillDirs().length;
-    return count === 47 ? true : `expected 47 skills, found ${count}`;
+    return count === 48 ? true : `expected 48 skills, found ${count}`;
   },
 };
 

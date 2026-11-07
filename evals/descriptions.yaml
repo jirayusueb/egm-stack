@@ -124,6 +124,14 @@
   skill: egm-bootstrap
   query: "Document this legacy repository."
   kind: positive
+- id: verify-criteria
+  skill: egm-verify
+  query: "Prove the change meets the design's success criteria."
+  kind: positive
+- id: verify-done
+  skill: egm-verify
+  query: "The task is called done. Check what done means."
+  kind: positive
 - id: negative-weather
   skill: none
   query: "What is the weather in Bangkok?"

@@ -2,6 +2,10 @@
 
 All changes to the `egm-review` skill are recorded here.
 
+## 0.12.0 - 2026-11-07
+
+- Added the settled registry and the specs profile for multi-document consistency.
+
 ## 0.10.0 - 2026-11-07
 
 - Added the parent-held isolation marker check for reviews whose verdict gates a release.

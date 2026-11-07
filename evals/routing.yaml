@@ -4,6 +4,10 @@
   prompt: "brief: review the auth module for missing checks."
   expect: review-only
   kind: playbook
+- id: verify-change
+  prompt: "Prove the change against the approved design's success criteria."
+  expect: egm-verify
+  kind: skill
 - id: ask-next-step
   prompt: "Where am I in the workflow and what should I run next?"
   expect: egm-ask

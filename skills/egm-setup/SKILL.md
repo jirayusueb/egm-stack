@@ -10,6 +10,13 @@ license: Apache-2.0
 budget, maps the seventeen roles, validates every model, and writes the same
 settings to three rule files. A re-run updates the files in place.
 
+## Spawn cap
+
+Ask once on a full run: the maximum spawns one run may use before the parent
+stops and asks. Any positive number, or `none` for no cap. Write it as
+`# max-spawns-per-run: 20`. Default when unset is `none`. The router enforces
+it.
+
 ## Reply language
 
 Ask once on every full run: `en`, `th`, or `match`. `match` answers in the

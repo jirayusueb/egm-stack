@@ -26,6 +26,13 @@ Ask for a missing input in chat. Do not invent a finding.
 This skill does not spawn a reviewer. When a fix needs a helper, write the brief
 with `../delegate/SKILL.md`. Name host commands from `../../docs/harness.md`.
 
+## Settled registry
+
+Append every settled finding to `.egm/<slug>/settled.md`: one line with the
+id, the scope, and the reason it settled. The next review loads this list, so
+a declined or contested finding stays settled until the condition changes.
+Create the file on first write.
+
 ## Categorize
 
 Give every finding exactly one outcome.

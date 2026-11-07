@@ -20,6 +20,9 @@
 - id: swarm-dedup
   prompt: "Two workers reported the same bug at the same line."
   assert: one-finding-citing-both-workers
+- id: spawn-cap
+  prompt: "The run reached the configured spawn cap."
+  assert: stops-and-asks-raise-or-stop
 - id: one-question
   prompt: "Run egm-review on docs/designs/checkout.md."
   assert: single-question

@@ -8,6 +8,14 @@ license: Apache-2.0
 
 Draft with context, review without it, build with evidence.
 
+## Spawn cap
+
+Read `# max-spawns-per-run:` from the config `egm-setup` writes. Count every
+spawn the run makes, including reviews, workers, and retries. At the cap, stop
+and ask one question: raise the cap for this run, or stop here. `none` or unset
+means no cap. Say the count in the reply whenever the run ends above half the
+cap.
+
 ## Reply language
 
 Read the `# reply-language:` line from the config file `egm-setup` writes.

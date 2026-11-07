@@ -62,10 +62,10 @@ installed, check which one owns the name.
 
 ## Only some skills appear
 
-Nine skills start with `egm-`. The other 38 have their own names. A prefix
+Ten skills start with `egm-`. The other 38 have their own names. A prefix
 filter matches names, not the package.
 
-If a host shows fewer than nine, check the route. A Claude Code plugin shows
+If a host shows fewer than ten, check the route. A Claude Code plugin shows
 `/egm-stack:egm-mode`. omp shows `/skill:egm-mode`. Codex, Cursor, and OpenCode
 show a picker. On the skills route, an interactive install can select a subset.
 Rerun with `-y` to install all 47.

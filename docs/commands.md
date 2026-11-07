@@ -23,6 +23,7 @@ Nine skills start with `egm-`. The other names are borrowed from pstack or are p
 | `egm-resolve` | `/egm-stack:egm-resolve` | `/egm-resolve` | `/skill:egm-resolve` | Triage reviewer findings against the target, write an annotated report, and apply only the fixes the author approves. |
 | `egm-review` | `/egm-stack:egm-review` | `/egm-review` | `/skill:egm-review` | Audit a design, spec, plan, document, code change, or domain model with fresh-context reviewers, resolve the findings, and report what remains. |
 | `egm-setup` | `/egm-stack:egm-setup` | `/egm-setup` | `/skill:egm-setup` | Configure which model each EGM role uses, set one reasoning budget, and write the result to the rule files that harnesses load. |
+| `egm-verify` | `/egm-stack:egm-verify` | `/egm-verify` | `/skill:egm-verify` | Prove a change against the approved design's success criteria. |
 
 ## Extended
 

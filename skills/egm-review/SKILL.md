@@ -22,6 +22,7 @@ A profile sets the default reviewers and the range.
 | code | Changed files or a diff | structural, style, codebase-details |
 | ddd | A domain model | zoom-out, design, codebase-details |
 | comments | Changed files or a diff | comment-sicko |
+| specs | Every document in `docs/designs/` | zoom-out, design |
 
 `plan` reviews the detailed range. `spec` reviews everything before it. `doc`
 and `code` review the whole target. The `ddd` profile maps its reviewers to the

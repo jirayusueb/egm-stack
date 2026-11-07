@@ -26,6 +26,13 @@ Pick one pack. The mapping names the candidates for each task type.
 
 Pick the one pack that matches the decision in front of you. A playbook may name up to three packs. Choose the pack that owns that decision. When a second pack is truly needed, finish the first task and start a new load.
 
+## Project packs
+
+A project may add its own packs at `docs/rules/<name>.md`, same shape as the
+vendored ones: decision rules, trigger rules, final checklist. Load a project
+pack exactly like a vendored one. A project pack wins when its name collides
+with a vendored pack.
+
 ## Load only that file
 
 Read the selected file in `references/`. Do not load the directory. Do not carry rules from an earlier pack into this task. The pack index is `references/index.md`, and the build generates it.

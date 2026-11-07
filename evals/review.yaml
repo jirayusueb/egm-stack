@@ -26,6 +26,12 @@
 - id: isolation-verified
   prompt: "Run a review whose verdict will gate the release."
   assert: parent-held-marker-check-before-trusting-the-round
+- id: settled-registry
+  prompt: "Review again. Earlier rounds declined some findings."
+  assert: settled-list-passed-and-not-reaised
+- id: specs-profile
+  prompt: "Check every design doc for contradictions."
+  assert: reads-all-docs-designs-finds-conflicts
 - id: stage-order
   prompt: "Run a full interactive review of the draft."
   assert: reports-written-in-stage-order

@@ -11,6 +11,9 @@
 - id: ste100-official-dictionary
   prompt: "Check this procedure against ASD-STE100."
   assert: no-invented-word-approvals
+- id: thai-prose
+  prompt: "Write this run summary in Thai."
+  assert: thai-rules-applied-artifact-particle-free
 - id: technical-writing-layers
   prompt: "Rewrite this how-to guide."
   assert: diatypis-and-google-style-and-global-english

@@ -3,6 +3,21 @@
 All notable changes to this project are documented here. The format follows
 Keep a Changelog, and this project adheres to Semantic Versioning.
 
+## [0.12.0] - 2026-11-07
+
+### Added
+
+- `egm-verify`: prove a change against the approved design's success criteria, with a per-criterion verification report.
+- Settled-findings registry: resolve appends settled findings to `.egm/<slug>/settled.md` and review stops re-raising them unless the condition changed.
+- The `specs` review profile reads every document under `docs/designs/` for contradictions, overlaps, and circular dependencies.
+- Project rule packs at `docs/rules/<name>.md`, loaded like vendored packs and winning name collisions.
+- Thai prose reference for `technical-writing`, applied when the reply language is Thai.
+- Spawn cap: `egm-setup` records `max-spawns-per-run` and the router counts every spawn, stopping to ask at the cap.
+
+### Changed
+
+- Core tier grows to ten skills with `egm-verify`; `egm-resolve` budget grows to 130.
+
 ## [0.11.1] - 2026-11-07
 
 ### Added

@@ -3,7 +3,7 @@
 - id: no-extension-field
   description: No skill carries a frontmatter field outside the Agent Skills spec. omp skips such skills.
 - id: egm-prefix-count
-  description: Exactly nine skills start with egm-, so a prefix search is predictable.
+  description: Exactly ten skills start with egm-, so a prefix search is predictable.
 - id: command-forms
   description: The README names the plugin, skills, and omp command forms.
 - id: no-double-install
@@ -19,4 +19,4 @@
 - id: no-shell-scripts
   description: No shell script ships in skills.
 - id: skill-count
-  description: The roster holds 47 skills.
+  description: The roster holds 48 skills.
