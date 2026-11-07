@@ -1,5 +1,16 @@
 # Review report templates
 
+
+## Digest
+
+Top of the consolidated report, before any table. Three lines maximum.
+
+- The three findings to fix first, one line each: id, severity, one-sentence issue. Prefer findings that more than one stage raised.
+- If fewer than three Blockers exist, fill the remaining lines with Majors.
+- One count line: `X Blocker, Y Major, Z Nit open. R reviewers completed, S not run.`
+
+A reader who stops after the digest still knows what to do next.
+
 Read this before writing the first report. Keep every heading and field.
 
 ## Stage report

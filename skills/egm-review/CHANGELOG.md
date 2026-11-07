@@ -2,6 +2,14 @@
 
 All changes to the `egm-review` skill are recorded here.
 
+## 0.7.0 - 2026-11-07
+
+- Added the `quick` preset for short documents: one reviewer, one round.
+- Added resume from existing stage reports, with a one-question gate.
+- Added the findings digest at the top of the consolidated report.
+- Added the panel warning to the plan preview.
+- The `doc` profile now reviews against `doc-standard`.
+
 ## 0.6.1 - 2026-11-06
 
 - Tightened the no-subagent stop message after a live case returned an empty user-facing reply.

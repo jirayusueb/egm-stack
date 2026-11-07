@@ -116,7 +116,7 @@ quality target.
 | `egm-setup` | 175 | Role configuration, show/reset/role/profile modes, provider/model values, host effort levels |
 | `egm-brainstorm` | 120 | Concept stress-test, brief artifact |
 | `egm-draft` | 140 | Section-by-section spec drafting |
-| `egm-review` | 220 | Review engine, stages, loop, profiles, gates |
+| `egm-review` | 240 | Review engine, stages, presets including quick, resume, loop, profiles, gates, digest |
 | `egm-resolve` | 110 | Triage and approved fixes |
 | `egm-drift` | 80 | Spec-versus-code drift |
 

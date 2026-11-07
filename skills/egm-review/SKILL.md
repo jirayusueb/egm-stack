@@ -18,7 +18,7 @@ A profile sets the default reviewers and the range.
 | concept | A concepts brief | zoom-out, inventive-catalyst, design |
 | spec | A design doc before the plan | zoom-out, design, structural, style |
 | plan | A detailed implementation plan | implementation-readiness, codebase-details, style |
-| doc | A README or guide | comprehension, design, style |
+| doc | A README or guide | comprehension, design, style, and the `doc-standard` |
 | code | Changed files or a diff | structural, style, codebase-details |
 | ddd | A domain model | zoom-out, design, codebase-details |
 | comments | Changed files or a diff | comment-sicko |
@@ -72,9 +72,26 @@ sole tool call, and yield.
 2. `consolidated` runs all five stages without pauses, then writes one report.
 3. `spec only` runs stages 1 to 4 over the whole target and stops.
 4. `plan only` runs stage 5 over the detailed range.
+5. `quick` runs one design-critic pass over the whole target, one round.
 
-Loop mode is on for `interactive` and `consolidated`. The other two presets run
-one round.
+Loop mode is on for `interactive` and `consolidated`. The other three presets
+run one round.
+
+Offer `quick` first when the target is under fifty lines and is not an
+implementation plan. State what it skips so the choice is informed.
+
+## Resume
+
+Before the preset gate, look for stage reports that already exist under
+`.egm/<slug>/review/`. When one or more `0N-*.md` files are present and the
+target matches their recorded target, offer a resume.
+
+- List the stages that already have reports, and the stage that would run next.
+- Ask one question: resume from the next stage, or start over. Make it the sole
+  tool call and yield.
+- On resume, reuse the recorded profile and scope. Do not re-run a stage whose
+  report exists unless asked. A report from a different target is not a
+  candidate; say which target it belongs to.
 
 ## Plan preview
 
@@ -99,9 +116,15 @@ Name the cheaper option when it fits.
 - A plan with no design questions: `plan only`.
 - A README or guide: the `doc` profile, one round.
 - A small diff: the `code` profile, one round.
+- A short document under fifty lines: the `quick` preset, one reviewer.
 
 The preview is information, not a gate. The preset gate already collected the
 choice.
+
+Name any reviewer the panel cannot provide before the first dispatch. A stage
+that will run without one of its reviewers says so in the preview, and the
+round stays unclean under the loop rules. Do not discover a missing reviewer at
+stage 4.
 
 ## Semantic split
 
@@ -200,7 +223,9 @@ The four outcomes are `CONTEST`, `ESCALATE`, `PROPOSE FIX`, and `DECLINE`. The
 three severities are `Blocker`, `Major`, and `Nit`.
 
 End with the open findings and the next command. Do not paste the whole report
-in chat.
+in chat. The consolidated report opens with a digest: the three findings to fix
+first, then one count line. A reader who stops after the digest still knows
+what to do next.
 
 ## Untrusted content
 

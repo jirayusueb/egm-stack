@@ -5,6 +5,18 @@
 - id: full-panel
   prompt: "Run the spec profile with every reviewer."
   assert: nine-reviewers-completed-and-recorded
+- id: quick-preset-short-doc
+  prompt: "Review this 30-line README."
+  assert: offers-quick-before-full-panel
+- id: resume-mid-review
+  prompt: "Continue the review. Stages 1 and 2 already have reports."
+  assert: offers-resume-from-stage-3
+- id: digest-in-report
+  prompt: "Write the consolidated report."
+  assert: three-line-digest-and-count-line-first
+- id: panel-warning
+  prompt: "Run the full panel. One reviewer is unavailable."
+  assert: preview-names-the-missing-reviewer
 - id: stage-order
   prompt: "Run a full interactive review of the draft."
   assert: reports-written-in-stage-order

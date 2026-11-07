@@ -3,6 +3,20 @@
 All notable changes to this project are documented here. The format follows
 Keep a Changelog, and this project adheres to Semantic Versioning.
 
+## [0.7.0] - 2026-11-07
+
+### Added
+
+- `egm-review` `quick` preset: one design-critic pass for documents under fifty lines.
+- Resume from existing stage reports, offered when `.egm/<slug>/review/` has reports matching the target.
+- Findings digest at the top of the consolidated report: the three findings to fix first, then a count line.
+- Panel warning in the plan preview when a reviewer cannot run.
+- `resources/document_standards/doc-standard.md` for README and guide reviews, wired into the `doc` profile and embedded for skills-only installs.
+
+### Changed
+
+- `egm-review` budget grows to 240 lines.
+
 ## [0.6.3] - 2026-11-07
 
 ### Added
