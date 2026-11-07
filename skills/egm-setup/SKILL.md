@@ -19,6 +19,13 @@ readiness`. A line of `inherit-parent` runs that stage on the parent model.
 Cheap tiers fit comprehension and style work; strong tiers fit zoom-out and
 readiness. Write only the lines that differ from the role default.
 
+## Library
+
+Ask once on a full run: the path to the user's technical book library, or
+`none`. Write it as `# library: <path>`. Unset means no library. Skills that
+need depth beyond a rule pack may open the matching book from this path. The
+library is the user's own copy; never copy book content into artifacts.
+
 ## Spawn cap
 
 Ask once on a full run: the maximum spawns one run may use before the parent

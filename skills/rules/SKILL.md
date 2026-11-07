@@ -26,6 +26,14 @@ Pick one pack. The mapping names the candidates for each task type.
 
 Pick the one pack that matches the decision in front of you. A playbook may name up to three packs. Choose the pack that owns that decision. When a second pack is truly needed, finish the first task and start a new load.
 
+## Library depth
+
+When the config carries a `# library:` path and the pack names its book, the
+pack's mini rules come first. When a decision needs more than the pack gives,
+open the matching book from the library and read the relevant chapter. Quote
+the book and the chapter when its answer changes a decision. Never copy book
+text into an artifact; state the conclusion and the citation.
+
 ## Project packs
 
 A project may add its own packs at `docs/rules/<name>.md`, same shape as the

@@ -2,6 +2,10 @@
 
 All changes to the `rules` skill are recorded here.
 
+## 0.18.0 - 2026-11-07
+
+- Added library depth: open the matching book from the configured library when a pack is not enough, and cite the chapter.
+
 ## 0.12.0 - 2026-11-07
 
 - Added project packs at docs/rules/, which win over same-named vendored packs.

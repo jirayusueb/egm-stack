@@ -3,6 +3,14 @@
 All notable changes to this project are documented here. The format follows
 Keep a Changelog, and this project adheres to Semantic Versioning.
 
+## [0.18.0] - 2026-11-07
+
+### Added
+
+- The library setting in `egm-setup`: a path to the user's technical books. `rules` opens the matching book for decisions a pack cannot settle and cites the chapter. `why` searches the library as an evidence category before the web.
+- `docs/further-reading.md`: the topic-to-book map, covering the books that deepen existing packs and the ones that fill gaps the packs do not cover.
+- Book content is never copied into artifacts; conclusions cite book and chapter only.
+
 ## [0.17.0] - 2026-11-07
 
 ### Added

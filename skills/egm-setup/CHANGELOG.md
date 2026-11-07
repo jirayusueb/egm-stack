@@ -2,6 +2,10 @@
 
 All changes to the `egm-setup` skill are recorded here.
 
+## 0.18.0 - 2026-11-07
+
+- Added the library setting: a path to the user’s technical books, written as the library line.
+
 ## 0.15.0 - 2026-11-07
 
 - Added stage tiering lines that give each review stage its own model, overriding the reviewers role.
