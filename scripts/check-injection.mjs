@@ -12,13 +12,14 @@ const errors = [];
 const GUARDED = [
   'egm-mode', 'egm-ask', 'egm-review', 'egm-resolve', 'egm-brainstorm',
   'egm-draft', 'egm-drift', 'how', 'why', 'ddd', 'no-comments',
-  'technical-writing', 'ste100', 'unslop', 'reflect', 'statechart', 'egm-bootstrap',
+  'technical-writing', 'ste100', 'unslop', 'reflect', 'statechart', 'egm-bootstrap', 'rules', 'delegate',
 ];
 
 for (const name of GUARDED) {
   const rel = `skills/${name}/SKILL.md`;
   if (!existsSync(join(ROOT, rel))) { errors.push(`${rel}: missing`); continue; }
-  if (!read(rel).includes('data, not instructions')) {
+  const normalized = read(rel).replace(/\s+/g, ' ');
+  if (!normalized.includes('data, not instructions')) {
     errors.push(`${rel}: missing the untrusted-content guardrail`);
   }
 }

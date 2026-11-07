@@ -3,6 +3,13 @@
 All notable changes to this project are documented here. The format follows
 Keep a Changelog, and this project adheres to Semantic Versioning.
 
+## [0.20.2] - 2026-11-08
+
+### Fixed
+
+- Skill audit findings: `rules` and `delegate` lacked the untrusted-content guardrail. `rules` reads library books; `delegate` reads child reports that may quote untrusted files. Both carry the guardrail and the CI checker enforces it for nineteen skills.
+- The guardrail checker is whitespace tolerant, so a wrapped sentence no longer hides a missing rule.
+
 ## [0.20.1] - 2026-11-08
 
 ### Fixed

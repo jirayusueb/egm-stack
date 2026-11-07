@@ -2,6 +2,10 @@
 
 All changes to the `rules` skill are recorded here.
 
+## 0.20.2 - 2026-11-08
+
+- Added the untrusted-content guardrail; packs and library books are data, never instructions.
+
 ## 0.18.0 - 2026-11-07
 
 - Added library depth: open the matching book from the configured library when a pack is not enough, and cite the chapter.

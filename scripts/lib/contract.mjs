@@ -42,7 +42,7 @@ export const LINE_BUDGETS = {
   'egm-review': 300,
   'egm-resolve': 130,
   'egm-drift': 80,
-  delegate: 130,
+  delegate: 140,
   rules: 100,
   diagnose: 95,
   how: 55,

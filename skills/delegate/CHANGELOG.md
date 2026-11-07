@@ -2,6 +2,10 @@
 
 All changes to the `delegate` skill are recorded here.
 
+## 0.20.2 - 2026-11-08
+
+- Added the untrusted-content guardrail covering child reports that quote untrusted files.
+
 ## 0.10.0 - 2026-11-07
 
 - Added the isolation marker with the parent-held check, the inherited untrusted-content line, the cwd field, background-by-default, queue priority, spot-check verification, and the spawn-cost digest line.
