@@ -51,4 +51,4 @@ jobs:
       - name: Skills CLI discovers the roster
         run: npx --yes skills add . --list | perl -pe 's/\e\[[0-9;]*m//g' | tee /tmp/skills.txt
       - name: Roster count is 47
-        run: grep -q "Found 47 skills" /tmp/skills.txt
+        run: grep -q "Found 48 skills" /tmp/skills.txt
