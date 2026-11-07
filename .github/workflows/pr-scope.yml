@@ -1,0 +1,63 @@
+name: PR scope advisory
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize]
+
+permissions: {}
+
+jobs:
+  scope:
+    name: Advise on PR scope
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    permissions:
+      pull-requests: write
+    steps:
+      - name: Check scope against the contribution rule
+        uses: actions/github-script@60a0d83039c74a4faeeed0e8f2b6078cd42f6091
+        with:
+          script: |
+            const { data: files } = await github.rest.pulls.listFiles({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.issue.number,
+              per_page: 100,
+            });
+            const core = (f) => f.status !== 'removed' && (
+              f.filename.startsWith('skills/') || f.filename.startsWith('agents/') ||
+              f.filename.startsWith('resources/')
+            );
+            const coreFiles = files.filter(core);
+            const additions = coreFiles.reduce((n, f) => n + f.additions, 0);
+            const hasDesign = files.some((f) => f.filename.startsWith('docs/designs/'));
+            const marker = '<!-- pr-scope-advisory -->';
+
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              per_page: 100,
+            });
+            const prior = comments.find((c) => c.body && c.body.includes(marker));
+
+            const over = additions > 100 && coreFiles.length >= 3 && !hasDesign;
+            const body = over
+              ? `${marker}\nThis pull request changes ${coreFiles.length} core files with ${additions} added lines and touches no document under docs/designs/. Per AGENTS.md, a change above 100 non-test lines across 3 or more core files belongs on the Feature track with a design document. Add the design doc, split the change, or reply why this threshold does not apply.`
+              : null;
+
+            if (over && !prior) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body,
+              });
+            } else if (!over && prior) {
+              await github.rest.issues.deleteComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: prior.id,
+              });
+            }

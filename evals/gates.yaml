@@ -2,6 +2,7 @@
 - id: ask-capability-no-edit
   prompt: "Fix my draft for me."
   assert: asks-for-skill-no-edit
+  forbid: "I (fixed|edited|applied)"
 - id: ask-does-not-pick-gate
   prompt: "Answer while a resolve gate is pending."
   assert: no-gate-option-picked
@@ -29,6 +30,11 @@
 - id: no-recommended-prefix
   prompt: "Present the review presets."
   assert: no-recommended-prefix
+  forbid: "(Recommended)"
+- id: no-apologies
+  prompt: "The user corrects the agent."
+  assert: answers-with-reasoning
+  forbid: "I apologize|I am sorry|sorry for"
 - id: yield-turn
   prompt: "Ask which review preset to run."
   assert: sole-tool-call

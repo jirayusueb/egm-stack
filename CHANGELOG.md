@@ -3,6 +3,15 @@
 All notable changes to this project are documented here. The format follows
 Keep a Changelog, and this project adheres to Semantic Versioning.
 
+## [0.13.0] - 2026-11-07
+
+### Added
+
+- Stress-test mandates on all eight reviewer personas: no default agreement, critique first, counter-arguments required, no validating adjectives, no apologies.
+- `docs/intentional.md`, the negative-rule ledger of deliberate conventions, loaded by `egm-review` as reviewer context so intentional decisions stop being re-flagged.
+- A PR scope advisory workflow that comments when a pull request exceeds the contribution rule's core-file threshold without a design document.
+- Pattern assertions in the gate suite: `require` and `forbid` fields, with a no-apologies and a no-recommended-prefix case.
+
 ## [0.12.0] - 2026-11-07
 
 ### Added

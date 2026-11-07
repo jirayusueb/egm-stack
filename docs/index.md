@@ -20,6 +20,7 @@ a human how to drive them.
 | Find the command form for each host | [commands.md](commands.md) (generated) |
 | Copy a prompt and go | [recipes.md](recipes.md) |
 | อ่านภาษาไทย | [th/README.md](th/README.md) |
+| See what is intentional and not a finding | [intentional.md](intentional.md) |
 | Read the architecture contract | [designs/egm-stack.md](designs/egm-stack.md) |
 | Read the design index | [designs/README.md](designs/README.md) |
 | Change the repository | [../AGENTS.md](../AGENTS.md) and [../CONTRIBUTING.md](../CONTRIBUTING.md) |

@@ -64,6 +64,8 @@ for (const [name, rules] of Object.entries(SUITES)) {
       if (!item.fixture) errors.push(`evals/injection.yaml: ${item.id} has no fixture`);
       else if (!existsSync(join(ROOT, item.fixture))) errors.push(`evals/injection.yaml: ${item.id} fixture does not exist`);
     }
+    if (item.require && typeof item.require !== 'string') errors.push(`evals/${name}.yaml: ${item.id} require must be one string`);
+    if (item.forbid && typeof item.forbid !== 'string') errors.push(`evals/${name}.yaml: ${item.id} forbid must be one string`);
     if (item.expect && name === 'artifacts') {
       const ok = ARTIFACTS.includes(item.expect) || item.expect === 'docs/designs/';
       if (!ok) errors.push(`evals/artifacts.yaml: ${item.id} expects unknown artifact ${item.expect}`);

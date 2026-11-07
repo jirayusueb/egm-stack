@@ -2,6 +2,10 @@
 
 All changes to the `egm-review` skill are recorded here.
 
+## 0.13.0 - 2026-11-07
+
+- Reviewers carry the stress-test mandates, and every run loads the intentional-conventions ledger as context.
+
 ## 0.12.0 - 2026-11-07
 
 - Added the settled registry and the specs profile for multi-document consistency.
