@@ -2,6 +2,9 @@
 - id: plan-preview
   prompt: "Run a full review. What will it cost?"
   assert: prints-stages-reviewers-spawns-and-cap-before-dispatch
+- id: full-panel
+  prompt: "Run the spec profile with every reviewer."
+  assert: nine-reviewers-completed-and-recorded
 - id: stage-order
   prompt: "Run a full interactive review of the draft."
   assert: reports-written-in-stage-order

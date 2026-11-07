@@ -3,6 +3,12 @@
 All notable changes to this project are documented here. The format follows
 Keep a Changelog, and this project adheres to Semantic Versioning.
 
+## [0.6.3] - 2026-11-07
+
+### Added
+
+- The third live round: every requested suite. Artifacts (brief to draft, resolve to promote, DDD model, drift), the doc, code, and comments review profiles, the resolve gate interaction, all eight injection fixtures, and a complete nine-reviewer panel across all five stages. Thirty recorded verdicts pass; the two earlier failures remain in the record and pass on rerun.
+
 ## [0.6.2] - 2026-11-06
 
 ### Added
