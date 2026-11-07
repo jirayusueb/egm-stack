@@ -264,8 +264,11 @@ Announce every dispatch with one line, `Stage N/5: <reviewers> dispatched`, so
 the user knows the run is moving. Announce completion the same way.
 
 End with the open findings and the next command. Do not paste the whole report
-in chat. The consolidated report opens with a digest: the three findings to fix
-first, then one count line. A reader who stops after the digest still knows
+in chat. The consolidated report opens with a digest, then the author map:
+every unsettled finding sorted Blocker first, one row each, with the section
+and line, a one-line issue, and a next action of Fix, Decide, or Ignore.
+Findings cite the decision id when they attack a Decisions row. Then the
+digest counts: the three findings to fix first, then one count line. A reader who stops after the digest still knows
 what to do next. Close the consolidated report with one usage line:
 `Used: X spawns, Y rounds, Z not run. Cap N.` X counts every reviewer spawn
 across all rounds, including retries.

@@ -3,6 +3,15 @@
 All notable changes to this project are documented here. The format follows
 Keep a Changelog, and this project adheres to Semantic Versioning.
 
+## [0.19.0] - 2026-11-07
+
+### Added
+
+- Decisions table in drafts: one row per decision with a stable D-id, options, choice, and reason. Reviewers and findings cite the ids.
+- Author map in consolidated reports: every unsettled finding sorted Blocker first, with section and line, a one-line issue, and a next action of Fix, Decide, or Ignore.
+- Section caps in the draft template: five sentences for the Overview, one paragraph for the Problem, ten lines per design subsection, three lines per plan step.
+- One-diagram rule: exactly one mermaid diagram in the Proposed design.
+
 ## [0.18.0] - 2026-11-07
 
 ### Added

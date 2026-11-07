@@ -2,6 +2,10 @@
 
 All changes to the `egm-review` skill are recorded here.
 
+## 0.19.0 - 2026-11-07
+
+- Added the author map: severity-sorted findings with section, line, decision id, and a Fix, Decide, or Ignore next action.
+
 ## 0.15.0 - 2026-11-07
 
 - Added the fast preset with parallel stages 1 and 2, the adaptive early-exit check after each stage, and the diff-scoped re-audit that reviews only changed ranges.

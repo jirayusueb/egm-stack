@@ -20,3 +20,6 @@
 - id: drift-report-artifact
   prompt: "Run drift detection and write the report."
   expect: drift_report.md
+- id: decision-log-in-draft
+  prompt: "Draft the spec from the brief."
+  expect: design_draft.md

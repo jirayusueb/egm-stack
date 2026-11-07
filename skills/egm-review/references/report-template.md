@@ -1,6 +1,21 @@
 # Review report templates
 
 
+## Author map
+
+First table after the digest, before any stage detail. Every unsettled
+finding, sorted Blocker first, one row each. The author reads this table and
+stops.
+
+| Finding | Severity | Section and line | Issue in one line | Next action |
+| --- | --- | --- | --- | --- |
+| critic-3-2 | Blocker | Proposed design L19, D1 | The key lifecycle is undecided. | Fix: name the mint point and store in D1. |
+| style-3-5 | Nit | Alternatives L26 | Guidance cited and never shown. | Decide: link it or drop it. |
+
+Next action is one of `Fix: <what>`, `Decide: <what>`, or `Ignore: <reason>`.
+Cite the line at review time and the decision id when the finding attacks a
+Decisions row.
+
 ## Digest
 
 Top of the consolidated report, before any table. Three lines maximum.

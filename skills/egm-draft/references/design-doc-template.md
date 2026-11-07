@@ -12,7 +12,17 @@ heading text and the order.
 
 ## Overview
 
-One short paragraph. What changes, for whom, and why now.
+At most five sentences. What changes, for whom, and why now. A reader who
+stops here still knows the shape of the change.
+
+## Decisions
+
+One row per decision, each with a stable id. Reviewers cite the id; findings
+cite the id.
+
+| Id | Decision | Options considered | Choice | Reason |
+| --- | --- | --- | --- | --- |
+| D1 | <what is being decided> | <the real alternatives> | <the choice> | <the concrete reason> |
 
 ## Goals and non-goals
 
@@ -26,13 +36,15 @@ One short paragraph. What changes, for whom, and why now.
 
 ## Problem
 
-The failure today. Include evidence, a reproduction, or a quote. State who
-feels it.
+One paragraph. The failure today. Include evidence, a reproduction, or a
+quote. State who feels it.
 
 ## Proposed design
 
 The components and how they fit. Name the interfaces, the data that crosses
-them, and the ownership. Add a small diagram when text is slower.
+them, and the ownership. One mermaid diagram of the structure or the data
+flow, and only one; needing two means the design splits in two. Each
+subsection stays under ten lines. Split a longer one.
 
 ## Alternatives considered
 

@@ -90,6 +90,15 @@ On approval, write the next section. On revise, apply the change and repeat the
 gate for the same section. Inline comments on the draft count as revision
 detail.
 
+## Readability
+
+- Give every decision a row in the Decisions table with a stable id, D1
+  onward. Options, choice, and the concrete reason. Reviewers and findings
+  cite these ids.
+- Hold the caps: five sentences in the Overview, one paragraph for the
+  Problem, ten lines per design subsection, three lines per plan step.
+- Include exactly one mermaid diagram in the Proposed design.
+
 ## Final pass
 
 After the last section, reconcile the draft against the input.

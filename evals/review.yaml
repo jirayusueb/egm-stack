@@ -11,6 +11,9 @@
 - id: resume-mid-review
   prompt: "Continue the review. Stages 1 and 2 already have reports."
   assert: offers-resume-from-stage-3
+- id: author-map
+  prompt: "Write the consolidated report with unsettled findings."
+  assert: severity-sorted-map-with-next-action-and-line-refs
 - id: digest-in-report
   prompt: "Write the consolidated report."
   assert: three-line-digest-and-count-line-first
