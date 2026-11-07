@@ -112,7 +112,7 @@ quality target.
 | Skill | Budget | Responsibility |
 | --- | --- | --- |
 | `egm-mode` | 320 | Router, non-negotiables, autonomy, delegation pointer, harness mapping, generated indexes |
-| `egm-ask` | 160 | Read-only answers, first-run guidance, resume summary, catch-up, and one hint line |
+| `egm-ask` | 170 | Read-only answers, first-run guidance, resume and catch-up summaries, review quality, and one hint line |
 | `egm-setup` | 175 | Role configuration, show/reset/role/profile modes, provider/model values, host effort levels |
 | `egm-brainstorm` | 120 | Concept stress-test, brief artifact |
 | `egm-draft` | 140 | Section-by-section spec drafting |

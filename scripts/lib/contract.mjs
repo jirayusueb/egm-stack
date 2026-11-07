@@ -32,7 +32,7 @@ export const EXPERIMENTAL_SKILLS = ['egm-bootstrap'];
 
 export const LINE_BUDGETS = {
   'egm-mode': 320,
-  'egm-ask': 160,
+  'egm-ask': 170,
   'egm-setup': 175,
   'egm-brainstorm': 120,
   'egm-draft': 140,

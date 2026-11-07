@@ -3,6 +3,11 @@
 One page for the first run. Install, start a design, review it, resolve the
 findings, then deliver.
 
+The draft step has an interview mode. With no brief and no notes, it asks four
+questions, writes the brief, and continues. A review can resume: stage reports
+that already exist are offered as the starting point, so an interrupted run
+does not start over. Short documents take the `quick` preset.
+
 ## 1. Install and set models
 
 Install through the route that fits your host. The [README](../README.md) has

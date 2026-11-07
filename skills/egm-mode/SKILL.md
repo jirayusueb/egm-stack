@@ -8,6 +8,13 @@ license: Apache-2.0
 
 Draft with context, review without it, build with evidence.
 
+## Reply language
+
+Read the `# reply-language:` line from the config file `egm-setup` writes.
+`en` and `th` fix the reply language. `match` mirrors the language of the
+user's latest message. Unset means `en`. Artifacts stay in English; only the
+conversation reply follows the setting.
+
 ## Verbosity
 
 The first words may set reply length for the whole session. `brief` before the

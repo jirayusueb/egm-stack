@@ -34,6 +34,10 @@ npx skills add jirayusueb/egm-stack
 Select the core skills and the twenty-four principles. The router routes to
 what is installed.
 
+Reply length and language are set once. Prefix a task with `brief` for
+one-screen replies, and `/egm-setup` records your reply language (`en`, `th`,
+or `match`).
+
 ### Claude Code
 
 ```sh
@@ -247,6 +251,15 @@ copyable next steps, and it never answers another skill's pending gate.
 Runs write under `.egm/<slug>/`, which is ignored by default. Promote an
 approved spec to `docs/designs/<slug>.md`. See [docs/artifacts.md](docs/artifacts.md).
 
+## Cost and control
+
+The plan preview states spawns and the cap before a review starts. The
+consolidated report closes with the actual usage line. A short document can
+take the `quick` preset: one reviewer, one round. Fan-outs keep a ledger under
+`.egm/<slug>/team/` that survives a crash and resumes only the missing
+children. Reviews whose verdict gates a release verify isolation with a
+parent-held marker.
+
 ## Commands
 
 Every skill, with its form on each host, is in [docs/commands.md](docs/commands.md).
@@ -329,6 +342,6 @@ Apache-2.0. See [LICENSE](LICENSE). Vendored MIT material keeps its own notice.
 - Confirm no generated region was hand-edited, and `LICENSE`, `NOTICE`, and the
   `UPSTREAM.md` pins are current.
 - Add a row to `docs/designs/README.md` for each new design document.
-- Tag `v0.10.0`.
+- Tag `v0.11.0`.
 - Test each documented install route on a clean machine, and confirm the tree
   has no secrets and no absolute local paths.

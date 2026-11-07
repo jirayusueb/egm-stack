@@ -2,6 +2,10 @@
 
 All changes to the `egm-ask` skill are recorded here.
 
+## 0.11.0 - 2026-11-07
+
+- Added the review-quality answer: outcome tallies per reviewer from the goldfish reports.
+
 ## 0.8.0 - 2026-11-07
 
 - Added catch-up from git log plus the artifact trail, and one related-skill hint line.

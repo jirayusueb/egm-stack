@@ -128,6 +128,13 @@ When the user asks where they were or says continue, answer in one screen.
 Keep the reply under 20 lines. When the newest artifact is older than the code,
 say the summary may be stale.
 
+For review quality, when the user asks how useful the reviewers were, read
+every `goldfish_review_report.md` under `.egm/`. Tally outcomes by reviewer
+prefix in the finding ids: applied, declined, contested-and-held, escalated.
+Report one line per reviewer plus one line of advice, such as a reviewer whose
+findings are mostly declined is a candidate to drop from the panel. Never
+invent a tally; report only what the reports record.
+
 For catch-up, when the user asks what changed since they left, you may run one
 read-only command, `git log --oneline -20`. Combine it with the artifact trail
 into the same one-screen shape. Name the command you ran under Source.

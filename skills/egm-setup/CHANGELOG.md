@@ -2,6 +2,10 @@
 
 All changes to the `egm-setup` skill are recorded here.
 
+## 0.11.0 - 2026-11-07
+
+- Added the reply-language setting: en, th, or match, stored in the config line.
+
 ## 0.6.0 - 2026-11-06
 
 - Added show, reset, role, and profile modes.

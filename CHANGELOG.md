@@ -3,6 +3,18 @@
 All notable changes to this project are documented here. The format follows
 Keep a Changelog, and this project adheres to Semantic Versioning.
 
+## [0.11.0] - 2026-11-07
+
+### Added
+
+- Reply language setting in `egm-setup` (`en`, `th`, `match`), applied by `egm-mode` to conversation replies; artifacts stay in English.
+- Review-quality answers in `egm-ask`: outcome tallies per reviewer from the recorded reports.
+- `docs/recipes.md` with copy-ready prompts for starting work, reviewing, navigating, drafting, delegating, and controlling cost.
+
+### Changed
+
+- README, getting started, and the docs index cover the cost meter, ledger, quick preset, verbosity, and the interview mode.
+
 ## [0.10.0] - 2026-11-07
 
 ### Added

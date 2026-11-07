@@ -18,6 +18,7 @@ a human how to drive them.
 | Map an action to a host | [harness.md](harness.md) |
 | Look up a skill, playbook, or principle | [skills.md](skills.md) (generated) |
 | Find the command form for each host | [commands.md](commands.md) (generated) |
+| Copy a prompt and go | [recipes.md](recipes.md) |
 | อ่านภาษาไทย | [th/README.md](th/README.md) |
 | Read the architecture contract | [designs/egm-stack.md](designs/egm-stack.md) |
 | Read the design index | [designs/README.md](designs/README.md) |

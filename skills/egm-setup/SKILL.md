@@ -10,6 +10,13 @@ license: Apache-2.0
 budget, maps the seventeen roles, validates every model, and writes the same
 settings to three rule files. A re-run updates the files in place.
 
+## Reply language
+
+Ask once on every full run: `en`, `th`, or `match`. `match` answers in the
+language of the user's last message. Write the choice as one line in every
+config file: `# reply-language: match`. Default when unset is `en`. Show modes
+and single-role changes keep the stored line unchanged.
+
 ## Modes
 
 The default run detects, asks for one budget, and writes. Four other modes skip
