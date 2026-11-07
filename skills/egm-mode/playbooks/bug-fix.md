@@ -2,10 +2,10 @@
 
 **You own the fix. Every shipped line traces to runtime evidence.**
 
-Read first: the `working-effectively-with-legacy-code` and `clean-code` rule packs.
+Read first: the `working-effectively-with-legacy-code` rule pack.
 
 1. Reproduce the defect on the surface the user reported. Write the exact steps and the observed result.
-2. Find the root cause with **how** and **why**. Form hypotheses and rule them out until one survives. Confirm the mechanism, not just the symptom.
+2. Run **diagnose** end to end. Reproduce, minimise, hypothesise with separating tests, instrument, and bisect when the table runs dry. A flaky test gets the triage loop, never a rerun until green. Confirm the mechanism, not the symptom.
 3. Write the failing test first with **tdd** when a cheap local test path exists. The failing test is the repro in history.
 4. Fix the root cause. Ship the smallest change the evidence justifies, and revert anything that only "might help".
 5. Verify on the same surface. The original repro now passes and the new test stays green.

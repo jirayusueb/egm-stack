@@ -105,6 +105,14 @@
   prompt: "Build webhook delivery. Design it first, then implement and verify."
   expect: feature
   kind: playbook
+- id: diagnose-bug
+  prompt: "The export writes duplicate rows intermittently. Find the root cause."
+  expect: diagnose
+  kind: skill
+- id: diagnose-flaky
+  prompt: "This test fails about one run in five. Work out why."
+  expect: diagnose
+  kind: skill
 - id: small-change
   prompt: "Fix the off-by-one in this validator. One file, no API change."
   expect: small-change

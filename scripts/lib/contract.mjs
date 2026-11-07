@@ -15,6 +15,7 @@ export const CORE_SKILLS = [
 export const EXTENDED_SKILLS = [
   'delegate',
   'rules',
+  'diagnose',
   'how',
   'why',
   'arena',
@@ -43,6 +44,7 @@ export const LINE_BUDGETS = {
   'egm-drift': 80,
   delegate: 130,
   rules: 100,
+  diagnose: 95,
   how: 55,
   why: 120,
   arena: 60,

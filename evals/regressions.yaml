@@ -19,4 +19,4 @@
 - id: no-shell-scripts
   description: No shell script ships in skills.
 - id: skill-count
-  description: The roster holds 48 skills.
+  description: The roster holds 49 skills.

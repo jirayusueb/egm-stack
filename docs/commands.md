@@ -31,6 +31,7 @@ Nine skills start with `egm-`. The other names are borrowed from pstack or are p
 | --- | --- | --- | --- | --- |
 | `arena` | `/egm-stack:arena` | `/arena` | `/skill:arena` | Run a controlled arena for /arena or when one attempt at a non-trivial artifact would lock in the wrong shape. |
 | `delegate` | `/egm-stack:delegate` | `/delegate` | `/skill:delegate` | Delegate a bounded task with /delegate and a self-contained brief. |
+| `diagnose` | `/egm-stack:diagnose` | `/diagnose` | `/skill:diagnose` | Find the root cause of a defect by discipline: reproduce, minimise, hypothesise with separating tests, instrument, bisect, then fix with a regression test. |
 | `how` | `/egm-stack:how` | `/how` | `/skill:how` | Explain how a subsystem works with /how. |
 | `no-comments` | `/egm-stack:no-comments` | `/no-comments` | `/skill:no-comments` | Remove comments and workaround code for /no-comments or when a diff adds narration, banners, or suppression comments. |
 | `reflect` | `/egm-stack:reflect` | `/reflect` | `/skill:reflect` | Mine the current conversation for durable learnings with /reflect. |

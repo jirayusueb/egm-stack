@@ -123,7 +123,7 @@ quality target.
 
 ### Extended (13)
 
-`delegate` 130, `rules` 100, `how` 55, `why` 120, `arena` 60, `swarm` 55,
+`delegate` 130, `rules` 100, `diagnose` 95, `how` 55, `why` 120, `arena` 60, `swarm` 55,
 `tdd` 50, `no-comments` 60, `reflect` 120, `unslop` 100, `technical-writing`
 110, `ste100` 110, `statechart` 100 (experimental).
 

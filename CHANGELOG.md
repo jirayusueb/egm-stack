@@ -3,6 +3,18 @@
 All notable changes to this project are documented here. The format follows
 Keep a Changelog, and this project adheres to Semantic Versioning.
 
+## [0.16.0] - 2026-11-07
+
+### Added
+
+- `diagnose`: the root-causing discipline. Reproduce, minimise, a hypothesis table with separating tests, targeted instrumentation, bisect as a normal tool, and a fix with a regression test.
+- Flaky-test triage inside `diagnose`: classify by repeat pattern, chase races and seeds, never rerun until green. The rate is recorded before and after.
+- The `bug-fix` playbook now runs `diagnose` for root-causing instead of improvising.
+
+### Changed
+
+- Extended tier grows to fourteen skills; the roster holds 49.
+
 ## [0.15.0] - 2026-11-07
 
 ### Added

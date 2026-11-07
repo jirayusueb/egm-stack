@@ -92,7 +92,7 @@ const checks = {
   },
   'skill-count': () => {
     const count = skillDirs().length;
-    return count === 48 ? true : `expected 48 skills, found ${count}`;
+    return count === 49 ? true : `expected 49 skills, found ${count}`;
   },
 };
 
