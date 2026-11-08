@@ -58,9 +58,9 @@ the table says so.
 | Responsibility | Holders | Access rule |
 | --- | --- | --- |
 | Router | `egm-mode` | Classifies intent, selects a playbook, owns routing gates and the only todo list, reads model config and harness map |
-| Workflows | `egm-brainstorm`, `egm-draft`, `egm-review`, `egm-resolve`, `egm-drift`, the 12 playbooks, and the 13 Extended skills (`delegate`, `rules`, `how`, `why`, `arena`, `swarm`, `tdd`, `no-comments`, `reflect`, `unslop`, `technical-writing`, `ste100`, `statechart`) | Own named inputs, artifacts, exit condition. May read contracts and knowledge |
+| Workflows | `egm-brainstorm`, `egm-draft`, `egm-review`, `egm-resolve`, `egm-drift`, the 13 playbooks, and the 14 Extended skills (`delegate`, `rules`, `diagnose`, `how`, `why`, `arena`, `swarm`, `tdd`, `no-comments`, `reflect`, `unslop`, `technical-writing`, `ste100`, `statechart`) | Own named inputs, artifacts, exit condition. May read contracts and knowledge |
 | Contracts | Review protocol inside `egm-review`; delegation contract inside `delegate`; verification rules | One implementation each. Other skills reference the contract by path instead of redefining it |
-| Knowledge | 24 principles, 14 rule packs, 6 standards, the ask stage map | Read-only. Nothing in this layer invokes anything |
+| Knowledge | 25 principles, 14 rule packs, 6 standards, the ask stage map | Read-only. Nothing in this layer invokes anything |
 
 Every skill and its reference files have one owner, the maintainer named in
 [AGENTS.md](../../AGENTS.md). A skill with no owner is a defect.
@@ -98,16 +98,16 @@ license: Apache-2.0
 
 Skills are model-invocable. Do not add extension fields such as
 `disable-model-invocation`. A strict Agent Plugins consumer skips a skill that
-carries one, which is how omp silently dropped all 47 skills in testing.
+carries one, which is how omp silently dropped every skill then shipped, 47 at the time.
 
-Exception: the 24 `principle-*` leaves carry a trigger, start their
+Exception: the 25 `principle-*` leaves carry a trigger, start their
 description with `Apply when`, and are cited rather than invoked.
 
 Line budgets are ceilings checked by `validate.mjs`. Depth that does not fit
 belongs in `references/`, and the skill says when to read it. A budget is not a
 quality target.
 
-### Core (10)
+### Core (9)
 
 | Skill | Budget | Responsibility |
 | --- | --- | --- |
@@ -117,15 +117,28 @@ quality target.
 | `egm-verify` | 100 | Prove a change against the approved design's success criteria |
 | `egm-brainstorm` | 120 | Concept stress-test, brief artifact |
 | `egm-draft` | 140 | Section-by-section spec drafting |
-| `egm-review` | 300 | Review engine, stages, six presets including fast, resume, loop, early exit, diff-scoped re-audit, profiles, gates, digest |
+| `egm-review` | 300 | Review engine: five stages, six execution presets, seven target profiles, resume, loop with the cap state, early exit, diff-scoped re-audit, gates, digest. A preset chooses how the stages run; a profile chooses the reviewers and the standard |
 | `egm-resolve` | 130 | Triage, approved fixes, and the settled registry |
 | `egm-drift` | 95 | Spec-versus-code drift |
 
-### Extended (13)
+### Extended (14)
 
-`delegate` 140, `rules` 100, `diagnose` 95, `how` 55, `why` 120, `arena` 60, `swarm` 55,
-`tdd` 65, `no-comments` 60, `reflect` 120, `unslop` 100, `technical-writing`
-110, `ste100` 110, `statechart` 100 (experimental).
+| Skill | Budget | Responsibility |
+| --- | --- | --- |
+| `delegate` | 140 | Briefs, fresh contexts, waves, the ledger, collection, and the report contract |
+| `rules` | 100 | Load one pack, apply it as constraints, open the library book when deeper |
+| `diagnose` | 95 | Reproduce, minimise, hypothesis table, instrument, bisect, flaky triage, fix with a regression test |
+| `how` | 55 | Explain a subsystem through explorers and one explainer |
+| `why` | 120 | Decision archaeology across evidence categories |
+| `arena` | 60 | Competing candidates, cross-judge, pick a base, graft |
+| `swarm` | 55 | Parallel workers over declared slices, one aggregated report |
+| `tdd` | 65 | Failing test first, construction rules, seed-varied runs |
+| `no-comments` | 60 | Comment Sicko pass, fix accepted findings at the root |
+| `reflect` | 120 | Mine the transcript, route learnings to skill edits with approval |
+| `unslop` | 100 | Cut AI tells by stable rule ids |
+| `technical-writing` | 110 | Structure and voice, delegating controlled language and deslop |
+| `ste100` | 110 | Controlled language with the heuristic linter |
+| `statechart` | 100 | TLA+ model check and Mermaid chart. Experimental |
 
 ### Domain (1) and experimental (1)
 
@@ -230,6 +243,10 @@ path.
   question. Offer accept, continue past the cap, or return to drafting.
 - **Cap** is five rounds. A failed reviewer is retried once, then recorded
   `not run`, which makes the round unclean.
+- **Cap-exhausted** is the state when five rounds pass with an open Blocker or
+  Major. The engine returns the document to drafting with the open-findings
+  list, or records each open finding as a DECLINE with an accepted-risk note
+  when the user chooses to proceed. It never reports the review as clean.
 
 **Gates.** One question, the sole tool call in the turn, yield immediately, no
 "(Recommended)" prefix. The presenting skill owns the gate. The router does not
@@ -253,7 +270,7 @@ Lead.
 
 `egm-ask` is read-only and advisory. It reads artifact names, the `Status:` and
 `**Target:**` lines of the review report, skill frontmatter, the stage table,
-and `docs/harness.md`. It classifies five question types, detects the stage,
+and `docs/harness.md`. It classifies five question types (next step, skill choice, capability request, troubleshooting, out of scope), detects the stage,
 applies the implementation gate, and replies in at most twenty lines with up to
 three copyable next steps. It never answers or picks an option on another
 skill's pending gate. The stage table lives at
@@ -370,7 +387,7 @@ place. A host without a subagent tool runs delegation inline and stops reviews.
 
 ## Validation
 
-Five commands, each with one job.
+Ten commands, each with one job.
 
 - `node scripts/validate.mjs` checks frontmatter and name parity, link
   integrity, cross-reference parity, manifest identity, banned tokens including
@@ -406,7 +423,7 @@ The dominant cost is subagent dispatch, not tokens on the parent.
 | Full five-stage review | 8 to 11 | up to 5 | 15 to 55 |
 | Arena | 2 to 4 candidates plus 1 judge | 1 | 3 to 5 |
 | Swarm | 3 to 20 workers | 1 | 3 to 20 |
-| `why` investigation | 1 per evidence category, up to 7 | 1 | 1 to 8 |
+| `why` investigation | 1 per evidence category, up to 7, plus 1 synthesizer | 1 | 1 to 8 |
 
 Loop mode multiplies the per-round count by the round count, with a hard cap of
 five. Token cost depends on the host and the target size and is not estimated
@@ -430,9 +447,12 @@ optional first-run statechart install.
   should also restrict them.
 - Secrets are never requested. A skill that needs a credential asks the user to
   place it in the host, not in the repository.
-- Prompt injection through a reviewed document is a real risk. The mitigation
-  is that reviewers never write and the parent applies edits, so a malicious
-  document can mislead findings but cannot execute.
+- Prompt injection through a reviewed document is a real risk. Reviewers never
+  write and the parent applies edits, so a malicious document can mislead
+  findings but cannot execute. Write-scoped delegates also carry the
+  untrusted-content guardrail: edits stay inside the declared write scope, and
+  the parent reviews every diff, so an injected instruction cannot widen the
+  blast radius beyond the scope the brief already allowed.
 
 ## Licensing and derivation
 
@@ -457,7 +477,7 @@ pins commits and inventories the files.
 | Alternative | Why rejected |
 | --- | --- |
 | Same-context review with a second prompt | It cannot catch unstated assumptions the author's context supplies. EGM's guide treats fresh context as load-bearing. |
-| Three-stage review instead of five | Loses the zero-context comprehension test and the implementation-readiness pass, which are the two stages that caught the most issues in this repo's dogfood run. |
+| Three-stage review instead of five | Loses the zero-context comprehension test and the implementation-readiness pass, which are the two stages the recorded dogfood rounds relied on: the zero-context comprehension catch and the readiness pass. |
 | Single-stage review | Cheaper, but one pass cannot both detect a missing assumption and prove the plan is implementable. It also removes the convergence rule that the loop depends on. |
 | Link to the upstream rule packs instead of vendoring | Removes the licensing and drift risks but breaks skills-only installs, adds a network dependency at task time, and couples decisions to a moving repository. Vendoring with headers and pins was chosen, and the licensing risk stays in the table. |
 | One review skill per target type | Seven engines drift. Profiles share one loop and one vocabulary. |

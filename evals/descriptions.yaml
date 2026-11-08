@@ -132,6 +132,10 @@
   skill: egm-verify
   query: "The task is called done. Check what done means."
   kind: positive
+- id: diagnose-root
+  skill: diagnose
+  query: "The export duplicates rows when a retry lands. Find the root cause."
+  kind: positive
 - id: negative-weather
   skill: none
   query: "What is the weather in Bangkok?"

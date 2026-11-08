@@ -484,7 +484,26 @@ checkRules();
 checkDelegation();
 checkStatechart();
 checkDocs();
+function checkStyleDashes() {
+  const roots = ['skills', 'agents', 'resources'];
+  for (const root of roots) {
+    for (const rel of relFiles(root)) {
+      if (!rel.endsWith('.md')) continue;
+      if (rel.includes('rules/references/') || rel.includes('statechart')) continue;
+      for (let i = 0; i < read(rel).split(/\r?\n/).length; i++) {
+        const line = read(rel).split(/\r?\n/)[i];
+        if (line.startsWith('|') || line.startsWith('#')) continue;
+        const clean = line.replace(/`[^`]*`/g, '');
+        if (clean.includes('—') || clean.includes(' – ')) {
+          fail(rel, `line ${i + 1}: em or en dash in prose`);
+        }
+      }
+    }
+  }
+}
+
 checkNoShellWrapper();
+checkStyleDashes();
 
 for (const message of warnings) console.warn(`warning: ${message}`);
 if (errors.length) {

@@ -3,6 +3,19 @@
 All notable changes to this project are documented here. The format follows
 Keep a Changelog, and this project adheres to Semantic Versioning.
 
+## [0.22.0] - 2026-11-08
+
+### Fixed
+
+- Quality round. The self-review with the new engine found the roster arithmetic unreconciled: the spec now states 9 core, 14 extended with `diagnose` named, 25 principles, and 13 playbooks everywhere, and the intentional ledger carries 50 skills.
+- The Extended roster gained a responsibility column, so `diagnose`, `tdd`, and `no-comments` are no longer names without behavior.
+- Presets versus profiles are defined; the ask taxonomy enumerates its five types; the loop gained the cap-exhausted terminal state; write-scoped delegates carry the injection guardrail with scope confinement and parent diff review; the `why` cost row names the synthesizer; config writes outside the workspace are inventoried; the validation section counts its ten commands.
+- CI enforces the em and en dash rule for authored prose. Arena and swarm say spawn, not launch.
+
+### Added
+
+- The first live description-trigger results: six cases recorded, all passing, including two negatives.
+
 ## [0.21.0] - 2026-11-08
 
 ### Added

@@ -6,7 +6,7 @@ license: Apache-2.0
 
 # Arena
 
-Open a todo list with one entry per phase before you launch anything.
+Open a todo list with one entry per phase before you spawn anything.
 
 ## Frame
 

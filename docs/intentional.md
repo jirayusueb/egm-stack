@@ -15,8 +15,10 @@ noise, not a finding. `egm-review` loads this file as context on every run.
 | Rule packs are MIT condensations | They are not the books. NOTICE and per-file headers carry the license. |
 | `ste100` paraphrases ASD-STE100 | The specification and dictionary are never vendored. ADR-0006. |
 | `.egm/` is gitignored by default | Run artifacts are local. Promotion copies into `docs/designs/`. |
-| Roster counts: 48 skills, 10 with the `egm-` prefix | Enforced by regression checks. A change updates the count, not the check. |
+| Roster counts: 50 skills, 25 principles, 10 with the `egm-` prefix | Enforced by regression checks. A change updates the count, not the check. |
 | Config comment lines `# reply-language:` and `# max-spawns-per-run:` | Parsed by skills at run time. They look like comments because hosts ignore them. |
+| `phase` outside the review engine | Arena, swarm, statechart, and principles use `phase` for their own stage structures. Only the review engine's five units are `stages`. |
+| `limit` versus `cap` | A `limit` belongs to the host (child limit). A `cap` belongs to this stack (round cap, spawn cap). |
 | No per-harness persona copies | One canonical `agents/` tree. ADR-0003. |
 
 A finding may challenge a convention only by arguing the decision itself, with
