@@ -2,6 +2,10 @@
 
 All changes to the `swarm` skill are recorded here.
 
+## 0.22.0 - 2026-11-08
+
+- Say spawn, not launch, in the todo-list opening line.
+
 ## 0.10.0 - 2026-11-07
 
 - Added the dedup rule: same scope plus same issue is one finding citing every worker.

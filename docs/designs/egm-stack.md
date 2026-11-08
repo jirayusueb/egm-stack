@@ -420,7 +420,7 @@ The dominant cost is subagent dispatch, not tokens on the parent.
 | --- | --- | --- | --- |
 | Concept profile | 2 to 3 | 1 | 2 to 3 |
 | Spec profile | 4 to 6 | 1, loop on request | 4 to 6 |
-| Full five-stage review | 8 to 11 | up to 5 | 15 to 55 |
+| Full five-stage review | 8 to 11 | 1 to 5 | 8 to 22 at one to two rounds, 55 at the cap |
 | Arena | 2 to 4 candidates plus 1 judge | 1 | 3 to 5 |
 | Swarm | 3 to 20 workers | 1 | 3 to 20 |
 | `why` investigation | 1 per evidence category, up to 7, plus 1 synthesizer | 1 | 1 to 8 |
