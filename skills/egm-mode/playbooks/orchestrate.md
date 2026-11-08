@@ -16,4 +16,8 @@ Keep the batch ledger from `../delegate` under `.egm/<slug>/team/ledger.md` and
 update it as each task completes. After any interruption, resume from the
 ledger, not from memory.
 
+Keep the parent-resident set small: gates, the ledger, and the final report.
+Every bulk read and every long build lives in a child. Update the checkpoint
+from `../egm-mode` at every step boundary.
+
 **Reply:** what landed against the done predicate, each task's state, the final review verdict, and every open decision.

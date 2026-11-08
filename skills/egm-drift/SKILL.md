@@ -14,6 +14,12 @@ writes a report. It does not edit code or documents.
 Take a directory or a list of documents. When neither is given, use
 `docs/designs/` and every `README.md`. When those do not exist, ask for a path.
 
+## Read ranges, not files
+
+When a file is large, locate first and read the range. Grep for the symbol or
+heading, read the surrounding lines, and cite them. Never pull a whole large
+file into context when a range answers the question.
+
 ## Method
 
 1. Read each document. Record every checkable claim. A claim names a file, a

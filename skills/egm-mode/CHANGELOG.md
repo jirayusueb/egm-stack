@@ -2,6 +2,10 @@
 
 All changes to the `egm-mode` skill are recorded here.
 
+## 0.21.0 - 2026-11-08
+
+- Added the checkpoint protocol and the compaction recovery rule: state lives in checkpoint.md, and after any compaction the first action is reading it.
+
 ## 0.17.0 - 2026-11-07
 
 - Wired egm-verify into the feature, small-change, bug-fix, and opening-a-pr playbooks, and added non-negotiables for verify and bootstrap.

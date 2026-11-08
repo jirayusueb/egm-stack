@@ -119,7 +119,7 @@ quality target.
 | `egm-draft` | 140 | Section-by-section spec drafting |
 | `egm-review` | 300 | Review engine, stages, six presets including fast, resume, loop, early exit, diff-scoped re-audit, profiles, gates, digest |
 | `egm-resolve` | 130 | Triage, approved fixes, and the settled registry |
-| `egm-drift` | 80 | Spec-versus-code drift |
+| `egm-drift` | 95 | Spec-versus-code drift |
 
 ### Extended (13)
 

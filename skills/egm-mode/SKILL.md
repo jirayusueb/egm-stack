@@ -23,6 +23,22 @@ Read the `# reply-language:` line from the config file `egm-setup` writes.
 user's latest message. Unset means `en`. Artifacts stay in English; only the
 conversation reply follows the setting.
 
+## Checkpoint
+
+While a playbook runs, keep `.egm/<slug>/checkpoint.md`. Append one line each
+time a step completes: the step, its outcome in five words, and the next
+command. The first lines name the playbook, the todo state, the decision ids
+settled so far, and any open gate. Update it before dispatching anything
+slow, so a crash loses at most the dispatch.
+
+## Compaction recovery
+
+After any context compaction, interruption, or resume, the first action is to
+read `.egm/<slug>/checkpoint.md` and the newest artifact. Restate the current
+step and the next command from those files, then continue. Never reconstruct
+state from scrollback or memory. A step is not done until the checkpoint says
+so.
+
 ## Verbosity
 
 The first words may set reply length for the whole session. `brief` before the

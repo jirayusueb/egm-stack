@@ -129,6 +129,8 @@ reviewer until the table is on screen.
 | Spawns per round | the sum of reviewers per stage |
 | Round cap | one, or five in loop mode |
 | Worst case | spawns per round times the round cap |
+| Parent-resident | gates, report writing, synthesis only |
+| Child-resident | every bulk read of the target and its links |
 
 A full interactive review runs ten reviewer spawns per round. With the loop cap
 it can reach fifty. State that number before the user pays for it.

@@ -2,6 +2,10 @@
 
 All changes to the `why` skill are recorded here.
 
+## 0.21.0 - 2026-11-08
+
+- Added the read-ranges rule for large files.
+
 ## 0.18.0 - 2026-11-07
 
 - Added the library as an evidence category, searched before the web and cited with book and chapter.

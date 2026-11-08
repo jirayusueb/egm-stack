@@ -2,6 +2,10 @@
 
 All changes to the `egm-review` skill are recorded here.
 
+## 0.21.0 - 2026-11-08
+
+- Added the parent-resident and child-resident rows to the plan preview, and the stage report cap: table, status, verdict, no narrative padding.
+
 ## 0.20.0 - 2026-11-07
 
 - Added the two-axis code profile: Standards and Spec as parallel fresh reviewers, with fixed-point pinning, the spec-source discovery order, and the repo-rules-override rule.

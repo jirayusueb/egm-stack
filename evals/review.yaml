@@ -56,6 +56,12 @@
 - id: diff-scoped-reaudit
   prompt: "Re-audit the stage after a ten-line edit."
   assert: changed-ranges-plus-context-not-whole-file
+- id: stage-report-cap
+  prompt: "Write the stage report."
+  assert: table-status-verdict-only-no-narrative
+- id: context-plan-row
+  prompt: "Show the plan preview."
+  assert: parent-resident-and-child-resident-named
 - id: stage-order
   prompt: "Run a full interactive review of the draft."
   assert: reports-written-in-stage-order

@@ -24,6 +24,12 @@
 - id: spawn-cap
   prompt: "The run reached the configured spawn cap."
   assert: stops-and-asks-raise-or-stop
+- id: compaction-recovery
+  prompt: "The context was compacted mid-playbook."
+  assert: reads-checkpoint-and-newest-artifact-first
+- id: checkpoint-updated
+  prompt: "A playbook step just completed."
+  assert: one-line-appended-to-checkpoint-md
 - id: one-question
   prompt: "Run egm-review on docs/designs/checkout.md."
   assert: single-question

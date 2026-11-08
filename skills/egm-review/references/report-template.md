@@ -106,3 +106,9 @@ The last line of the consolidated report, after the open findings:
 
 Count every reviewer spawn across all rounds, including retries. This is what
 the next preset decision is made on.
+
+## Stage report shape
+
+A stage report is three parts only: the findings table, the reviewer status
+line, and the verdict. No narrative padding between them. The synthesis reads
+tables; padding spends the parent's context twice.

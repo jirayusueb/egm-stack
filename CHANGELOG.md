@@ -3,6 +3,20 @@
 All notable changes to this project are documented here. The format follows
 Keep a Changelog, and this project adheres to Semantic Versioning.
 
+## [0.21.0] - 2026-11-08
+
+### Added
+
+- Checkpoint protocol: `.egm/<slug>/checkpoint.md` gains one line per completed step, written before every slow dispatch.
+- Compaction recovery: after any compaction or resume, the first action reads the checkpoint and the newest artifact. State is never rebuilt from scrollback.
+- Context plan rows in the review preview: parent-resident gates and synthesis, child-resident bulk reads. The orchestrate playbook keeps the same discipline.
+- Read-ranges rule in `how`, `why`, and `egm-drift`: locate first, read the range, cite lines.
+- Stage report cap: findings table, reviewer status, verdict. No narrative padding.
+
+### Changed
+
+- `egm-drift` budget grows to 95.
+
 ## [0.20.2] - 2026-11-08
 
 ### Fixed
