@@ -362,10 +362,14 @@ function checkSte100() {
 
 function checkRules() {
   const dir = 'skills/rules/references';
-  const files = RULE_PACKS.map((name) => `${dir}/${name}.md`);
-  for (const rel of files) {
+  for (const name of RULE_PACKS) {
+    const rel = `${dir}/${name}.md`;
     if (!existsSync(join(ROOT, rel))) { fail(rel, 'missing rule pack'); continue; }
     const text = read(rel);
+    if (name === 'oop-design') {
+      if (!text.includes('Original work of egm-stack')) fail(rel, 'missing the original-work notice');
+      continue;
+    }
     if (!text.includes('ciembor/agent-rules-books')) fail(rel, 'missing upstream source URL');
     if (!/MIT/i.test(text)) fail(rel, 'missing MIT notice');
     if (!/condensed/i.test(text)) fail(rel, 'missing the condensed disclaimer');

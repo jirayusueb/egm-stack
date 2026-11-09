@@ -60,7 +60,7 @@ the table says so.
 | Router | `egm-mode` | Classifies intent, selects a playbook, owns routing gates and the only todo list, reads model config and harness map |
 | Workflows | `egm-brainstorm`, `egm-draft`, `egm-review`, `egm-resolve`, `egm-drift`, the 13 playbooks, and the 14 Extended skills (`delegate`, `rules`, `diagnose`, `how`, `why`, `arena`, `swarm`, `tdd`, `no-comments`, `reflect`, `unslop`, `technical-writing`, `ste100`, `statechart`) | Own named inputs, artifacts, exit condition. May read contracts and knowledge |
 | Contracts | Review protocol inside `egm-review`; delegation contract inside `delegate`; verification rules | One implementation each. Other skills reference the contract by path instead of redefining it |
-| Knowledge | 25 principles, 14 rule packs, 6 standards, the ask stage map | Read-only. Nothing in this layer invokes anything |
+| Knowledge | 25 principles, 15 rule packs, 6 standards, the ask stage map | Read-only. Nothing in this layer invokes anything |
 
 Every skill and its reference files have one owner, the maintainer named in
 [AGENTS.md](../../AGENTS.md). A skill with no owner is a defect.

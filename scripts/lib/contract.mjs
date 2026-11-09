@@ -114,6 +114,7 @@ export const RULE_PACKS = [
   'refactoring',
   'refactoring-guru',
   'release-it',
+  'oop-design',
   'the-pragmatic-programmer',
   'working-effectively-with-legacy-code',
 ];

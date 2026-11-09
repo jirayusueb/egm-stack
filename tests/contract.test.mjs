@@ -86,8 +86,12 @@ test('rule packs are present with attribution', () => {
     const file = join(ROOT, 'skills/rules/references', `${name}.md`);
     assert.ok(existsSync(file), `missing pack ${name}`);
     const text = readFileSync(file, 'utf8');
-    assert.match(text, /ciembor\/agent-rules-books/, `${name} lacks source`);
-    assert.match(text, /MIT/, `${name} lacks license`);
+    if (name === 'oop-design') {
+      assert.match(text, /Original work of egm-stack/, `${name} lacks the original notice`);
+    } else {
+      assert.match(text, /ciembor\/agent-rules-books/, `${name} lacks source`);
+    }
+    if (name !== 'oop-design') assert.match(text, /MIT/, `${name} lacks license`);
     assert.match(text, /condensed/i, `${name} lacks disclaimer`);
     assert.ok(countLines(text) <= 80, `${name} over 80 lines`);
   }

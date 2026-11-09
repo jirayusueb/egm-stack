@@ -77,6 +77,9 @@ const checks = {
   'rule-pack-attribution': () => {
     for (const name of RULE_PACKS) {
       const text = read(`skills/rules/references/${name}.md`);
+      if (name === 'oop-design') {
+        return text.includes('Original work of egm-stack') ? true : `${name} is missing the original-work notice`;
+      }
       for (const phrase of ['ciembor/agent-rules-books', 'MIT', 'condensed']) {
         if (!text.includes(phrase)) return `${name} is missing ${phrase}`;
       }

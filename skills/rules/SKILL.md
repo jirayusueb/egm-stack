@@ -12,6 +12,7 @@ Load one condensed book pack. Apply it as constraints for the current task. The 
 
 Pick one pack. The mapping names the candidates for each task type.
 
+- object design -> oop-design
 - design -> a-philosophy-of-software-design
 - boundaries -> clean-architecture, patterns-of-enterprise-application-architecture
 - code review -> clean-code, code-complete

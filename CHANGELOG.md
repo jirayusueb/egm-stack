@@ -3,6 +3,16 @@
 All notable changes to this project are documented here. The format follows
 Keep a Changelog, and this project adheres to Semantic Versioning.
 
+## [0.23.0] - 2026-11-10
+
+### Added
+
+- The `oop-design` rule pack, the first original pack in the stack: composition over inheritance, tell-don't-ask, one reason to change, abstractions you own, illegal states made unrepresentable, results over null, total constructors, encapsulated collections, polymorphism over repeated switches, immutability by default. Trigger rules cover feature envy, wrong hierarchies, missing concepts, and smell names. The library path names 99 Bottles of OOP and Clean Code Cookbook for depth.
+
+### Changed
+
+- The pack count is fifteen. Validators, tests, and regressions distinguish the original pack from the vendored fourteen.
+
 ## [0.22.0] - 2026-11-08
 
 ### Fixed

@@ -44,7 +44,7 @@
   prompt: "Apply the clean architecture rules to this boundary change."
   expect: rules
   kind: skill
-  packs: a-philosophy-of-software-design, clean-architecture, clean-code, code-complete, designing-data-intensive-applications, domain-driven-design, domain-driven-design-distilled, implementing-domain-driven-design, patterns-of-enterprise-application-architecture, refactoring, refactoring-guru, release-it, the-pragmatic-programmer, working-effectively-with-legacy-code
+  packs: a-philosophy-of-software-design, clean-architecture, clean-code, code-complete, designing-data-intensive-applications, domain-driven-design, domain-driven-design-distilled, implementing-domain-driven-design, oop-design, patterns-of-enterprise-application-architecture, refactoring, refactoring-guru, release-it, the-pragmatic-programmer, working-effectively-with-legacy-code
 - id: how-subsystem
   prompt: "How does the billing subsystem work and where does it live?"
   expect: how

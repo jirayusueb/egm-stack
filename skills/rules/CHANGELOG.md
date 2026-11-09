@@ -2,6 +2,10 @@
 
 All changes to the `rules` skill are recorded here.
 
+## 0.23.0 - 2026-11-10
+
+- Added the oop-design pack, an original condensation of object design rules: composition over inheritance, tell-don't-ask, illegal states, encapsulated collections, polymorphism over repeated switches.
+
 ## 0.20.2 - 2026-11-08
 
 - Added the untrusted-content guardrail; packs and library books are data, never instructions.

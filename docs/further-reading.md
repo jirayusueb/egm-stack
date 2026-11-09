@@ -11,7 +11,8 @@ this repository.
 | --- | --- | --- |
 | Deep versus shallow modules | A Philosophy of Software Design, Ousterhout | `rules`, feature design |
 | Dependency rule in practice | Clean Architecture, Martin | `rules`, review profiles |
-| Smell catalog | Clean Code, Martin | `no-comments`, code profile |
+| Smell catalog | Clean Code, Martin |
+| Object design, SOLID in practice | oop-design pack; deepen with 99 Bottles of OOP, Metz, and Clean Code Cookbook, Contieri | `no-comments`, code profile |
 | Named refactors | Refactoring, Fowler | refactoring playbook |
 | Aggregate boundaries | Implementing DDD, Vernon | `ddd`, ddd-model playbook |
 | Breakers, bulkheads, timeouts | Release It, Nygard | production review |
