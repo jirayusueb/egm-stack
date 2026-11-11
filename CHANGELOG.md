@@ -3,6 +3,14 @@
 All notable changes to this project are documented here. The format follows
 Keep a Changelog, and this project adheres to Semantic Versioning.
 
+## [0.26.0] - 2026-11-11
+
+### Added
+
+- `scripts/outline.mjs` with four diff-marked views over the touched files: the symbol outline with kinds, the component tree with declared and passed props, the class hierarchy with overrides and contracts, and the api surface from a spec or inferred from handlers. Bounded, heuristic, and read-only.
+- `docs/structure-views.md`: the five views with commands and the use-case map across review, diagnose, how, why, drift, readiness, verify, refactoring, and onboarding.
+- The code profile brief now carries the outline next to the tree and the diff.
+
 ## [0.25.0] - 2026-11-11
 
 ### Added

@@ -30,8 +30,10 @@ in order: issue refs in commit messages, a path the user named, a spec file
 under `docs/`, then ask; with none, the Spec axis reports `no spec available`
 and continues. Pin the fixed point yourself, `git diff <point>...HEAD`, and confirm the ref
 resolves and the diff is non-empty before any dispatch. Build the annotated
-tree with `node scripts/tree.mjs --base <point>` from the repository root and
-put it in both reviewers' briefs next to the diff. A
+tree with `node scripts/tree.mjs --base <point>` and the symbol outline with
+`node scripts/outline.mjs --base <point>` from the repository root, and put
+both in the reviewers' briefs next to the diff. Component, class, and api
+views follow `docs/structure-views.md` when the diff calls for them. A
 documented repo rule always overrides the smell baseline, per
 `../../docs/intentional.md`.
 | ddd | A domain model | zoom-out, design, codebase-details |

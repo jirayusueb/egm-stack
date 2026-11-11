@@ -2,6 +2,10 @@
 
 All changes to the `egm-review` skill are recorded here.
 
+## 0.26.0 - 2026-11-11
+
+- Added the structure views: scripts/outline.mjs renders the symbol outline, component tree with props, class hierarchy, and inferred api surface, all diff-marked and bounded to touched files. docs/structure-views.md maps every view to its use cases, and the code profile brief carries the outline next to the diff.
+
 ## 0.25.0 - 2026-11-11
 
 - Added the annotated tree to every code review brief: `scripts/tree.mjs --base <point>` marks changed files, and the baseline gains tree reading with four structural checks before the diff is read.

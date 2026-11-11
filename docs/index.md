@@ -20,6 +20,7 @@ a human how to drive them.
 | Find the command form for each host | [commands.md](commands.md) (generated) |
 | Copy a prompt and go | [recipes.md](recipes.md) |
 | Go deeper than a rule pack | [further-reading.md](further-reading.md) |
+| See the code without reading it | [structure-views.md](structure-views.md) |
 | อ่านภาษาไทย | [th/README.md](th/README.md) |
 | See what is intentional and not a finding | [intentional.md](intentional.md) |
 | Read the architecture contract | [designs/egm-stack.md](designs/egm-stack.md) |
