@@ -3,6 +3,16 @@
 All notable changes to this project are documented here. The format follows
 Keep a Changelog, and this project adheres to Semantic Versioning.
 
+## [0.25.0] - 2026-11-11
+
+### Added
+
+- The annotated file tree in every code review brief. `scripts/tree.mjs --base <point>` renders the touched subtrees with changed files marked, and the baseline gains tree reading: layer placement, test counterpart presence, sibling orphaning, and naming consistency, all checked from the tree before the diff is read.
+
+### Fixed
+
+- The plan-to-code divergence round: plan steps carry the decision ids they cover and the files they touch, the implementer stops and reports when a decision cannot be honored instead of substituting silently, and the implement loop reviewer checks decision coverage against the diff.
+
 ## [0.24.1] - 2026-11-11
 
 ### Added

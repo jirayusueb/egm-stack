@@ -28,8 +28,10 @@ coverage check, security vectors, smell list, suggestion discipline);
 Spec, the diff against the originating issue or design. Find the spec source
 in order: issue refs in commit messages, a path the user named, a spec file
 under `docs/`, then ask; with none, the Spec axis reports `no spec available`
-and continues. Pin the fixed point yourself, `git diff <point>...HEAD`, and
-confirm the ref resolves and the diff is non-empty before any dispatch. A
+and continues. Pin the fixed point yourself, `git diff <point>...HEAD`, and confirm the ref
+resolves and the diff is non-empty before any dispatch. Build the annotated
+tree with `node scripts/tree.mjs --base <point>` from the repository root and
+put it in both reviewers' briefs next to the diff. A
 documented repo rule always overrides the smell baseline, per
 `../../docs/intentional.md`.
 | ddd | A domain model | zoom-out, design, codebase-details |

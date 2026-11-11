@@ -51,6 +51,19 @@ One pass over the diff for: injection into a shell, query, or template;
 authorization on a new route or command; secrets or tokens in code or logs;
 unvalidated input crossing a boundary; a new outbound request with no timeout.
 
+## Tree reading
+
+Every review brief carries an annotated tree of the subtrees the diff touches,
+changed files marked with `*`, built by `node scripts/tree.mjs --base <point>`
+from the repository root. Read it before the diff. Four checks:
+
+- Does each changed file sit in the layer or module its name claims? A handler
+  in the domain folder is a finding from the tree alone.
+- Does every changed source file have its test counterpart in the tree, or a
+  named reason it does not?
+- Is a new file near its siblings, or orphaned where no neighbor names it?
+- Do the file names in the diff match the naming of their directory?
+
 ## Smell baseline
 
 One line each. A smell is a finding only when the change pays for it, per the

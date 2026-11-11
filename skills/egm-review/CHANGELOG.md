@@ -2,6 +2,10 @@
 
 All changes to the `egm-review` skill are recorded here.
 
+## 0.25.0 - 2026-11-11
+
+- Added the annotated tree to every code review brief: `scripts/tree.mjs --base <point>` marks changed files, and the baseline gains tree reading with four structural checks before the diff is read.
+
 ## 0.24.1 - 2026-11-11
 
 - Added the project-standards-first protocol: discovery order for the repository's own documents, agent instructions, machine-enforced rules, and neighborhood conventions. The project's linter output outranks the smell baseline, and a standard that endorses a smell suppresses it.
