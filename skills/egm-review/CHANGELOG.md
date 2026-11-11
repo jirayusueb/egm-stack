@@ -2,6 +2,10 @@
 
 All changes to the `egm-review` skill are recorded here.
 
+## 0.24.0 - 2026-11-11
+
+- Added the code review baseline: the code severity rubric, the diff-scope rule, the test coverage check, the security vectors, the twelve-smell list, and the suggestion discipline. The code profile Standards axis loads it.
+
 ## 0.21.0 - 2026-11-08
 
 - Added the parent-resident and child-resident rows to the plan preview, and the stage report cap: table, status, verdict, no narrative padding.

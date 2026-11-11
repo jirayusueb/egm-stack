@@ -3,6 +3,12 @@
 All notable changes to this project are documented here. The format follows
 Keep a Changelog, and this project adheres to Semantic Versioning.
 
+## [0.24.0] - 2026-11-11
+
+### Added
+
+- `egm-review/references/code-review-baseline.md`: the smell baseline the code profile always carried in name but never in content. A severity rubric for code findings, the diff-scope rule that keeps findings on changed lines and their blast radius, the test coverage check that makes changed behavior without a test a Major, five security vectors, a twelve-smell catalog, and the suggestion discipline that only proposes complete fixes.
+
 ## [0.23.1] - 2026-11-11
 
 ### Added

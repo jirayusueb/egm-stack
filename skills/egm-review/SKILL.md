@@ -22,7 +22,9 @@ A profile sets the default reviewers and the range.
 | code | Changed files or a diff | structural, style, codebase-details, run as two axes |
 
 The `code` profile runs two axes in parallel fresh reviewers: Standards, the
-diff against this repository's own documented rules plus the smell baseline;
+diff against this repository's own documented rules plus the baseline in
+`references/code-review-baseline.md` (severity rubric, diff scope, test
+coverage check, security vectors, smell list, suggestion discipline);
 Spec, the diff against the originating issue or design. Find the spec source
 in order: issue refs in commit messages, a path the user named, a spec file
 under `docs/`, then ask; with none, the Spec axis reports `no spec available`
