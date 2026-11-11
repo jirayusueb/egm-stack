@@ -230,6 +230,7 @@ Match the request to one playbook and open it. Copy its steps into the only todo
 
 <!-- generated:playbooks:start -->
 - **Bug fix.** You own the fix. Every shipped line traces to runtime evidence. ([steps](playbooks/bug-fix.md))
+- **Code review.** You own the verdict on the diff. Find hard findings, mark smells optional, and change nothing. ([steps](playbooks/code-review.md))
 - **DDD model.** You own the model. Terms, boundaries, and invariants, in that order. ([steps](playbooks/ddd-model.md))
 - **DDD modernize.** You own the path from the legacy model to a modeled core. ([steps](playbooks/ddd-modernize.md))
 - **DDD review.** You own the domain verdict. Reviewers read and you score and report. ([steps](playbooks/ddd-review.md))

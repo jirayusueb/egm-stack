@@ -72,6 +72,7 @@ export const PLAYBOOKS = [
   'refactoring',
   'prototype',
   'review-only',
+  'code-review',
   'small-change',
   'drift-maintenance',
   'opening-a-pr',

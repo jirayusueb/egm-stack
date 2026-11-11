@@ -129,6 +129,10 @@
   prompt: "Prototype two markdown renderers so we can decide cheaply."
   expect: prototype
   kind: playbook
+- id: route-code-review
+  prompt: "Review the diff on this branch since main."
+  expect: code-review
+  kind: playbook
 - id: review-only
   prompt: "Just review this existing spec; skip the full design loop."
   expect: review-only

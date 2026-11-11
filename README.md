@@ -161,6 +161,7 @@ and an applied fix does not settle. Read [the guide](docs/guide/README.md).
 | Playbook | Use it when |
 | --- | --- |
 | `Bug fix` | You own the fix. Every shipped line traces to runtime evidence. |
+| `Code review` | You own the verdict on the diff. Find hard findings, mark smells optional, and change nothing. |
 | `DDD model` | You own the model. Terms, boundaries, and invariants, in that order. |
 | `DDD modernize` | You own the path from the legacy model to a modeled core. |
 | `DDD review` | You own the domain verdict. Reviewers read and you score and report. |
@@ -345,6 +346,6 @@ Apache-2.0. See [LICENSE](LICENSE). Vendored MIT material keeps its own notice.
 - Confirm no generated region was hand-edited, and `LICENSE`, `NOTICE`, and the
   `UPSTREAM.md` pins are current.
 - Add a row to `docs/designs/README.md` for each new design document.
-- Tag `v0.23.0`.
+- Tag `v0.23.1`.
 - Test each documented install route on a clean machine, and confirm the tree
   has no secrets and no absolute local paths.

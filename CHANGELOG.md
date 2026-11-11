@@ -3,6 +3,12 @@
 All notable changes to this project are documented here. The format follows
 Keep a Changelog, and this project adheres to Semantic Versioning.
 
+## [0.23.1] - 2026-11-11
+
+### Added
+
+- The `code-review` playbook, the fourteenth. Pin the fixed point and confirm the diff before any dispatch, find the spec source in the discovery order, run the two-axis code profile with the intentional ledger, split hard findings from optional smells, present the author map, and hand off to the implement loop only on request. Read first: clean-code, oop-design, code-complete.
+
 ## [0.23.0] - 2026-11-10
 
 ### Added

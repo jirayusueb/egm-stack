@@ -93,6 +93,7 @@ Playbooks run through the router. Invoke `/egm-mode` and describe the task, or n
 | Playbook | Use it when |
 | --- | --- |
 | `Bug fix` | You own the fix. Every shipped line traces to runtime evidence. |
+| `Code review` | You own the verdict on the diff. Find hard findings, mark smells optional, and change nothing. |
 | `DDD model` | You own the model. Terms, boundaries, and invariants, in that order. |
 | `DDD modernize` | You own the path from the legacy model to a modeled core. |
 | `DDD review` | You own the domain verdict. Reviewers read and you score and report. |

@@ -185,9 +185,9 @@ rule, not a summary.
 title, bold thesis, numbered steps naming skills, a `Read first:` line naming
 rule packs, and a `**Reply:**`.
 
-Thirteen: investigation, feature, small-change, bug-fix, refactoring,
-prototype, review-only, drift-maintenance, opening-a-pr, ddd-model, ddd-review,
-ddd-modernize, orchestrate.
+Fourteen: investigation, feature, small-change, bug-fix, refactoring,
+prototype, review-only, code-review, drift-maintenance, opening-a-pr,
+ddd-model, ddd-review, ddd-modernize, orchestrate.
 
 | Playbook | Read first |
 | --- | --- |
@@ -197,6 +197,7 @@ ddd-modernize, orchestrate.
 | refactoring | refactoring, refactoring-guru, working-effectively-with-legacy-code |
 | prototype | the-pragmatic-programmer |
 | review-only | clean-code, code-complete |
+| code-review | clean-code, oop-design, code-complete |
 | small-change | clean-code |
 | drift-maintenance | working-effectively-with-legacy-code |
 | opening-a-pr | release-it, the-pragmatic-programmer |
