@@ -11,6 +11,11 @@ real lines, never the view alone.
 | Components + props | `node scripts/outline.mjs --components --base <ref>` | Which components and props changed, and who renders whom |
 | Class hierarchy | `node scripts/outline.mjs --classes --base <ref>` | Which overrides and contracts changed |
 | API surface | `node scripts/outline.mjs --api --base <ref>` | Which endpoints and fields changed, breaking or not |
+| Import graph | `node scripts/outline.mjs --imports --base <ref>` | Which dependencies each touched module pulls, and which edges deserve a direction check |
+| State machine | `node scripts/outline.mjs --state --base <ref>` | Which states exist and where status assignments move them |
+| Data model | `node scripts/outline.mjs --data --base <ref>` | Which entities and schemas the diff touches |
+| Event flow | `node scripts/outline.mjs --events --base <ref>` | Who publishes and who listens, across the touched files |
+| Test map | `node scripts/outline.mjs --tests --base <ref>` | What the changed tests cover, by name |
 
 ## When to run which view
 
@@ -27,4 +32,11 @@ real lines, never the view alone.
   answered from the api view.
 - Refactoring: the biggest classes, deepest chains, and heaviest props are the
   candidate table, ranked by number.
+- Statechart work: the state view is the raw material the model check starts from.
+- Domain modeling: the data view plus the class view frames the aggregate boundary question.
+- Event-driven changes: the events view catches a publisher whose listener is not in the diff, and the reverse.
 - Onboarding and QA: one annotated page instead of the whole tree.
+
+Adding a view is one entry in the registry inside `scripts/outline.mjs`: an
+extractor over the touched files and a renderer. The use-case map above
+decides when a view runs.

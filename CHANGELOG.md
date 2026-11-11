@@ -3,6 +3,12 @@
 All notable changes to this project are documented here. The format follows
 Keep a Changelog, and this project adheres to Semantic Versioning.
 
+## [0.26.1] - 2026-11-11
+
+### Added
+
+- Five more views in the outline registry: the import graph with direction checks, the state machine view, the data model view, the event flow view, and the test map. The registry is the extension point; one entry adds a view.
+
 ## [0.26.0] - 2026-11-11
 
 ### Added

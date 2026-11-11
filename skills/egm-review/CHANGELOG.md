@@ -2,6 +2,10 @@
 
 All changes to the `egm-review` skill are recorded here.
 
+## 0.26.1 - 2026-11-11
+
+- Added five views to the outline registry: import graph, state machine, data model, event flow, and test map. The structure-views doc gains the use cases for state, domain, and event-driven work, and names the registry as the extension point.
+
 ## 0.26.0 - 2026-11-11
 
 - Added the structure views: scripts/outline.mjs renders the symbol outline, component tree with props, class hierarchy, and inferred api surface, all diff-marked and bounded to touched files. docs/structure-views.md maps every view to its use cases, and the code profile brief carries the outline next to the diff.

@@ -9,7 +9,7 @@ import { readFileSync, existsSync } from 'node:fs';
 const args = process.argv.slice(2);
 const opt = (n) => { const i = args.indexOf(`--${n}`); return i === -1 ? undefined : args[i + 1]; };
 const base = opt('base') ?? 'HEAD~1';
-const mode = args.includes('--components') ? 'components' : args.includes('--classes') ? 'classes' : args.includes('--api') ? 'api' : 'symbols';
+const mode = ['components','classes','api','imports','state','data','events','tests'].find(m => args.includes(`--${m}`)) ?? 'symbols';
 const git = (c) => { try { return execSync(c, { encoding: 'utf8', maxBuffer: 1 << 24 }); } catch { return ''; } };
 
 // ---- shared: changed files + hunk ranges ----
@@ -166,4 +166,73 @@ function renderApi() {
   return out.join('\n') + '\n(inferred from handlers; no spec file. That absence is itself a finding.)';
 }
 
-console.log(mode === 'components' ? renderComponents() : mode === 'classes' ? renderClasses() : mode === 'api' ? renderApi() : renderSymbols());
+function renderImports() {
+  const out = [];
+  for (const f of changed) {
+    const text = read(f) || git(`git show HEAD:${JSON.stringify(f)}`); if (!text) continue;
+    out.push(`${f}*`);
+    for (const m of text.matchAll(/(?:import[^'"]*from\s*|require\()\s*['"]([^'"]+)['"]/g)) {
+      const dep = m[1];
+      const local = dep.startsWith('.') || dep.startsWith('/');
+      const crossLayer = local && /\b(components|hooks|pages|domain|infra|lib|api)\b/.test(dep) && /\b(domain|infra)\b/.test(f) && !f.includes(dep.split('/').find(s => /domain|infra/.test(s)) ?? '');
+      out.push(`  ${local ? '' : 'ext '}${dep}${crossLayer ? '   <- check direction' : ''}`);
+    }
+  }
+  return out.join('\n');
+}
+function renderState() {
+  const out = [];
+  for (const f of changed) {
+    const text = read(f) || git(`git show HEAD:${JSON.stringify(f)}`); if (!text) continue;
+    const states = new Set(), transitions = [];
+    for (const m of text.matchAll(/(?:status|state|phase)\s*[=:]\s*['"]([\w-]+)['"]/g)) states.add(m[1]);
+    for (const m of text.matchAll(/case\s+'([\w-]+)'/g)) states.add(m[1]);
+    for (const m of text.matchAll(/(?:status|state)\s*[=:]\s*['"]([\w-]+)['"][^;\n]*['"]([\w-]+)['"]\s*;?/g)) transitions.push(`${m[1]} -> ?${m[2]}`);
+    if (states.size) {
+      out.push(`${f}*`);
+      out.push(`  states: ${[...states].join(', ')}`);
+      for (const t of [...new Set(transitions)]) out.push(`  ${t}`);
+    }
+  }
+  return out.length ? out.join('\n') : 'no state shapes found in changed files';
+}
+function renderData() {
+  const out = [];
+  for (const f of changed) {
+    const text = read(f) || git(`git show HEAD:${JSON.stringify(f)}`); if (!text) continue;
+    const entities = [];
+    for (const m of text.matchAll(/(?:export\s+)?(?:class|interface|type)\s+(\w+)(?:\s+extends\s+\w+)?\s*\{/g)) {
+      if (/Repository|Service|Controller|Props|Test/.test(m[1])) continue;
+      entities.push(m[1]);
+    }
+    for (const m of text.matchAll(/CREATE\s+TABLE\s+(?:IF\s+NOT\s+EXISTS\s+)?[\w."`]*?(\w+)\s*\(/gi)) entities.push(`${m[1]} (sql)`);
+    if (entities.length) { out.push(`${f}*`); for (const e of entities) out.push(`  ${e}`); }
+  }
+  return out.length ? out.join('\n') : 'no data shapes found in changed files';
+}
+function renderEvents() {
+  const out = [];
+  for (const f of changed) {
+    const text = read(f) || git(`git show HEAD:${JSON.stringify(f)}`); if (!text) continue;
+    const pubs = [...text.matchAll(/(?:emit|publish)\(\s*['"]([\w.:_-]+)['"]/g)].map(m => `emit   ${m[1]}`);
+    const subs = [...text.matchAll(/(?:on|subscribe)\(\s*['"]([\w.:_-]+)['"]/g)].map(m => `listen ${m[1]}`);
+    if (pubs.length || subs.length) { out.push(`${f}*`); out.push(...pubs, ...subs); }
+  }
+  return out.length ? out.join('\n') : 'no event flow found in changed files';
+}
+function renderTests() {
+  const out = [];
+  const testFiles = changed.filter(f => /(?:test|spec)\.[cm]?[jt]sx?$|__tests__\//.test(f));
+  for (const f of testFiles) {
+    const text = read(f) || git(`git show HEAD:${JSON.stringify(f)}`); if (!text) continue;
+    out.push(`${f}*`);
+    for (const m of text.matchAll(/(?:describe|it|test)\(\s*['"`]([^'"`]+)['"`]/g)) out.push(`  ${m[1]}`);
+  }
+  return out.length ? out.join('\n') : 'no test files in the diff';
+}
+
+const VIEWS = {
+  symbols: renderSymbols, components: renderComponents, classes: renderClasses, api: renderApi,
+  imports: renderImports, state: renderState, data: renderData, events: renderEvents, tests: renderTests,
+};
+console.log((VIEWS[mode] ?? renderSymbols)());
