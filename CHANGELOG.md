@@ -3,6 +3,12 @@
 All notable changes to this project are documented here. The format follows
 Keep a Changelog, and this project adheres to Semantic Versioning.
 
+## [0.24.1] - 2026-11-11
+
+### Added
+
+- Project standards first: the code baseline opens with a discovery protocol for each repository's own rules (explicit documents, agent instructions, linter and formatter configurations, neighborhood conventions), states that the project's own check output outranks the smell baseline, and that a project standard endorsing a smell suppresses it.
+
 ## [0.24.0] - 2026-11-11
 
 ### Added

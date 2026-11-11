@@ -4,6 +4,27 @@ The Standards axis of the `code` profile. A repository's own documented rules
 always override this baseline. The intentional-conventions ledger drops
 findings that restate deliberate decisions.
 
+## Project standards first
+
+This baseline is the floor, never the ceiling. Every project carries its own
+standards, and they outrank this file wherever they speak.
+
+Find the project's standards in this order, and say which you used:
+
+1. Explicit documents: `CODING_STANDARDS.md`, `CONTRIBUTING.md`, anything
+   under `docs/standards/` or similar.
+2. Agent instructions of the repository: `AGENTS.md`, `CLAUDE.md`, and their
+   convention sections.
+3. Machine-enforced rules: the linter, formatter, and type-checker
+   configurations in the repo. Run the project's own check first; its output
+   outranks any smell here. A finding the linter already catches is reported
+   as the linter's, not re-derived.
+4. The neighborhood: the dominant conventions of the files the diff touches.
+
+When a project standard endorses what a smell here would flag, suppress the
+smell and say the standard did it. When the project is silent, this baseline
+decides. Never import a rule this project never wrote.
+
 ## Severity rubric for code
 
 | Severity | Means |
