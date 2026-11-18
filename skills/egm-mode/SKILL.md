@@ -23,6 +23,14 @@ Read the `# reply-language:` line from the config file `egm-setup` writes.
 user's latest message. Unset means `en`. Artifacts stay in English; only the
 conversation reply follows the setting.
 
+## Session memory
+
+Keep `.egm/memory/log.md`. Append one line when a task finishes: the date,
+the playbook, the outcome in five words, and the decision ids it settled.
+At the start of a session with a fresh context, read the last ten lines
+before routing anything. That file, not the transcript, is what the next
+session inherits.
+
 ## Checkpoint
 
 While a playbook runs, keep `.egm/<slug>/checkpoint.md`. Append one line each
@@ -30,6 +38,14 @@ time a step completes: the step, its outcome in five words, and the next
 command. The first lines name the playbook, the todo state, the decision ids
 settled so far, and any open gate. Update it before dispatching anything
 slow, so a crash loses at most the dispatch.
+
+## Corrections
+
+A correction is the user rejecting a proposal, overriding a gate option, or
+re-stating a requirement the run ignored. Keep the count. When the run ends
+with two or more, offer once: mine the corrections with **reflect** and
+record what survives into `.egm/memory/learnings.md`. Never start reflect
+unasked, and never edit a skill without the approval gates reflect defines.
 
 ## Compaction recovery
 

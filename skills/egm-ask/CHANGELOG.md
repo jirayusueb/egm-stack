@@ -2,6 +2,10 @@
 
 All changes to the `egm-ask` skill are recorded here.
 
+## 0.28.0 - 2026-11-18
+
+- Answers now start from the last ten lines of the session memory log when it exists.
+
 ## 0.11.0 - 2026-11-07
 
 - Added the review-quality answer: outcome tallies per reviewer from the goldfish reports.

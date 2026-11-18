@@ -3,6 +3,15 @@
 All notable changes to this project are documented here. The format follows
 Keep a Changelog, and this project adheres to Semantic Versioning.
 
+## [0.28.0] - 2026-11-18
+
+### Added
+
+- Session memory: `.egm/memory/log.md` gains one line per finished task, and every fresh context reads the last ten lines before routing. Cross-session continuity without the transcript.
+- The correction counter: a run that ends with two or more user corrections is offered one reflect pass. Reflect is never started unasked.
+- The learnings ledger: `.egm/memory/learnings.md` is the queue of open learnings, drained by reflect and released only through the approval gates.
+- `docs/memory.md`: the memory protocol and its boundaries.
+
 ## [0.27.0] - 2026-11-18
 
 ### Added

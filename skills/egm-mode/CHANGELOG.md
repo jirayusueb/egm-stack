@@ -2,6 +2,10 @@
 
 All changes to the `egm-mode` skill are recorded here.
 
+## 0.28.0 - 2026-11-18
+
+- Added the session memory log and the correction counter that offers reflect once when a run ends with two or more corrections.
+
 ## 0.21.0 - 2026-11-08
 
 - Added the checkpoint protocol and the compaction recovery rule: state lives in checkpoint.md, and after any compaction the first action is reading it.
