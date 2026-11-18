@@ -18,6 +18,7 @@ function option(name) {
 function has(name) {
   return args.includes(`--${name}`);
 }
+const REPEAT = Number(option('repeat') ?? 1);
 function suiteNames() {
   return readdirSync(join(ROOT, 'evals')).filter((name) => name.endsWith('.yaml')).map((name) => name.replace(/\.yaml$/, ''));
 }
@@ -37,7 +38,7 @@ function resultsFile(suite) {
   const base = join(RESULTS, `${suite}-${commit()}.md`);
   if (!existsSync(base)) return base;
   const text = readFileSync(base, 'utf8');
-  if (text.includes(`| ${option('case')} |`)) {
+  if (text.includes(`| ${option('case')}${REPEAT > 1 ? ` run ${option('run') ?? 1}/${REPEAT}` : ''} |`)) {
     let index = 2;
     while (existsSync(join(RESULTS, `${suite}-${commit()}-${index}.md`))) index += 1;
     return join(RESULTS, `${suite}-${commit()}-${index}.md`);
@@ -91,6 +92,22 @@ if (has('summary')) {
     }
   }
   if (!files.length) console.log('no recorded results');
+  const byCase = {};
+  for (const name of readdirSync(RESULTS).filter(n => n.endsWith('.md'))) {
+    const text = readFileSync(join(RESULTS, name), 'utf8');
+    for (const m of text.matchAll(/^\| ([^|]+?)\s*(?:run \d+\/\d+)? \| (pass|fail) \|/gm)) {
+      const key = m[1].replace(/ run \d+\/\d+/, '').trim();
+      byCase[key] ??= { pass: 0, total: 0 };
+      byCase[key][m[2] === 'pass' ? 'pass' : 'fail'] += 0;
+      byCase[key].total += 1;
+      if (m[2] === 'pass') byCase[key].pass += 1;
+    }
+  }
+  const repeated = Object.entries(byCase).filter(([, v]) => v.total > 1);
+  if (repeated.length) {
+    console.log('pass@k over repeated cases:');
+    for (const [kase, v] of repeated) console.log(`  ${kase}: ${v.pass}/${v.total} (${Math.round(100 * v.pass / v.total)}%)`);
+  }
   for (const [suite, counts] of Object.entries(tally)) {
     console.log(`${suite}: ${counts.pass ?? 0} pass, ${counts.fail ?? 0} fail, ${counts['not run'] ?? 0} not run`);
   }

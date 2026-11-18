@@ -2,6 +2,10 @@
 
 All changes to the `egm-setup` skill are recorded here.
 
+## 0.27.0 - 2026-11-18
+
+- Added the doctor mode: install health checks for roster count, config parsing, role resolution, library path, stacked installs, and stale checkpoints. Repair only on approval.
+
 ## 0.18.0 - 2026-11-07
 
 - Added the library setting: a path to the user’s technical books, written as the library line.

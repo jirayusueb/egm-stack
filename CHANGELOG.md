@@ -3,6 +3,16 @@
 All notable changes to this project are documented here. The format follows
 Keep a Changelog, and this project adheres to Semantic Versioning.
 
+## [0.27.0] - 2026-11-18
+
+### Added
+
+- `egm-setup doctor`: install health checks, one line per check, repair only on approval.
+- `scripts/check-skill-security.mjs` in the check pipeline: scans skill, agent, and resource prose for shell pipelines from the network, eval, credential literals, exfiltration phrasing, and injection phrases.
+- Pass at k in the live eval helper: `--repeat N` annotates runs and the summary aggregates pass rates per repeated case.
+- The orchestrate playbook gains the worktree pattern: parallel writers each get their own worktree and branch, the parent merges in dependency order.
+- Install hygiene guidance: one method per host, duplicates named by doctor.
+
 ## [0.26.1] - 2026-11-11
 
 ### Added

@@ -40,6 +40,17 @@ language of the user's last message. Write the choice as one line in every
 config file: `# reply-language: match`. Default when unset is `en`. Show modes
 and single-role changes keep the stored line unchanged.
 
+## Doctor
+
+`doctor` checks install health without changing anything. Verify in order and
+report one line per check: the skill roster count the host actually lists
+against the expected count; the config file parses and every line it carries
+is one of the known keys; the roles resolve to real model names; the library
+path exists when the library line is set; no skill appears twice in the host
+listing, which means two install methods stacked; stale checkpoints under
+`.egm/` older than a week, named so the user can delete them. End with one
+line: healthy, or the first check to fix. Repair only what the user approves.
+
 ## Modes
 
 The default run detects, asks for one budget, and writes. Four other modes skip

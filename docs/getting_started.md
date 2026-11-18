@@ -141,3 +141,11 @@ Read the [guide](guide/README.md) in order. Then keep these three handy.
 - [artifacts.md](artifacts.md) for the artifact contract.
 - [evals.md](evals.md) before you change a skill.
 - [designs/egm-stack.md](designs/egm-stack.md) before you change architecture.
+
+## Install one way per host
+
+Pick a single install method per host and stay with it. Installing the plugin
+and then adding the same skills through another installer duplicates every
+skill: the host lists each one twice and both copies compete to trigger. The
+`egm-setup doctor` mode lists what the host actually has and names duplicates.
+To clean up, remove the method you no longer want before adding the other.

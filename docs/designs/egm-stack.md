@@ -113,7 +113,7 @@ quality target.
 | --- | --- | --- |
 | `egm-mode` | 320 | Router, non-negotiables, autonomy, delegation pointer, harness mapping, generated indexes |
 | `egm-ask` | 170 | Read-only answers, first-run guidance, resume and catch-up summaries, review quality, and one hint line |
-| `egm-setup` | 195 | Role and stage-tier configuration, modes, provider/model values, host effort levels, spawn cap, reply language |
+| `egm-setup` | 210 | Role and stage-tier configuration, modes, provider/model values, host effort levels, spawn cap, reply language |
 | `egm-verify` | 100 | Prove a change against the approved design's success criteria |
 | `egm-brainstorm` | 120 | Concept stress-test, brief artifact |
 | `egm-draft` | 140 | Section-by-section spec drafting |

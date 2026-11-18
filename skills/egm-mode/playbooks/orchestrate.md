@@ -20,4 +20,9 @@ Keep the parent-resident set small: gates, the ledger, and the final report.
 Every bulk read and every long build lives in a child. Update the checkpoint
 from `../egm-mode` at every step boundary.
 
+Independent slices that write files go in separate worktrees, one per child,
+so parallel writes never collide. Each brief names its worktree path as the
+`cwd:` and its branch. The parent merges finished branches in dependency
+order and resolves conflicts itself, never a child.
+
 **Reply:** what landed against the done predicate, each task's state, the final review verdict, and every open decision.
